@@ -44,11 +44,17 @@ TagManager:
   - name: UnderMap
     uniqueID: 11035849
     locked: 0
-  - name: OverMap
-    uniqueID: 842277199
+  - name: UnderObj
+    uniqueID: 3511270929
     locked: 0
   - name: Character
     uniqueID: 1224748835
+    locked: 0
+  - name: OverMap
+    uniqueID: 842277199
+    locked: 0
+  - name: OverObj
+    uniqueID: 2821476827
     locked: 0
   m_RenderingLayers:
   - Default
