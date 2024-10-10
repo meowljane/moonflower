@@ -3,17 +3,17 @@ guid: 76726590242fe5b4daaaeda4ff5dba17
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5003416885793334284
-    second: F3_1_Ov_0
+      213: 8938169794646518800
+    second: F7_1_Ov_0
   - first:
-      213: 895557643806188919
-    second: F3_1_Ov_1
+      213: -7838010957798581262
+    second: F7_1_Ov_1
   - first:
-      213: 5525263242810508893
-    second: F3_1_Ov_2
+      213: -6601363850952593770
+    second: F7_1_Ov_2
   - first:
-      213: -4848690771228963317
-    second: F3_1_Ov_3
+      213: -2304771766367669023
+    second: F7_1_Ov_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: F3_1_Ov_0
+      name: F7_1_Ov_0
       rect:
         serializedVersion: 2
         x: 161
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fbd8130ada409ab0800000000000000
-      internalID: -5003416885793334284
+      spriteID: 01c28006212ca0c70800000000000000
+      internalID: 8938169794646518800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: F3_1_Ov_1
+      name: F7_1_Ov_1
       rect:
         serializedVersion: 2
-        x: 417
-        y: 351
-        width: 582
-        height: 408
+        x: 418
+        y: 319
+        width: 581
+        height: 413
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,19 +146,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77524f2aee8ad6c00800000000000000
-      internalID: 895557643806188919
+      spriteID: 2fbdbcabf8ac93390800000000000000
+      internalID: -7838010957798581262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: F3_1_Ov_2
+      name: F7_1_Ov_2
       rect:
         serializedVersion: 2
-        x: 448
+        x: 447
         y: 731
-        width: 187
+        width: 188
         height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d564e3e25adadac40800000000000000
-      internalID: 5525263242810508893
+      spriteID: 69eadd69d8e3364a0800000000000000
+      internalID: -6601363850952593770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: F3_1_Ov_3
+      name: F7_1_Ov_3
       rect:
         serializedVersion: 2
-        x: 553
+        x: 577
         y: 255
         width: 35
-        height: 42
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0ece2bde6df5bcb0800000000000000
-      internalID: -4848690771228963317
+      spriteID: 1e43e492a4ec300e0800000000000000
+      internalID: -2304771766367669023
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      F3_1_Ov_0: -5003416885793334284
-      F3_1_Ov_1: 895557643806188919
-      F3_1_Ov_2: 5525263242810508893
-      F3_1_Ov_3: -4848690771228963317
+      F7_1_Ov_0: 8938169794646518800
+      F7_1_Ov_1: -7838010957798581262
+      F7_1_Ov_2: -6601363850952593770
+      F7_1_Ov_3: -2304771766367669023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
