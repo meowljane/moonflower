@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 580515481}
   - component: {fileID: 580515482}
   m_Layer: 0
-  m_Name: KimE
+  m_Name: Kim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 758774995}
   - component: {fileID: 758774996}
   m_Layer: 0
-  m_Name: ChoiW
+  m_Name: Choi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 1006842066}
   - component: {fileID: 1006842067}
   m_Layer: 0
-  m_Name: ParkW
+  m_Name: Park
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 1033445936}
   - component: {fileID: 1033445937}
   m_Layer: 0
-  m_Name: KingW
+  m_Name: King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 1382574196}
   - component: {fileID: 1382574197}
   m_Layer: 0
-  m_Name: PannelSE
+  m_Name: Pannel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 1485110647}
   - component: {fileID: 1485110648}
   m_Layer: 0
-  m_Name: WhiteDoor
+  m_Name: Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 2142106530}
   - component: {fileID: 2142106531}
   m_Layer: 0
-  m_Name: LeeE
+  m_Name: Lee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
