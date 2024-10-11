@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 17459744}
   - component: {fileID: 17459745}
   m_Layer: 0
-  m_Name: Obj (1)
+  m_Name: Evi1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1.35, y: 1.35, z: 0.7941176}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &17459745
 SpriteRenderer:
@@ -205,6 +205,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &123645659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123645660}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &123645660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123645659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2084880974}
+  - {fileID: 1524627065}
+  m_Father: {fileID: 607050154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &126555331
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,14 +267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1551916571}
-  - {fileID: 1485391910}
-  - {fileID: 640862458}
-  - {fileID: 232444249}
-  - {fileID: 1124659375}
-  - {fileID: 646650332}
-  - {fileID: 1700381522}
-  - {fileID: 1731540275}
+  - {fileID: 1840533505}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212069598
@@ -273,23 +299,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1051535508}
-  - {fileID: 1522126970}
-  - {fileID: 570348055}
-  - {fileID: 924793636}
-  - {fileID: 2045519802}
-  - {fileID: 1170746437}
-  - {fileID: 1589608735}
-  - {fileID: 499286551}
-  - {fileID: 394599827}
-  - {fileID: 586808932}
-  - {fileID: 2114496585}
-  - {fileID: 631360596}
-  - {fileID: 2130149594}
-  - {fileID: 2064843980}
-  - {fileID: 1691386350}
-  - {fileID: 665328693}
-  - {fileID: 708860759}
+  - {fileID: 652029509}
+  - {fileID: 1453125978}
+  - {fileID: 389455522}
+  - {fileID: 1049400602}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &219995774
@@ -303,7 +316,7 @@ GameObject:
   - component: {fileID: 219995775}
   - component: {fileID: 219995776}
   m_Layer: 0
-  m_Name: Obj (6)
+  m_Name: Chat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,7 +335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 385621676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &219995776
 SpriteRenderer:
@@ -390,7 +403,7 @@ GameObject:
   - component: {fileID: 225908214}
   - component: {fileID: 225908215}
   m_Layer: 0
-  m_Name: Obj (10)
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,11 +418,11 @@ Transform:
   m_GameObject: {fileID: 225908213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -248.4, y: 40.1, z: 0}
+  m_LocalPosition: {x: -248.3999, y: 40.099976, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 385621676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &225908215
 SpriteRenderer:
@@ -477,7 +490,7 @@ GameObject:
   - component: {fileID: 227132087}
   - component: {fileID: 227132088}
   m_Layer: 0
-  m_Name: Obj (7)
+  m_Name: Chat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -496,7 +509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 385621676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &227132088
 SpriteRenderer:
@@ -548,93 +561,6 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 29, y: 47}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &232444248
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 232444249}
-  - component: {fileID: 232444250}
-  m_Layer: 0
-  m_Name: Obj (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &232444249
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232444248}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 182, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 126555332}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &232444250
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232444248}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -783696367
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4b9be094518bd14ca0cefc0ab279c46, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 235, y: 218}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -743,7 +669,7 @@ GameObject:
   - component: {fileID: 270495730}
   - component: {fileID: 270495731}
   m_Layer: 0
-  m_Name: NPC (1)
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1072125097}
+  m_Father: {fileID: 1004488345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &270495731
 SpriteRenderer:
@@ -830,7 +756,7 @@ GameObject:
   - component: {fileID: 278003954}
   - component: {fileID: 278003955}
   m_Layer: 0
-  m_Name: Obj (9)
+  m_Name: Evi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,7 +775,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &278003955
 SpriteRenderer:
@@ -951,7 +877,7 @@ GameObject:
   - component: {fileID: 324482330}
   - component: {fileID: 324482331}
   m_Layer: 0
-  m_Name: Obj (2)
+  m_Name: Evi2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &324482331
 SpriteRenderer:
@@ -1027,6 +953,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &385621675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385621676}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &385621676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385621675}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1969021567}
+  - {fileID: 225908214}
+  - {fileID: 702343252}
+  - {fileID: 227132087}
+  - {fileID: 1236423105}
+  - {fileID: 219995775}
+  m_Father: {fileID: 570904824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &389455521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 389455522}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &389455522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389455521}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1051535508}
+  - {fileID: 1522126970}
+  - {fileID: 570348055}
+  - {fileID: 924793636}
+  - {fileID: 2045519802}
+  - {fileID: 1170746437}
+  - {fileID: 1589608735}
+  - {fileID: 499286551}
+  m_Father: {fileID: 212069599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &394599826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1040,7 @@ GameObject:
   - component: {fileID: 394599827}
   - component: {fileID: 394599828}
   m_Layer: 0
-  m_Name: Lock
+  m_Name: Evi1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1057,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 652029509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &394599828
 SpriteRenderer:
@@ -1125,7 +1127,7 @@ GameObject:
   - component: {fileID: 427124457}
   - component: {fileID: 427124458}
   m_Layer: 0
-  m_Name: Obj (7)
+  m_Name: Evi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,11 +1142,11 @@ Transform:
   m_GameObject: {fileID: 427124456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3869, y: 91, z: 0}
+  m_LocalPosition: {x: -131, y: 91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &427124458
 SpriteRenderer:
@@ -1318,7 +1320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &499286552
 SpriteRenderer:
@@ -1386,7 +1388,7 @@ GameObject:
   - component: {fileID: 528115396}
   - component: {fileID: 528115397}
   m_Layer: 0
-  m_Name: Obj (5)
+  m_Name: Evi1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1401,11 +1403,11 @@ Transform:
   m_GameObject: {fileID: 528115395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3619, y: 96, z: 0}
+  m_LocalPosition: {x: -381, y: 96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &528115397
 SpriteRenderer:
@@ -1473,7 +1475,7 @@ GameObject:
   - component: {fileID: 567520866}
   - component: {fileID: 567520867}
   m_Layer: 0
-  m_Name: Obj (4)
+  m_Name: Evi2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,11 +1490,11 @@ Transform:
   m_GameObject: {fileID: 567520865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1992, y: 313, z: 0}
+  m_LocalPosition: {x: -8, y: 313, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 1719091487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &567520867
 SpriteRenderer:
@@ -1560,7 +1562,7 @@ GameObject:
   - component: {fileID: 568619855}
   - component: {fileID: 568619856}
   m_Layer: 0
-  m_Name: Obj (3)
+  m_Name: Chat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,11 +1577,11 @@ Transform:
   m_GameObject: {fileID: 568619854}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2302, y: 79, z: 0}
+  m_LocalPosition: {x: 302, y: 79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 593772845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &568619856
 SpriteRenderer:
@@ -1666,7 +1668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &570348056
 SpriteRenderer:
@@ -1752,19 +1754,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 17459744}
-  - {fileID: 324482330}
-  - {fileID: 2018765636}
-  - {fileID: 999035639}
-  - {fileID: 1969021567}
-  - {fileID: 219995775}
-  - {fileID: 227132087}
-  - {fileID: 702343252}
-  - {fileID: 278003954}
-  - {fileID: 225908214}
-  - {fileID: 780226065}
-  - {fileID: 608927168}
-  - {fileID: 1236423105}
+  - {fileID: 937928684}
+  - {fileID: 385621676}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575238111
@@ -1792,18 +1783,12 @@ Transform:
   m_GameObject: {fileID: 575238111}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2000, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1874267903}
-  - {fileID: 1962610726}
-  - {fileID: 568619855}
-  - {fileID: 567520866}
-  - {fileID: 1697632020}
-  - {fileID: 1579249003}
-  - {fileID: 621065852}
-  - {fileID: 1116783875}
+  - {fileID: 1719091487}
+  - {fileID: 593772845}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586808930
@@ -1817,7 +1802,7 @@ GameObject:
   - component: {fileID: 586808932}
   - component: {fileID: 586808931}
   m_Layer: 0
-  m_Name: NPC1
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1891,7 +1876,41 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &593772844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593772845}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &593772845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593772844}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1962610726}
+  - {fileID: 1874267903}
+  - {fileID: 568619855}
+  m_Father: {fileID: 575238112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596955374
 GameObject:
@@ -1904,7 +1923,7 @@ GameObject:
   - component: {fileID: 596955375}
   - component: {fileID: 596955376}
   m_Layer: 0
-  m_Name: NPC (2)
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1923,7 +1942,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2080494705}
+  m_Father: {fileID: 813829753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &596955376
 SpriteRenderer:
@@ -2009,12 +2028,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1524627065}
-  - {fileID: 973214593}
-  - {fileID: 1669837372}
-  - {fileID: 2084880974}
-  - {fileID: 1996683256}
-  - {fileID: 1884627259}
+  - {fileID: 1722821453}
+  - {fileID: 123645660}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608927167
@@ -2028,7 +2043,7 @@ GameObject:
   - component: {fileID: 608927168}
   - component: {fileID: 608927169}
   m_Layer: 0
-  m_Name: Obj (12)
+  m_Name: Evi7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2047,7 +2062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &608927169
 SpriteRenderer:
@@ -2115,7 +2130,7 @@ GameObject:
   - component: {fileID: 621065852}
   - component: {fileID: 621065853}
   m_Layer: 0
-  m_Name: Obj (7)
+  m_Name: Evi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2130,11 +2145,11 @@ Transform:
   m_GameObject: {fileID: 621065851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2046, y: 277, z: 0}
+  m_LocalPosition: {x: 46, y: 277, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 1719091487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &621065853
 SpriteRenderer:
@@ -2202,7 +2217,7 @@ GameObject:
   - component: {fileID: 630991992}
   - component: {fileID: 630991993}
   m_Layer: 0
-  m_Name: Obj (8)
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2217,11 +2232,11 @@ Transform:
   m_GameObject: {fileID: 630991991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4008, y: -329, z: 0}
+  m_LocalPosition: {x: 8, y: -329, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 668929862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &630991993
 SpriteRenderer:
@@ -2289,7 +2304,7 @@ GameObject:
   - component: {fileID: 631360596}
   - component: {fileID: 631360595}
   m_Layer: 0
-  m_Name: NPC2
+  m_Name: Chat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2363,7 +2378,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640862457
 GameObject:
@@ -2376,7 +2391,7 @@ GameObject:
   - component: {fileID: 640862458}
   - component: {fileID: 640862459}
   m_Layer: 0
-  m_Name: Obj (3)
+  m_Name: Evi1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2395,7 +2410,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Father: {fileID: 1840533505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &640862459
 SpriteRenderer:
@@ -2463,7 +2478,7 @@ GameObject:
   - component: {fileID: 646650332}
   - component: {fileID: 646650333}
   m_Layer: 0
-  m_Name: Obj (6)
+  m_Name: Evi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2482,7 +2497,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Father: {fileID: 1840533505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &646650333
 SpriteRenderer:
@@ -2539,6 +2554,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &652029508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652029509}
+  m_Layer: 0
+  m_Name: Evidence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652029509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652029508}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 394599827}
+  m_Father: {fileID: 212069599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665328691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,7 +2597,7 @@ GameObject:
   - component: {fileID: 665328693}
   - component: {fileID: 665328692}
   m_Layer: 0
-  m_Name: NPCN
+  m_Name: Chat7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2624,7 +2671,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &668929861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668929862}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668929862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668929861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 630991992}
+  - {fileID: 1764843898}
+  m_Father: {fileID: 1709599775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675423545
 GameObject:
@@ -2761,7 +2841,7 @@ GameObject:
   - component: {fileID: 685953037}
   - component: {fileID: 685953038}
   m_Layer: 0
-  m_Name: NPC (3)
+  m_Name: Chat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2780,7 +2860,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1072125097}
+  m_Father: {fileID: 1004488345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &685953038
 SpriteRenderer:
@@ -2848,7 +2928,7 @@ GameObject:
   - component: {fileID: 702343252}
   - component: {fileID: 702343253}
   m_Layer: 0
-  m_Name: Obj (8)
+  m_Name: Chat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2867,7 +2947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 385621676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &702343253
 SpriteRenderer:
@@ -2935,7 +3015,7 @@ GameObject:
   - component: {fileID: 708077363}
   - component: {fileID: 708077364}
   m_Layer: 0
-  m_Name: NPC (4)
+  m_Name: Chat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2954,7 +3034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1072125097}
+  m_Father: {fileID: 1004488345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &708077364
 SpriteRenderer:
@@ -3022,7 +3102,7 @@ GameObject:
   - component: {fileID: 708860759}
   - component: {fileID: 708860760}
   m_Layer: 0
-  m_Name: PannelSQ
+  m_Name: Pannel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3041,7 +3121,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1049400602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &708860760
 SpriteRenderer:
@@ -3196,7 +3276,7 @@ GameObject:
   - component: {fileID: 780226065}
   - component: {fileID: 780226066}
   m_Layer: 0
-  m_Name: Obj (11)
+  m_Name: Evi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3211,11 +3291,11 @@ Transform:
   m_GameObject: {fileID: 780226064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -140, y: 14.2, z: 0}
+  m_LocalPosition: {x: -140, y: 14.199951, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &780226066
 SpriteRenderer:
@@ -3272,6 +3352,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &813829752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813829753}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813829753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813829752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 847099145}
+  - {fileID: 596955375}
+  m_Father: {fileID: 2080494705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &829716705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,7 +3483,7 @@ GameObject:
   - component: {fileID: 847099145}
   - component: {fileID: 847099146}
   m_Layer: 0
-  m_Name: NPC (1)
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3389,7 +3502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2080494705}
+  m_Father: {fileID: 813829753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &847099146
 SpriteRenderer:
@@ -3457,7 +3570,7 @@ GameObject:
   - component: {fileID: 850666128}
   - component: {fileID: 850666129}
   m_Layer: 0
-  m_Name: Obj (6)
+  m_Name: Evi7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3472,11 +3585,11 @@ Transform:
   m_GameObject: {fileID: 850666127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4303, y: 149, z: 0}
+  m_LocalPosition: {x: 303, y: 149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &850666129
 SpriteRenderer:
@@ -3544,7 +3657,7 @@ GameObject:
   - component: {fileID: 906144616}
   - component: {fileID: 906144617}
   m_Layer: 0
-  m_Name: Obj (1)
+  m_Name: Evi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3559,11 +3672,11 @@ Transform:
   m_GameObject: {fileID: 906144615}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3940, y: 330, z: 0}
+  m_LocalPosition: {x: -60, y: 330, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &906144617
 SpriteRenderer:
@@ -3650,7 +3763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &924793637
 SpriteRenderer:
@@ -3707,6 +3820,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &937928683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937928684}
+  m_Layer: 0
+  m_Name: Evidence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937928684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937928683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 17459744}
+  - {fileID: 324482330}
+  - {fileID: 278003954}
+  - {fileID: 780226065}
+  - {fileID: 2018765636}
+  - {fileID: 999035639}
+  - {fileID: 608927168}
+  m_Father: {fileID: 570904824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959029050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,7 +3956,7 @@ GameObject:
   - component: {fileID: 973214593}
   - component: {fileID: 973214594}
   m_Layer: 0
-  m_Name: Obj (2)
+  m_Name: Evi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3824,7 +3975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 607050154}
+  m_Father: {fileID: 1722821453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &973214594
 SpriteRenderer:
@@ -3892,7 +4043,7 @@ GameObject:
   - component: {fileID: 999035639}
   - component: {fileID: 999035640}
   m_Layer: 0
-  m_Name: Obj (4)
+  m_Name: Evi6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3911,7 +4062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &999035640
 SpriteRenderer:
@@ -3968,6 +4119,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1004488344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004488345}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1004488345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004488344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1371063016}
+  - {fileID: 270495730}
+  - {fileID: 1700761262}
+  - {fileID: 708077363}
+  - {fileID: 685953037}
+  m_Father: {fileID: 1072125097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1049400601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1049400602}
+  m_Layer: 0
+  m_Name: Notice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1049400602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049400601}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 708860759}
+  m_Father: {fileID: 212069599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051535507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,7 +4217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1051535509
 SpriteRenderer:
@@ -4084,11 +4303,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 270495730}
-  - {fileID: 1371063016}
-  - {fileID: 685953037}
-  - {fileID: 708077363}
-  - {fileID: 1700761262}
+  - {fileID: 1004488345}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116783874
@@ -4102,7 +4317,7 @@ GameObject:
   - component: {fileID: 1116783875}
   - component: {fileID: 1116783876}
   m_Layer: 0
-  m_Name: Obj (8)
+  m_Name: Evi1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4117,11 +4332,11 @@ Transform:
   m_GameObject: {fileID: 1116783874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1549, y: -79, z: 0}
+  m_LocalPosition: {x: -451, y: -79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 1719091487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1116783876
 SpriteRenderer:
@@ -4178,7 +4393,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1124659374
+--- !u!1 &1127326595
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4186,85 +4401,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1124659375}
-  - component: {fileID: 1124659376}
+  - component: {fileID: 1127326596}
   m_Layer: 0
-  m_Name: Obj (5)
+  m_Name: Evidence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1124659375
+--- !u!4 &1127326596
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124659374}
+  m_GameObject: {fileID: 1127326595}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60, y: 62, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Children:
+  - {fileID: 528115396}
+  - {fileID: 1539378896}
+  - {fileID: 427124457}
+  - {fileID: 906144616}
+  - {fileID: 2055374475}
+  - {fileID: 2116708652}
+  - {fileID: 850666128}
+  m_Father: {fileID: 1709599775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1124659376
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124659374}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -783696367
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2ed81bc98f214147a817aa4f1e7f8d9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 199, y: 164}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1170746436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,7 +4461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1170746438
 SpriteRenderer:
@@ -4402,7 +4568,7 @@ GameObject:
   - component: {fileID: 1236423105}
   - component: {fileID: 1236423106}
   m_Layer: 0
-  m_Name: Obj (13)
+  m_Name: Chat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4421,7 +4587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 385621676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1236423106
 SpriteRenderer:
@@ -4663,7 +4829,7 @@ GameObject:
   - component: {fileID: 1371063016}
   - component: {fileID: 1371063017}
   m_Layer: 0
-  m_Name: NPC (2)
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4682,7 +4848,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1072125097}
+  m_Father: {fileID: 1004488345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1371063017
 SpriteRenderer:
@@ -4913,6 +5079,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1453125977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453125978}
+  m_Layer: 0
+  m_Name: Chat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1453125978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453125977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 586808932}
+  - {fileID: 2114496585}
+  - {fileID: 631360596}
+  - {fileID: 2130149594}
+  - {fileID: 2064843980}
+  - {fileID: 1691386350}
+  - {fileID: 665328693}
+  m_Father: {fileID: 212069599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1459808604
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,7 +5215,7 @@ GameObject:
   - component: {fileID: 1485391910}
   - component: {fileID: 1485391911}
   m_Layer: 0
-  m_Name: Obj (2)
+  m_Name: Evi2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5030,7 +5234,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Father: {fileID: 1840533505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1485391911
 SpriteRenderer:
@@ -5117,7 +5321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1522126971
 SpriteRenderer:
@@ -5185,7 +5389,7 @@ GameObject:
   - component: {fileID: 1524627065}
   - component: {fileID: 1524627066}
   m_Layer: 0
-  m_Name: Obj (1)
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5204,7 +5408,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 607050154}
+  m_Father: {fileID: 123645660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1524627066
 SpriteRenderer:
@@ -5272,7 +5476,7 @@ GameObject:
   - component: {fileID: 1539378896}
   - component: {fileID: 1539378897}
   m_Layer: 0
-  m_Name: Obj (4)
+  m_Name: Evi2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5287,11 +5491,11 @@ Transform:
   m_GameObject: {fileID: 1539378895}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3703, y: 137, z: 0}
+  m_LocalPosition: {x: -297, y: 137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1539378897
 SpriteRenderer:
@@ -5359,7 +5563,7 @@ GameObject:
   - component: {fileID: 1551916571}
   - component: {fileID: 1551916572}
   m_Layer: 0
-  m_Name: Obj (1)
+  m_Name: Evi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5378,7 +5582,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Father: {fileID: 1840533505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1551916572
 SpriteRenderer:
@@ -5533,7 +5737,7 @@ GameObject:
   - component: {fileID: 1579249003}
   - component: {fileID: 1579249004}
   m_Layer: 0
-  m_Name: Obj (6)
+  m_Name: Evi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5548,11 +5752,11 @@ Transform:
   m_GameObject: {fileID: 1579249002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2039, y: 227, z: 0}
+  m_LocalPosition: {x: 39, y: 227, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 1719091487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1579249004
 SpriteRenderer:
@@ -5639,7 +5843,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1589608736
 SpriteRenderer:
@@ -5707,7 +5911,7 @@ GameObject:
   - component: {fileID: 1669837372}
   - component: {fileID: 1669837373}
   m_Layer: 0
-  m_Name: Obj (3)
+  m_Name: Evi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5726,7 +5930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 607050154}
+  m_Father: {fileID: 1722821453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1669837373
 SpriteRenderer:
@@ -5881,7 +6085,7 @@ GameObject:
   - component: {fileID: 1691386350}
   - component: {fileID: 1691386349}
   m_Layer: 0
-  m_Name: NPCW (1)
+  m_Name: Chat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5955,7 +6159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697632019
 GameObject:
@@ -5968,7 +6172,7 @@ GameObject:
   - component: {fileID: 1697632020}
   - component: {fileID: 1697632021}
   m_Layer: 0
-  m_Name: Obj (5)
+  m_Name: Evi5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5983,11 +6187,11 @@ Transform:
   m_GameObject: {fileID: 1697632019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2078, y: 1, z: 0}
+  m_LocalPosition: {x: 78, y: 1, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 1719091487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1697632021
 SpriteRenderer:
@@ -6055,7 +6259,7 @@ GameObject:
   - component: {fileID: 1700381522}
   - component: {fileID: 1700381523}
   m_Layer: 0
-  m_Name: Obj (7)
+  m_Name: Evi6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6074,7 +6278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Father: {fileID: 1840533505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1700381523
 SpriteRenderer:
@@ -6142,7 +6346,7 @@ GameObject:
   - component: {fileID: 1700761262}
   - component: {fileID: 1700761263}
   m_Layer: 0
-  m_Name: NPCE
+  m_Name: Chat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6161,7 +6365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1072125097}
+  m_Father: {fileID: 1004488345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1700761263
 SpriteRenderer:
@@ -6243,20 +6447,84 @@ Transform:
   m_GameObject: {fileID: 1709599774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4000, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1127326596}
+  - {fileID: 668929862}
+  m_Father: {fileID: 1218768382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1719091486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1719091487}
+  m_Layer: 0
+  m_Name: Evidence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1719091487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719091486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 906144616}
-  - {fileID: 2055374475}
-  - {fileID: 1764843898}
-  - {fileID: 1539378896}
-  - {fileID: 528115396}
-  - {fileID: 850666128}
-  - {fileID: 427124457}
-  - {fileID: 630991992}
-  - {fileID: 2116708652}
-  m_Father: {fileID: 1218768382}
+  - {fileID: 1116783875}
+  - {fileID: 567520866}
+  - {fileID: 1579249003}
+  - {fileID: 621065852}
+  - {fileID: 1697632020}
+  m_Father: {fileID: 575238112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1722821452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722821453}
+  m_Layer: 0
+  m_Name: Evidence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722821453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722821452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1884627259}
+  - {fileID: 1996683256}
+  - {fileID: 973214593}
+  - {fileID: 1669837372}
+  m_Father: {fileID: 607050154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731540274
 GameObject:
@@ -6269,7 +6537,7 @@ GameObject:
   - component: {fileID: 1731540275}
   - component: {fileID: 1731540276}
   m_Layer: 0
-  m_Name: Obj (8)
+  m_Name: Evi5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6288,7 +6556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 126555332}
+  m_Father: {fileID: 1840533505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1731540276
 SpriteRenderer:
@@ -6356,7 +6624,7 @@ GameObject:
   - component: {fileID: 1764843898}
   - component: {fileID: 1764843899}
   m_Layer: 0
-  m_Name: Obj (3)
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6371,11 +6639,11 @@ Transform:
   m_GameObject: {fileID: 1764843897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4545, y: -33, z: 0}
+  m_LocalPosition: {x: 545, y: -33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 668929862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1764843899
 SpriteRenderer:
@@ -6519,6 +6787,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1840533504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840533505}
+  m_Layer: 0
+  m_Name: Evidence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1840533505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840533504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 640862458}
+  - {fileID: 1485391910}
+  - {fileID: 646650332}
+  - {fileID: 1551916571}
+  - {fileID: 1731540275}
+  - {fileID: 1700381522}
+  m_Father: {fileID: 126555332}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1874267902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6530,7 +6835,7 @@ GameObject:
   - component: {fileID: 1874267903}
   - component: {fileID: 1874267904}
   m_Layer: 0
-  m_Name: Obj (1)
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6545,11 +6850,11 @@ Transform:
   m_GameObject: {fileID: 1874267902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1964, y: -292, z: 0}
+  m_LocalPosition: {x: -36, y: -292, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 593772845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1874267904
 SpriteRenderer:
@@ -6617,7 +6922,7 @@ GameObject:
   - component: {fileID: 1884627259}
   - component: {fileID: 1884627260}
   m_Layer: 0
-  m_Name: Obj (6)
+  m_Name: Evi1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6632,11 +6937,11 @@ Transform:
   m_GameObject: {fileID: 1884627258}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -58.5, y: -57.7, z: 0}
+  m_LocalPosition: {x: -58.5, y: -57.69995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 607050154}
+  m_Father: {fileID: 1722821453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1884627260
 SpriteRenderer:
@@ -6830,7 +7135,7 @@ GameObject:
   - component: {fileID: 1962610726}
   - component: {fileID: 1962610727}
   m_Layer: 0
-  m_Name: Obj (2)
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6845,11 +7150,11 @@ Transform:
   m_GameObject: {fileID: 1962610725}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1505, y: 48, z: 0}
+  m_LocalPosition: {x: -495, y: 48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 575238112}
+  m_Father: {fileID: 593772845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1962610727
 SpriteRenderer:
@@ -6917,7 +7222,7 @@ GameObject:
   - component: {fileID: 1969021567}
   - component: {fileID: 1969021568}
   m_Layer: 0
-  m_Name: Obj (5)
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6936,7 +7241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 385621676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1969021568
 SpriteRenderer:
@@ -7004,7 +7309,7 @@ GameObject:
   - component: {fileID: 1996683256}
   - component: {fileID: 1996683257}
   m_Layer: 0
-  m_Name: Obj (5)
+  m_Name: Evi2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7019,11 +7324,11 @@ Transform:
   m_GameObject: {fileID: 1996683255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -43.8, y: 151.3, z: 0}
+  m_LocalPosition: {x: -43.8, y: 151.30005, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 607050154}
+  m_Father: {fileID: 1722821453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1996683257
 SpriteRenderer:
@@ -7091,7 +7396,7 @@ GameObject:
   - component: {fileID: 2018765636}
   - component: {fileID: 2018765637}
   m_Layer: 0
-  m_Name: Obj (3)
+  m_Name: Evi5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7110,7 +7415,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 570904824}
+  m_Father: {fileID: 937928684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2018765637
 SpriteRenderer:
@@ -7197,7 +7502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 389455522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2045519803
 SpriteRenderer:
@@ -7265,7 +7570,7 @@ GameObject:
   - component: {fileID: 2055374475}
   - component: {fileID: 2055374476}
   m_Layer: 0
-  m_Name: Obj (2)
+  m_Name: Evi5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7280,11 +7585,11 @@ Transform:
   m_GameObject: {fileID: 2055374474}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4055, y: 203, z: 0}
+  m_LocalPosition: {x: 55, y: 203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2055374476
 SpriteRenderer:
@@ -7352,7 +7657,7 @@ GameObject:
   - component: {fileID: 2064843980}
   - component: {fileID: 2064843979}
   m_Layer: 0
-  m_Name: NPCW
+  m_Name: Chat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7426,7 +7731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080494704
 GameObject:
@@ -7457,8 +7762,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 847099145}
-  - {fileID: 596955375}
+  - {fileID: 813829753}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084880973
@@ -7472,7 +7776,7 @@ GameObject:
   - component: {fileID: 2084880974}
   - component: {fileID: 2084880975}
   m_Layer: 0
-  m_Name: Obj (4)
+  m_Name: Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7491,7 +7795,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 607050154}
+  m_Father: {fileID: 123645660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2084880975
 SpriteRenderer:
@@ -7559,7 +7863,7 @@ GameObject:
   - component: {fileID: 2114496585}
   - component: {fileID: 2114496584}
   m_Layer: 0
-  m_Name: NPC3
+  m_Name: Chat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7633,7 +7937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116708651
 GameObject:
@@ -7646,7 +7950,7 @@ GameObject:
   - component: {fileID: 2116708652}
   - component: {fileID: 2116708653}
   m_Layer: 0
-  m_Name: Obj (9)
+  m_Name: Evi6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7661,11 +7965,11 @@ Transform:
   m_GameObject: {fileID: 2116708651}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4056, y: -25, z: 0}
+  m_LocalPosition: {x: 56, y: -25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1709599775}
+  m_Father: {fileID: 1127326596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2116708653
 SpriteRenderer:
@@ -7733,7 +8037,7 @@ GameObject:
   - component: {fileID: 2130149594}
   - component: {fileID: 2130149593}
   m_Layer: 0
-  m_Name: NPCE
+  m_Name: Chat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7807,7 +8111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 212069599}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
