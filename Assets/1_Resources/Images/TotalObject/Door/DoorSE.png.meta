@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa8d1922694f10e4798d6dd54285ccc8
+guid: 8758f4a4aa6dc524dbfef5d1ff094c19
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,10 +103,10 @@ TextureImporter:
       name: DoorSE_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 25
-        width: 48
-        height: 131
+        x: 18
+        y: 14
+        width: 39
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
