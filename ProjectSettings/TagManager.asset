@@ -56,5 +56,11 @@ TagManager:
   - name: OverObj
     uniqueID: 2821476827
     locked: 0
+  - name: UI_Button
+    uniqueID: 3615802703
+    locked: 0
+  - name: UI_Window
+    uniqueID: 491203177
+    locked: 0
   m_RenderingLayers:
   - Default
