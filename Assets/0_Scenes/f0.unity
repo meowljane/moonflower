@@ -1692,8 +1692,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 476426987}
-        m_TargetAssemblyTypeName: RespawnSet, Assembly-CSharp
-        m_MethodName: Respawn
+        m_TargetAssemblyTypeName: Respawn, Assembly-CSharp
+        m_MethodName: RespawnBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1702,6 +1702,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1585669479}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 595929253}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &476426987
 MonoBehaviour:
@@ -1712,14 +1736,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 476426981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49fabc21eefb0742a74ef1f052f6bb4, type: 3}
+  m_Script: {fileID: 11500000, guid: e987010d9778aca4e8977152994bab2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 1751439442}
   startPoint: {fileID: 0}
-  boundObject: {fileID: 0}
-  vcamObject: {fileID: 0}
-  bound: {fileID: 0}
 --- !u!1 &488012785
 GameObject:
   m_ObjectHideFlags: 0
@@ -4252,6 +4273,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148681421}
   m_CullTransparentMesh: 1
+--- !u!1 &1176760767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176760768}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1176760768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176760767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874954381}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1232043089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6368,6 +6424,7 @@ GameObject:
   - component: {fileID: 1874954379}
   - component: {fileID: 1874954378}
   - component: {fileID: 1874954382}
+  - component: {fileID: 1874954384}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6454,8 +6511,9 @@ RectTransform:
   - {fileID: 2158515686839015032}
   - {fileID: 822209461}
   - {fileID: 1585669480}
-  - {fileID: 999637196}
   - {fileID: 1618591053}
+  - {fileID: 1176760768}
+  - {fileID: 999637196}
   m_Father: {fileID: 1649322176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6475,7 +6533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff75020e183dc4488428a37badfc3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theWindow: {fileID: 0}
+  theWindow: {fileID: 1874954384}
   thePlayer: {fileID: 1751439442}
   dialogueWindow: {fileID: 1618591052}
   sprite: {fileID: 1001341150}
@@ -6495,9 +6553,32 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e034232b35a8522468d8726f384b5b2c, type: 3}
   - name: Park
     sprite: {fileID: 21300000, guid: 820babc6fb997874bbc749bffff96d06, type: 3}
-  currentList: []
-  currentIndex: 0
+  typingSpeed: 0.07
   isTalking: 0
+--- !u!114 &1874954384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874954377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ad8517ccdb7a4fbd20462c0e3a93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 595929253}
+  DialogueWindow: {fileID: 1618591052}
+  TextWindow: {fileID: 1176760767}
+  windowsSettings:
+  - window: {fileID: 257444204006210562}
+  - window: {fileID: 822209460}
+  - window: {fileID: 1585669479}
+  onWindow:
+  - {fileID: 1371879254}
+  offWindow:
+  - {fileID: 844045949}
+  - {fileID: 1830845962}
 --- !u!1 &1920903610
 GameObject:
   m_ObjectHideFlags: 0

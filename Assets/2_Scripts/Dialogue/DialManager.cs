@@ -33,8 +33,8 @@ public class DialManager : MonoBehaviour
     private int currentIndex = 0;
 
     //텍스트 관련
-    private string fullText;
-    private int currentCharIndex;
+    private string fullText = "";
+    private int currentCharIndex = 0;
     public float typingSpeed = 0.07f;
     private float timer;
 

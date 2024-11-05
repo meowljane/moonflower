@@ -14,12 +14,10 @@ public class TextManager : MonoBehaviour
 
     //스크립트 캐싱
     public DialManager theDM;
-    public QuestManager theQM;
 
     private void Awake()
     {
         theDM = FindFirstObjectByType<DialManager>();
-        theQM = FindFirstObjectByType<QuestManager>();
         CloseText();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -37,7 +35,7 @@ public class TextManager : MonoBehaviour
     //대화창을 여는 함수
     public void ShowText(string textbox)
     {
-        if (textbox != null && !theDM.isTalking && !theQM.isTalking)
+        if (textbox != null && !theDM.isTalking)
         {
             textComponent.text = textbox;
             textWindow.SetActive(true);
