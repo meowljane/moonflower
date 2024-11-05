@@ -30,26 +30,15 @@ public class Replay : MonoBehaviour
     {
         if (DatabaseManager.instance != null)
         {
-            // 모든 아이템 status를 NotHave로 설정
-            foreach (ItemInfo item in DatabaseManager.instance.itemInfos)
+            foreach (ItemInfo itemInfo in DatabaseManager.instance.itemInfos)
             {
-                item.status = ItemStatus.NotHave;
+                for (int i = 0; i < itemInfo.items.Count; i++)
+                {
+                    ItemInfo.ItemData itemData = itemInfo.items[i];
+                    itemData.status = false;
+                    itemInfo.items[i] = itemData;
+                }
             }
-
-            // 모든 퀘스트 status를 NotSeen으로 설정
-            foreach (QuestInfo quest in DatabaseManager.instance.questInfos)
-            {
-                quest.status = QuestStatus.NotSeen;
-            }
-
-            // 모든 인물 isActive를 false로 설정
-            foreach (PersonInfo person in DatabaseManager.instance.personInfos)
-            {
-                person.isActive = false;
-            }
-
-            DatabaseManager.instance.minutes = 0;
-            DatabaseManager.instance.seconds = 0;
         }
 
         //브금초기화
@@ -63,23 +52,5 @@ public class Replay : MonoBehaviour
         SceneManager.LoadScene("P2");
 
         //endingBtn 알파값 0으로 초기화 
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // f0 씬에서만 작동하도록 설정
-        if (scene.name == "P2")
-        {
-            // Player 태그를 가진 오브젝트들을 찾음
-            GameObject[] objectsToHandle = GameObject.FindGameObjectsWithTag("Player");
-
-            // 각 오브젝트를 삭제하거나 비활성화
-            foreach (GameObject obj in objectsToHandle)
-            {
-                //현재 플레이어와 다른 player오브젝트를 찾아서 삭제
-                if(obj != thePlayer)
-                    obj.SetActive(false);
-            }
-        }
     }
 }
