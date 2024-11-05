@@ -29,8 +29,14 @@ public class DialManager : MonoBehaviour
     }
 
     //현재 스프라이트 리스트와 인덱스
-    public List<DialogueData> currentList;
-    public int currentIndex = 0;
+    private List<DialogueData> currentList;
+    private int currentIndex = 0;
+
+    //텍스트 관련
+    private string fullText;
+    private int currentCharIndex;
+    public float typingSpeed = 0.07f;
+    private float timer;
 
     //게임 중 변하는 불값(InteractionDialogue가 바꿔줌)
     public bool isTalking = false;
@@ -44,6 +50,18 @@ public class DialManager : MonoBehaviour
         if (isTalking)
         {
             InputFunc();
+        }
+
+        if (currentCharIndex < fullText.Length)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= typingSpeed)
+            {
+                text.text += fullText[currentCharIndex];
+                currentCharIndex++;
+                timer = 0;
+            }
         }
     }
 
@@ -93,8 +111,18 @@ public class DialManager : MonoBehaviour
     {
         if (currentList != null && currentIndex < currentList.Count - 1)
         {
-            currentIndex++;
-            ShowSprite();
+            if (currentCharIndex < fullText.Length)
+            {
+                text.text = fullText;
+                currentCharIndex = 99999;
+                timer = 0;
+            }
+            else
+            {
+                currentIndex++;
+                ShowSprite();
+
+            }
         }
         else
         {
@@ -108,7 +136,10 @@ public class DialManager : MonoBehaviour
     {
         if (currentList != null && currentIndex < currentList.Count)
         {
-            text.text = currentList[currentIndex].dialogueText;
+            fullText = currentList[currentIndex].dialogueText;
+            currentCharIndex = 0;
+            text.text = "";
+            timer = 0;
 
             string optionName = currentList[currentIndex].option.ToString();
             Sprite matchedSprite = null;

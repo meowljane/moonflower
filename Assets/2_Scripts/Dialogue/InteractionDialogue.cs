@@ -44,6 +44,8 @@ public class InteractionDialogue : MonoBehaviour
     private void Awake()
     {
         theDM = FindFirstObjectByType<DialManager>();
+        webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
+        confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
     }
 
     private void Update()
