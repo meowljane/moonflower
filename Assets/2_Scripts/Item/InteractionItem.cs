@@ -9,7 +9,6 @@ public class InteractionItem : MonoBehaviour
     public WebGLBtn webglBtn;
 
     //db관련된 문자열 변수
-    public string roomName;
     public string itemName;
 
     //게임 중 변하는 불값

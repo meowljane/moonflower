@@ -15,6 +15,17 @@ public class DatabaseManager : MonoBehaviour
 
     private float elapsedTime = 0f;
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -59,6 +70,8 @@ public class ItemInfo
     public struct ItemData
     {
         public string itemName;
+        public Sprite itemImg;
+        public Sprite itemDetailImg;
         public bool status;
     }
 }
