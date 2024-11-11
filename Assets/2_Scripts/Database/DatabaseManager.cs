@@ -4,25 +4,8 @@ using UnityEngine;
 
 public class DatabaseManager : MonoBehaviour
 {
+
     static public DatabaseManager instance;
-
-    // Singleton 패턴 적용
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-    }
-
-    public List<PersonInfo> personInfos = new List<PersonInfo>();
-
-    public List<QuestInfo> questInfos = new List<QuestInfo>();
 
     public List<ItemInfo> itemInfos = new List<ItemInfo>();
 
@@ -49,98 +32,33 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
-    public void UpdateQuestStatus(string questName, QuestStatus newStatus)
+    public void UpdateItemStatus(string itemName, bool newStatus)
     {
-        QuestInfo quest = questInfos.Find(q => q.questName == questName);
-        if (quest != null)
+        foreach (ItemInfo itemInfo in itemInfos)
         {
-            quest.status = newStatus;
-        }
-        else
-        {
-            Debug.LogWarning("Quest with name " + questName + " not found in database.");
+            ItemInfo.ItemData? itemData = itemInfo.items.Find(q => q.itemName == itemName);
+            if (itemData!=null)
+            {
+                int index = itemInfo.items.IndexOf(itemData.Value);
+                ItemInfo.ItemData updatedItemData = itemInfo.items[index];
+                updatedItemData.status = newStatus;
+                itemInfo.items[index] = updatedItemData;
+                return;
+            }
         }
     }
-
-    public void UpdateItemStatus(string itemName, ItemStatus newStatus)
-    {
-        ItemInfo item = itemInfos.Find(q => q.itemName == itemName);
-        if (item != null)
-        {
-            item.status = newStatus;
-        }
-        else
-        {
-            Debug.LogWarning("Quest with name " + itemName + " not found in database.");
-        }
-    }
-
-    public void UpdatePersonStatus(string personName, bool newStatus)
-    {
-        PersonInfo person = personInfos.Find(q => q.name == personName);
-        if (person != null)
-        {
-            person.isActive = newStatus;
-        }
-        else
-        {
-            Debug.LogWarning("Quest with name " + person + " not found in database.");
-        }
-    }
-}
-
-// 인물 정보
-[System.Serializable]
-public class PersonInfo
-{
-    public string name;
-    public bool isActive; 
-
-    public PersonInfo(string _name, bool _isActive)
-    {
-        name = _name;
-        isActive = _isActive;
-    }
-}
-
-// 퀘스트 상태 
-public enum QuestStatus
-{
-    NotSeen,    // 안봤음
-    Seen,       // 봤음
-    HintSeen    // 힌트봤음
-}
-
-// 퀘스트 정보 
-[System.Serializable]
-public class QuestInfo
-{
-    public string questName;
-    public QuestStatus status;
-
-    public QuestInfo(string _questName, QuestStatus _status)
-    {
-        questName = _questName;
-        status = _status;
-    }
-}
-
-public enum ItemStatus
-{
-    NotHave,    // 안얻음
-    Have,       // 얻음
-    Used    // 사용함
 }
 
 [System.Serializable]
 public class ItemInfo
 {
-    public string itemName;
-    public ItemStatus status;
+    public string roomName;
+    public List<ItemData> items = new List<ItemData>();
 
-    public ItemInfo(string _itemName, ItemStatus _status)
+    [System.Serializable]
+    public struct ItemData
     {
-        itemName = _itemName;
-        status = _status;
+        public string itemName;
+        public bool status;
     }
 }

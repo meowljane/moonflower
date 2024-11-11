@@ -1,7 +1,28 @@
 fileFormatVersion: 2
-guid: d78fe208c47035b4a83b71128f0d34bc
+guid: fbe7ae57864281c488e68a65f9f27d30
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 338665639874268281
+    second: ezgif-6-ba8b5fba10_0
+  - first:
+      213: 4690346211222469631
+    second: ezgif-6-ba8b5fba10_1
+  - first:
+      213: -8405050511214709110
+    second: ezgif-6-ba8b5fba10_2
+  - first:
+      213: 6253415188298866407
+    second: ezgif-6-ba8b5fba10_3
+  - first:
+      213: -5862589252134815397
+    second: ezgif-6-ba8b5fba10_4
+  - first:
+      213: -1675307441765201197
+    second: ezgif-6-ba8b5fba10_5
+  - first:
+      213: -3605024602500381891
+    second: ezgif-6-ba8b5fba10_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -71,7 +92,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -81,7 +102,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
+    buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,7 +115,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -119,30 +140,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_0
+      name: nextbtn_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1100
-        width: 500
-        height: 550
+        y: 1000
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c60f5b0f9680884d840468bb9a82bea
-      internalID: 2058538622
+      spriteID: d30dd8bc792c017458da97410e69bf4c
+      internalID: 331517431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_1
+      name: nextbtn_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1100
-        width: 500
-        height: 550
+        x: 560
+        y: 1000
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96d1211c6379d24aa932144699192b0
-      internalID: 869177875
+      spriteID: 4f4f3c78d7d45e744a449ac92f44f4e0
+      internalID: 1692917663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_2
+      name: nextbtn_2
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1100
-        width: 500
-        height: 550
+        x: 1120
+        y: 1000
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c3fbb4955fb9be43a1d5c908c5d9df1
-      internalID: 889590596
+      spriteID: c7b899d42e867084b940c32954e8b13e
+      internalID: -932504276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_3
+      name: nextbtn_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 550
-        width: 500
-        height: 550
+        y: 500
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f0e8b859d37da4ba66635877b38277
-      internalID: -763354440
+      spriteID: 0478eadf80b103a47ad7dcd5d2f8758a
+      internalID: 295989102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_4
+      name: nextbtn_4
       rect:
         serializedVersion: 2
-        x: 500
-        y: 550
-        width: 500
-        height: 550
+        x: 560
+        y: 500
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b184b522d1e263f428196890a09bb48a
-      internalID: -212105358
+      spriteID: 5707ebe64e776ba44b95265a0944ae53
+      internalID: -488791183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_5
+      name: nextbtn_5
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 550
-        width: 500
-        height: 550
+        x: 1120
+        y: 500
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08d66d7fd67b73a4b8fa28b5d453c2fb
-      internalID: 1677672023
+      spriteID: a140a6f4de21ac542bea1d6ea4c05a81
+      internalID: 202880071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skip_bt-ezgif.com-gif-to-sprite-converter_6
+      name: nextbtn_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 550
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,8 +291,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fdd151f08bd6f445afd953cef1f7bac
-      internalID: 1269285511
+      spriteID: 0696f72380e6da04caa72ab6a45a25f4
+      internalID: 2143213150
       vertices: []
       indices: 
       edges: []
@@ -293,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 0c373f26db3cd064eb06ba86d7798cc0
     internalID: 0
     vertices: []
     indices: 
@@ -303,13 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      skip_bt-ezgif.com-gif-to-sprite-converter_0: 2058538622
-      skip_bt-ezgif.com-gif-to-sprite-converter_1: 869177875
-      skip_bt-ezgif.com-gif-to-sprite-converter_2: 889590596
-      skip_bt-ezgif.com-gif-to-sprite-converter_3: -763354440
-      skip_bt-ezgif.com-gif-to-sprite-converter_4: -212105358
-      skip_bt-ezgif.com-gif-to-sprite-converter_5: 1677672023
-      skip_bt-ezgif.com-gif-to-sprite-converter_6: 1269285511
+      nextbtn_0: 331517431
+      nextbtn_1: 1692917663
+      nextbtn_2: -932504276
+      nextbtn_3: 295989102
+      nextbtn_4: -488791183
+      nextbtn_5: 202880071
+      nextbtn_6: 2143213150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

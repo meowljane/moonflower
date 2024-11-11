@@ -57,7 +57,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: skip_bt-ezgif_com-gif-to-sprite-converter_0
+  m_Name: nextbtn
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

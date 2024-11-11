@@ -1,25 +1,12 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemStateManager : MonoBehaviour
-{
-    public string itemName;
-    public Sprite inactiveSprite;
-    public Sprite activeSprite; 
-
-    public GameObject usedObj;   
-
-    private Image buttonImage; 
-
-    private void Start()
-    {
-        buttonImage = GetComponent<Image>();
-        UpdateButtonState();
-    }
+{  
 
     private void OnEnable()
     {
-        buttonImage = GetComponent<Image>();
         UpdateButtonState();
     }
 
@@ -27,33 +14,16 @@ public class ItemStateManager : MonoBehaviour
     {
         DatabaseManager databaseManager = DatabaseManager.instance;
 
-        ItemInfo itemInfo = databaseManager.itemInfos.Find(q => q.itemName == itemName);
-
-        if (itemInfo != null)
+        foreach (ItemInfo itemInfo in databaseManager.itemInfos)
         {
-            switch (itemInfo.status)
+            if (itemInfo != null)
             {
-                case ItemStatus.NotHave:
-                    buttonImage.sprite = inactiveSprite;
-                    GetComponent<Button>().interactable = false;
-                    usedObj.SetActive(false);
-                    break;
-                case ItemStatus.Have:
-                    buttonImage.sprite = activeSprite;
-                    GetComponent<Button>().interactable = true;
-                    usedObj.SetActive(false);
-                    break;
-                case ItemStatus.Used:
-                    buttonImage.sprite = activeSprite;
-                    GetComponent<Button>().interactable = false;
-                    usedObj.SetActive(true);
-                    break;
+                // Count items with status == true
+                int trueStatusCount = itemInfo.items.Count(item => item.status);
+
+                // Log the room name and the count of items with status == true
+                Debug.Log($"Room: {itemInfo.roomName} has {trueStatusCount} item(s) with status set to true.");
             }
-        }
-        else
-        {
-            buttonImage.sprite = inactiveSprite;
-            GetComponent<Button>().interactable = false;
         }
     }
 }
