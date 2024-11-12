@@ -48,16 +48,20 @@ public class DatabaseManager : MonoBehaviour
         foreach (ItemInfo itemInfo in itemInfos)
         {
             ItemInfo.ItemData? itemData = itemInfo.items.Find(q => q.itemName == itemName);
-            if (itemData!=null)
+            if (itemData.HasValue)
             {
                 int index = itemInfo.items.IndexOf(itemData.Value);
-                ItemInfo.ItemData updatedItemData = itemInfo.items[index];
-                updatedItemData.status = newStatus;
-                itemInfo.items[index] = updatedItemData;
-                return;
+                if (index != -1) // 유효한 인덱스인지 확인
+                {
+                    ItemInfo.ItemData updatedItemData = itemInfo.items[index];
+                    updatedItemData.status = newStatus;
+                    itemInfo.items[index] = updatedItemData;
+                    return;
+                }
             }
         }
     }
+
 }
 
 [System.Serializable]

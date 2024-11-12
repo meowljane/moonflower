@@ -19,6 +19,7 @@ public class ItemStateManager : MonoBehaviour
 
     private void OnDisable()
     {
+        Debug.Log("ÆÄÆÄ±«");
         foreach (Transform child in itemContent.transform)
         {
             Destroy(child.gameObject);
