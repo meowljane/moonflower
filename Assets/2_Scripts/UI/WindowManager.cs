@@ -1,4 +1,7 @@
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,14 +20,18 @@ public class WindowManager : MonoBehaviour
     }
     public WindowSettings[] windowsSettings;
 
-
     public GameObject[] onWindow;
     public GameObject[] offWindow;
 
+    public GameObject[] testObj;
+    public List<bool> testList;
     //public bool isUp = false;
     void Awake()
     {
         thePlayer = FindFirstObjectByType<PlayerManager>();
+        //불값 list를 만들어주고
+        //확인해야하는 오브젝트 리스트의 길이 만큼 반복문 돌리고
+        //그 값을 list에 앞에서부터 차곡차곡 넣어주면 끝
     }
     private void Update()
     {
@@ -82,7 +89,6 @@ public class WindowManager : MonoBehaviour
         {
             if (settings.window != null)
             {
-                thePlayer.canMove = true;
                 settings.window.SetActive(false);
             }
         }
@@ -91,6 +97,7 @@ public class WindowManager : MonoBehaviour
     public void OpenWindow(GameObject windowToOpen)
     {
         DeactivateAllWindows();
+        TextWindow.SetActive(false);
         button.SetActive(false);
         windowToOpen.SetActive(true);
     }
@@ -98,8 +105,6 @@ public class WindowManager : MonoBehaviour
     public void CloseWindow()
     {
         button.SetActive(true);
-        DialogueWindow.SetActive(false);
-        TextWindow.SetActive(false);
     }
 
     public void WindowInit()

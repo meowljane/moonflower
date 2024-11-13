@@ -31,7 +31,7 @@ public class InteractionDialogue : MonoBehaviour
         Park,
         Lee,
         Choi,
-        Detective
+        Detective,
     }
 
     //게임 중 변하는 불값
@@ -52,7 +52,7 @@ public class InteractionDialogue : MonoBehaviour
     {
         if (isColliding && !theDM.isTalking)
         {
-            //confirmOn.SetActive(true);
+            confirmOn.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
             {
                 SendDialogue();
