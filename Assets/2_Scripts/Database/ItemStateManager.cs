@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ItemStateManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class ItemStateManager : MonoBehaviour
     public GameObject itemContent;
     public GameObject itemPrefab;
     public Image itemDetail;
+    public List<Sprite> itemList;
+    public GameObject btnLeft;
+    public GameObject btnRight;
+
+    public int currentItemIndex = 0;
 
 
     private void OnEnable()
@@ -25,6 +31,8 @@ public class ItemStateManager : MonoBehaviour
             Destroy(child.gameObject);
             SetImageAlpha(0f);
             itemDetail.sprite = null;
+            btnLeft.SetActive(false);
+            btnRight.SetActive(false);
         }
     }
 
@@ -84,6 +92,8 @@ public class ItemStateManager : MonoBehaviour
             Destroy(child.gameObject);
             SetImageAlpha(0f);
             itemDetail.sprite = null;
+            btnLeft.SetActive(false);
+            btnRight.SetActive(false);
         }
 
         Vector2 initialPosition = new Vector2(-230, 0);
@@ -115,10 +125,49 @@ public class ItemStateManager : MonoBehaviour
         }
     }
 
-    public void ShowItemInfo(Sprite itemDetailImg)
+    public void ShowItemInfo(List<Sprite> itemDetailImg)
     {
-        itemDetail.sprite = itemDetailImg;
+        currentItemIndex = 0;
+        itemList = itemDetailImg;
+        itemDetail.sprite = itemDetailImg[0];
+        if(itemDetailImg.Count > 1)
+        {
+            btnLeft.SetActive(true);
+            btnRight.SetActive(true);
+        }
+        else
+        {
+            btnLeft.SetActive(false);
+            btnRight.SetActive(false);
+        }
         SetImageAlpha(255.0f);
+    }
+    public void NextImgaeDetail()
+    {
+        if (itemList != null && currentItemIndex < itemList.Count - 1)
+        {
+            currentItemIndex++;
+            itemDetail.sprite = itemList[currentItemIndex];
+        }
+        else
+        {
+            currentItemIndex = 0;
+            itemDetail.sprite = itemList[currentItemIndex];
+        }
+    }
+
+    public void BackImgaeDetail()
+    {
+        if (itemList != null && currentItemIndex > 0)
+        {
+            currentItemIndex--;
+            itemDetail.sprite = itemList[currentItemIndex];
+        }
+        else
+        {
+            currentItemIndex = itemList.Count - 1;
+            itemDetail.sprite = itemList[currentItemIndex];
+        }
     }
 
     public void SetImageAlpha(float alpha)

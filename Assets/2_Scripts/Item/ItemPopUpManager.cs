@@ -91,7 +91,7 @@ public class ItemPopUpManager : MonoBehaviour
         }
         else
         {
-            currentIndex = listSprites.Count;
+            currentIndex = listSprites.Count - 1; ;
             ShowSprite();
         }
     }

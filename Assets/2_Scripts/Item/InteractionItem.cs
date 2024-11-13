@@ -76,7 +76,7 @@ public class InteractionItem : MonoBehaviour
             var itemData = itemInfo.items.Find(q => q.itemName == itemName);
             if (itemData.itemName == itemName)
             {
-                sprites.Add(itemData.itemDetailImg);
+                sprites = itemData.itemDetailImg;
                 break;
             }
         }

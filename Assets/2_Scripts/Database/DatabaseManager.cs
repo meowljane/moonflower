@@ -75,7 +75,7 @@ public class ItemInfo
     {
         public string itemName;
         public Sprite itemImg;
-        public Sprite itemDetailImg;
+        public List<Sprite> itemDetailImg;
         public bool status;
     }
 }
