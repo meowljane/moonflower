@@ -15,6 +15,17 @@ public class DatabaseManager : MonoBehaviour
 
     private float elapsedTime = 0f;
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -37,16 +48,20 @@ public class DatabaseManager : MonoBehaviour
         foreach (ItemInfo itemInfo in itemInfos)
         {
             ItemInfo.ItemData? itemData = itemInfo.items.Find(q => q.itemName == itemName);
-            if (itemData!=null)
+            if (itemData.HasValue)
             {
                 int index = itemInfo.items.IndexOf(itemData.Value);
-                ItemInfo.ItemData updatedItemData = itemInfo.items[index];
-                updatedItemData.status = newStatus;
-                itemInfo.items[index] = updatedItemData;
-                return;
+                if (index != -1) // 유효한 인덱스인지 확인
+                {
+                    ItemInfo.ItemData updatedItemData = itemInfo.items[index];
+                    updatedItemData.status = newStatus;
+                    itemInfo.items[index] = updatedItemData;
+                    return;
+                }
             }
         }
     }
+
 }
 
 [System.Serializable]
@@ -59,6 +74,8 @@ public class ItemInfo
     public struct ItemData
     {
         public string itemName;
+        public Sprite itemImg;
+        public List<Sprite> itemDetailImg;
         public bool status;
     }
 }

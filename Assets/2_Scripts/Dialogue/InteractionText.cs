@@ -60,13 +60,11 @@ public class InteractionText : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isColliding = true;
-        //webglBtn.isAble = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isColliding = false;
-        //webglBtn.isAble = false;
         confirmOn.SetActive(false);
     }
 

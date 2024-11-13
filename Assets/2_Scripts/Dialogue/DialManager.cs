@@ -95,6 +95,7 @@ public class DialManager : MonoBehaviour
             isTalking = false;
 
             dialogueWindow.gameObject.SetActive(false);
+            btnNext.SetActive(false);
 
             onDialogueEndedObject?.Invoke();
             onDialogueEndedData?.Invoke();
