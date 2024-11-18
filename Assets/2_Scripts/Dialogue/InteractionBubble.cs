@@ -36,22 +36,6 @@ public class InteractionBubble : MonoBehaviour
     {
         if (isColliding && !isActive) //EventCollider에 닿아서 true가 돼었을때
         {
-            if (isTouch) //Inspector창에서 true값으로 고정 / 스크립트에서 따로 조절하는 부분이 없음.
-            {
-                theTM.ShowText(sentences);
-                isActive = true;
-                Invoke("CloseTMText", closeCount);
-            }
-            else
-            {
-                confirmOn.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
-                {
-                    theTM.ShowText(sentences);
-                    isActive = true;
-                    Invoke("CloseTMText", closeCount);
-                }
-            }
 
         }
     }
