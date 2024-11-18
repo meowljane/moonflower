@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      quiz_correct_bg_0: 573164494415358293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
