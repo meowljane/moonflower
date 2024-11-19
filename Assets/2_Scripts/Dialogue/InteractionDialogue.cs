@@ -58,7 +58,6 @@ public class InteractionDialogue : MonoBehaviour
                 SendDialogue();
                 webglBtn.isClick = false;
             }
-
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
