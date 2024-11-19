@@ -24,9 +24,9 @@ public class TimerInfo
         [Tooltip("플레이 시간이 무제한 ?")]
         public bool infinityTime;  // 플레이 시간이 무제한인지
 
-        [Tooltip("시작 전 준비 시간 [ 1 ~ 30 ] (초)")]
-        [Range(0, 30)]
-        public int prepareTime;   // 시작 전 준비 시간 (초)
+        //[Tooltip("시작 전 준비 시간 [ 1 ~ 30 ] (초)")]
+        //[Range(0, 30)]
+        //public int prepareTime;   // 시작 전 준비 시간 (초)
 
         [Tooltip("씬 전환 대기 시간 [ 1 ~ 10 ] (초)")]
         [Range(0, 10)]

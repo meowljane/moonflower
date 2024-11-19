@@ -265,31 +265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerInfos:
-  - sceneName: TimerTest
-    timerData:
-      infinityTime: 1
-      prepareTime: 0
-      waitTime: 7
-      playTime: 0
-    textData:
-      prepareText:
-      - "\uC774\uC2B9\uD604 \uB611\uB611\uD574 / 3"
-      - "\uC774\uC2B9\uD604 \uB108\uBB34 \uB611 / 4"
-      endText: []
-  - sceneName: TimerTest_1
-    timerData:
-      infinityTime: 0
-      prepareTime: 0
-      waitTime: 0
-      playTime: 10
-    textData:
-      prepareText:
-      - 
-      endText: []
   - sceneName: 
     timerData:
       infinityTime: 0
-      prepareTime: 0
       waitTime: 0
       playTime: 0
     textData:
@@ -298,43 +276,6 @@ MonoBehaviour:
   - sceneName: 
     timerData:
       infinityTime: 0
-      prepareTime: 0
-      waitTime: 0
-      playTime: 0
-    textData:
-      prepareText: []
-      endText: []
-  - sceneName: 
-    timerData:
-      infinityTime: 0
-      prepareTime: 0
-      waitTime: 0
-      playTime: 0
-    textData:
-      prepareText: []
-      endText: []
-  - sceneName: 
-    timerData:
-      infinityTime: 0
-      prepareTime: 0
-      waitTime: 0
-      playTime: 0
-    textData:
-      prepareText: []
-      endText: []
-  - sceneName: 
-    timerData:
-      infinityTime: 0
-      prepareTime: 0
-      waitTime: 0
-      playTime: 0
-    textData:
-      prepareText: []
-      endText: []
-  - sceneName: 
-    timerData:
-      infinityTime: 0
-      prepareTime: 0
       waitTime: 0
       playTime: 0
     textData:
