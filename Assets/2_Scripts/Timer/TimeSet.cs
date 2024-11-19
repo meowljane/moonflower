@@ -28,9 +28,9 @@ public class TimerInfo
         //[Range(0, 30)]
         //public int prepareTime;   // 시작 전 준비 시간 (초)
 
-        [Tooltip("씬 전환 대기 시간 [ 1 ~ 10 ] (초)")]
-        [Range(0, 10)]
-        public int waitTime;  // 씬 전환 대기 시간 (초)
+        //[Tooltip("씬 전환 대기 시간 [ 1 ~ 10 ] (초)")]
+        //[Range(0, 10)]
+        //public int waitTime;  // 씬 전환 대기 시간 (초)
 
         [Tooltip("본 게임 시간 [ 1 ~ 15 ] (분)")]
         [Range(0, 15)]
