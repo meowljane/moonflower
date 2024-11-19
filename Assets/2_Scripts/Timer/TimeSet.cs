@@ -43,7 +43,7 @@ public class TimerInfo
         [Tooltip("시작 시 사용될 텍스트 내용 / 대기 시간")]
         public List<string> prepareText; // 시작 전 텍스트 내용
 
-        [Tooltip("완료 시 사용될 텍스트 내용")]
+        [Tooltip("완료 시 사용될 텍스트 내용 / 대기 시간")]
         public List<string> endText; // 끝나기 전 텍스트 내용
     }
 }
