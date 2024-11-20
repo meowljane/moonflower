@@ -10,7 +10,6 @@ public class WindowManager : MonoBehaviour
 {
     private PlayerManager thePlayer;
     public GameObject button;
-    public GameObject DialogueWindow;
     public GameObject TextWindow;
 
     [System.Serializable]
@@ -96,10 +95,11 @@ public class WindowManager : MonoBehaviour
 
     public void OpenWindow(GameObject windowToOpen)
     {
+        Debug.Log(windowToOpen+"ÄÑÁü");
         DeactivateAllWindows();
         TextWindow.SetActive(false);
-        button.SetActive(false);
         windowToOpen.SetActive(true);
+        button.SetActive(false);
     }
 
     public void CloseWindow()

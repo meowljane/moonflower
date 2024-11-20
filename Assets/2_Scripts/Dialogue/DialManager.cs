@@ -71,7 +71,6 @@ public class DialManager : MonoBehaviour
         if (dialogueData != null && dialogueData.Count > 0 && !isTalking)
         {
             //팝업 시 플레이어 이동 제한 조건
-            thePlayer.canMove = false;
             isTalking = true;
 
             dialogueWindow.gameObject.SetActive(true);
@@ -91,19 +90,18 @@ public class DialManager : MonoBehaviour
         if (sprite != null)
         {
             //플레이어 이동 제한 해제
-            thePlayer.canMove = true;
             isTalking = false;
 
             dialogueWindow.gameObject.SetActive(false);
             btnNext.SetActive(false);
 
-            onDialogueEndedObject?.Invoke();
-            onDialogueEndedData?.Invoke();
 
             currentIndex = 0;
             text.text = "";
             //theWindow 스크립트에서 화면 초기화
             theWindow.CloseWindow();
+            onDialogueEndedObject?.Invoke();
+            onDialogueEndedData?.Invoke();
         }
     }
 
