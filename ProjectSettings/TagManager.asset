@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - AnswerPannel
+  - QuizPannel
+  - ButtonO
+  - ButtonX
   layers:
   - Default
   - TransparentFX
