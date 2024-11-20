@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    // 스크립트 캐싱
     [Header("Caching Script")]
     [Tooltip("TimeSet 코드가 들어간 오브젝트")]
     public TimeSet timeSet;
 
-    // 오브젝트 캐싱
     [Header("Caching Text")]
     [Tooltip("타이머를 담당할 텍스트")]
     public Text timerText;
@@ -18,14 +16,20 @@ public class Timer : MonoBehaviour
     [Tooltip("센터라벨을 담당할 텍스트")]
     public Text centerLabel;
 
+    [Tooltip("총 플레이 타임을 표시할 텍스트")]
+    public Text playTimeText;
+
     private TimerInfo TimerInfo;
-    private bool isInfinityTimeActive = false; // InfinityTime 상태 관리 플래그
-    private bool isEscPressed = false;        // Esc 키가 눌렸는지 확인
+    private bool isInfinityTimeActive = false;
+    private bool isEscPressed = false;
+
+    private float totalPlayTime = 0f; // 총 플레이 타임 (초 단위)
 
     void Awake()
     {
         // 씬 로드 이벤트 등록
         SceneManager.sceneLoaded += OnSceneLoaded;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void OnDestroy()
@@ -58,6 +62,14 @@ public class Timer : MonoBehaviour
         if (isInfinityTimeActive && Input.GetKeyDown(KeyCode.Escape))
         {
             isEscPressed = true;
+        }
+
+        // 총 플레이 타임 업데이트
+        if (playTimeText != null)
+        {
+            int minutes = Mathf.FloorToInt(totalPlayTime / 60);
+            int seconds = Mathf.FloorToInt(totalPlayTime % 60);
+            playTimeText.text = $"총 플레이 타임: {minutes:00}:{seconds:00}";
         }
     }
 
@@ -98,16 +110,42 @@ public class Timer : MonoBehaviour
             timerText.text = "99:99";
         }
 
-        // Esc 키가 눌릴 때까지 대기
         while (!isEscPressed)
         {
-            yield return null; // 매 프레임 대기
+            // 매 초마다 총 플레이 타임 증가
+            totalPlayTime += Time.deltaTime;
+            yield return null;
         }
 
-        // Esc 키가 눌리면 InfinityTime 종료
         isInfinityTimeActive = false;
         isEscPressed = false;
         Debug.Log("InfinityTime 종료: Esc 키가 눌렸습니다.");
+    }
+
+    private IEnumerator RunGameCountdown(int totalSeconds)
+    {
+        int remainingTime = totalSeconds;
+
+        while (remainingTime > 0)
+        {
+            if (timerText != null)
+            {
+                int minutes = remainingTime / 60;
+                int seconds = remainingTime % 60;
+                timerText.text = $"{minutes:00}:{seconds:00}";
+            }
+
+            // 매 초마다 총 플레이 타임 증가
+            totalPlayTime += 1f;
+
+            yield return new WaitForSeconds(1f);
+            remainingTime--;
+        }
+
+        if (timerText != null)
+        {
+            timerText.text = "00:00";
+        }
     }
 
     private IEnumerator RunTextCountdown(float totalTime, System.Collections.Generic.List<string> textList)
@@ -118,9 +156,13 @@ public class Timer : MonoBehaviour
         {
             string[] parts = entry.Split('/');
             string message = parts[0].Trim();
+
+            // \n 제거 및 텍스트 처리
+            message = message.Replace("\\n", "\n"); // \n을 Unity에서 인식할 수 있는 줄바꿈으로 변환
+
             float displayTime = parts.Length > 1 && float.TryParse(parts[1], out float time) ? time : 2f;
 
-            centerLabel.text = message;
+            centerLabel.text = message; // 줄바꿈이 적용된 텍스트 설정
 
             while (displayTime > 0)
             {
@@ -146,43 +188,6 @@ public class Timer : MonoBehaviour
         }
     }
 
-    private IEnumerator RunGameCountdown(int totalSeconds)
-    {
-        int remainingTime = totalSeconds;
-        bool oneMinuteMessageShown = false;
-
-        while (remainingTime > 0)
-        {
-            if (timerText != null)
-            {
-                int minutes = remainingTime / 60;
-                int seconds = remainingTime % 60;
-                timerText.text = $"{minutes:00}:{seconds:00}";
-            }
-
-            // 1분 남았을 때 메시지 출력
-            if (remainingTime == 60 && !oneMinuteMessageShown)
-            {
-                oneMinuteMessageShown = true;
-                StartCoroutine(ShowOneMinuteLeftMessage());
-            }
-
-            yield return new WaitForSeconds(1f);
-            remainingTime--;
-        }
-
-        if (timerText != null)
-        {
-            timerText.text = "00:00";
-        }
-    }
-
-    private IEnumerator ShowOneMinuteLeftMessage()
-    {
-        centerLabel.text = "1분 남았습니다.";
-        yield return new WaitForSeconds(2f);
-        centerLabel.text = ""; // 메시지 초기화
-    }
 
     private float CalculateTotalTime(System.Collections.Generic.List<string> textList)
     {
