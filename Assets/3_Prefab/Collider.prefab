@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3924382834548757036}
   - component: {fileID: 5707832080602767183}
+  - component: {fileID: 320049526537101838}
   m_Layer: 0
   m_Name: Cam_Bound
   m_TagString: Untagged
@@ -83,6 +84,20 @@ PolygonCollider2D:
       - {x: 208, y: -128}
       - {x: 208, y: 128}
   m_UseDelaunayMesh: 0
+--- !u!114 &320049526537101838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167549054566143325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de2b71ead06e69489b8fb692ee953a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bound2D: {fileID: 0}
+  isAwake: 0
 --- !u!1 &6365082773774780247
 GameObject:
   m_ObjectHideFlags: 0

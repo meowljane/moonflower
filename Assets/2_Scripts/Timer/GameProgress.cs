@@ -24,8 +24,7 @@ public class GameProgress : MonoBehaviour
     public AudioSource audioSource;
 
     private GameInfos gameInfos;
-    private bool isInfinityTimeActive = false;
-    private bool isEscPressed = false;
+    private bool isSkipPlay = false;
 
     private float totalPlayTime = 0f; // 총 플레이 타임 (초 단위)
 
@@ -34,6 +33,11 @@ public class GameProgress : MonoBehaviour
         // 씬 로드 이벤트 등록
         SceneManager.sceneLoaded += OnSceneLoaded;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void SkipPlayCoroutine()
+    {
+        isSkipPlay = true;
     }
 
     private void OnDestroy()
@@ -72,14 +76,8 @@ public class GameProgress : MonoBehaviour
         StartCoroutine(StartTimer());
     }
 
-    void Update()
+    private void SetPlayTime()
     {
-        // Esc 키 입력 감지
-        if (isInfinityTimeActive && Input.GetKeyDown(KeyCode.Escape))
-        {
-            isEscPressed = true;
-        }
-
         // 총 플레이 타임 업데이트
         if (playTimeText != null)
         {
@@ -103,7 +101,6 @@ public class GameProgress : MonoBehaviour
         PlaySound(gameInfos.soundData.BGM);
         if (timerData.infinityTime)
         {
-            isInfinityTimeActive = true; // InfinityTime 활성화
             yield return StartCoroutine(RunInfinityTimer()); // InfinityTimer 실행
         }
         else
@@ -111,6 +108,8 @@ public class GameProgress : MonoBehaviour
             int playTimeInSeconds = timerData.playTime * 60; // 분 -> 초 변환
             yield return StartCoroutine(RunGameCountdown(playTimeInSeconds));
         }
+
+        isSkipPlay = false;
 
         // 3. 종료 텍스트 실행
         float endTotalTime = CalculateTotalTime(textData.endText);
@@ -129,15 +128,17 @@ public class GameProgress : MonoBehaviour
             timerText.text = "99:99";
         }
 
-        while (!isEscPressed)
+        while (!isSkipPlay)
         {
             // 매 초마다 총 플레이 타임 증가
             totalPlayTime += Time.deltaTime;
+
+            // 총 플레이 타임 업데이트
+            SetPlayTime();
+
             yield return null;
         }
 
-        isInfinityTimeActive = false;
-        isEscPressed = false;
         Debug.Log("InfinityTime 종료: Esc 키가 눌렸습니다.");
     }
 
@@ -145,7 +146,7 @@ public class GameProgress : MonoBehaviour
     {
         int remainingTime = totalSeconds;
 
-        while (remainingTime > 0)
+        while (!isSkipPlay || remainingTime > 0)
         {
             if (timerText != null)
             {
@@ -156,6 +157,9 @@ public class GameProgress : MonoBehaviour
 
             // 매 초마다 총 플레이 타임 증가
             totalPlayTime += 1f;
+
+            // 총 플레이 타임 업데이트
+            SetPlayTime();
 
             yield return new WaitForSeconds(1f);
             remainingTime--;
@@ -230,6 +234,7 @@ public class GameProgress : MonoBehaviour
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
+
         }
         else
         {
