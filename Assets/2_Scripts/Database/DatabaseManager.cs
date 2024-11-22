@@ -15,17 +15,6 @@ public class DatabaseManager : MonoBehaviour
 
     private float elapsedTime = 0f;
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     void Update()
     {
         elapsedTime += Time.deltaTime;

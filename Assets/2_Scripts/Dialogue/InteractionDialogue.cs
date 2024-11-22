@@ -32,10 +32,13 @@ public class InteractionDialogue : MonoBehaviour
         Lee,
         Choi,
         Detective,
+        Boss,
+        Ending
     }
 
     //게임 중 변하는 불값
     public bool isColliding = false;
+    public bool isAwake = false;
 
     //이벤트
     public Action onDialogueStartedObject;
@@ -46,11 +49,16 @@ public class InteractionDialogue : MonoBehaviour
         theDM = FindFirstObjectByType<DialManager>();
         webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
         confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
+        if (isAwake)
+        {
+            SendDialogue();
+            webglBtn.isClick = false;
+        }
     }
 
     private void Update()
     {
-        if (isColliding && !theDM.isTalking)
+        if (isColliding && !theDM.isTalking && !isAwake)
         {
             confirmOn.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
@@ -58,7 +66,6 @@ public class InteractionDialogue : MonoBehaviour
                 SendDialogue();
                 webglBtn.isClick = false;
             }
-
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

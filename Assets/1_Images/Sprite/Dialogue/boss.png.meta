@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8a4e9a27705d3164db49baec5a742719
+guid: f56625f77e2330f46bb127eb48fa9679
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6400399375786359808
-    second: quiz_o_2_0
+      213: -2424553518018739129
+    second: boss_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,7 +111,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: 48
     textureCompression: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quiz_o_2_0
+      name: boss_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 45
-        height: 36
+        width: 560
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0044f91bda63d27a0800000000000000
-      internalID: -6400399375786359808
+      spriteID: 744c193db614a5ed0800000000000000
+      internalID: -2424553518018739129
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quiz_o_2_0: -6400399375786359808
+      boss_0: -2424553518018739129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
