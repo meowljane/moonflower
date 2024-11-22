@@ -292,7 +292,7 @@ MonoBehaviour:
         \uD604\uC7A5 \uAC80\uC99D\uC73C\uB85C \uBC14\uB85C \uC774\uB3D9\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4./7"
       endText:
       - "\uC6A9\uC758\uC790 \uC870\uC0AC\uAC00 \uC885\uB8CC \uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC7A0\uC2DC
-        \uD6C4 \uCD94\uB9AC \uC810\uAC80\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4."
+        \uD6C4 \uCD94\uB9AC \uC810\uAC80\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4./8"
     soundData:
       BGM: {fileID: 8300000, guid: 149c2cd97f885084baeabca635abad4d, type: 3}
       startSound: {fileID: 8300000, guid: 1d7e8aae17c752e46a9ae2b564191f48, type: 3}

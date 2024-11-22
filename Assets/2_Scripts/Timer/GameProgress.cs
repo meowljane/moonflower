@@ -146,7 +146,7 @@ public class GameProgress : MonoBehaviour
     {
         int remainingTime = totalSeconds;
 
-        while (!isSkipPlay || remainingTime > 0)
+        while (remainingTime > 0 && !isSkipPlay)
         {
             if (timerText != null)
             {
