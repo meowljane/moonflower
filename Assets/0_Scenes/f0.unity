@@ -280,7 +280,7 @@ MonoBehaviour:
   - sceneName: F2
     timerData:
       infinityTime: 0
-      playTime: 2
+      playTime: 1
     textData:
       prepareText:
       - "\uC6A9\uC758\uC790 \uC870\uC0AC 10\uBD84/3"
@@ -300,7 +300,7 @@ MonoBehaviour:
   - sceneName: F3
     timerData:
       infinityTime: 0
-      playTime: 7
+      playTime: 1
     textData:
       prepareText:
       - "1\uCC28 \uD604\uC7A5\uAC80\uC99D 7\uBD84/4"
@@ -357,7 +357,7 @@ MonoBehaviour:
   - sceneName: F6
     timerData:
       infinityTime: 0
-      playTime: 15
+      playTime: 1
     textData:
       prepareText:
       - "2\uCC28 \uD604\uC7A5 \uAC80\uC99D 15\uBD84/4"
@@ -373,8 +373,8 @@ MonoBehaviour:
         \uD6C4 \uB2E4\uC74C \uC7A5\uC18C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4./8"
     soundData:
       BGM: {fileID: 8300000, guid: 149c2cd97f885084baeabca635abad4d, type: 3}
-      startSound: {fileID: 8300000, guid: 9045c7573fbc69743b0b73ef8cc1eaf5, type: 3}
-      endSound: {fileID: 8300000, guid: 5abf5ea1d8da4974ab5388fe2044fc23, type: 3}
+      startSound: {fileID: 8300000, guid: 5abf5ea1d8da4974ab5388fe2044fc23, type: 3}
+      endSound: {fileID: 8300000, guid: 9045c7573fbc69743b0b73ef8cc1eaf5, type: 3}
   - sceneName: F7
     timerData:
       infinityTime: 0
