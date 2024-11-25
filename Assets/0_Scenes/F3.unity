@@ -1653,6 +1653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a9c4ca1f783404c8f1df2ae133870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHard: 0
+  seconds: 0
+  isCorrectVote: 0
+  isCheckedHint: 0
+  quizCorrect: 00000000000000000000
   itemInfos:
   - roomName: "\uC9C0\uD765\uC655\uC758 \uBC29"
     items:
@@ -1960,8 +1965,6 @@ MonoBehaviour:
       itemDetailImg:
       - {fileID: 21300000, guid: fdba81fa18049134fa4419be7db2876c, type: 3}
       status: 0
-  minutes: 0
-  seconds: 0
 --- !u!1 &178772877
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6369,8 @@ GameObject:
   m_Component:
   - component: {fileID: 586808932}
   - component: {fileID: 586808931}
+  - component: {fileID: 586808933}
+  - component: {fileID: 586808934}
   m_Layer: 0
   m_Name: Chat1
   m_TagString: Untagged
@@ -6437,12 +6442,77 @@ Transform:
   m_GameObject: {fileID: 586808930}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -397.56693, y: -528.22754, z: 0}
+  m_LocalPosition: {x: -382, y: -546, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586808933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586808930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70d6f6dbfe7f684ba3c4f454c3007c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefab: {fileID: 9220741725682894876, guid: e7aeb3b0c2ecb454c94fdb75670cd2ab, type: 3}
+  offsetY: 30
+  fixedWidth: 100
+  minHeight: 20
+  lineHeight: 20
+  message: "\uC655\uAD81 \uB0B4\uC758 \uC2DD\uC0AC \uC900\uBE44, \uC124\uAC70\uC9C0,
+    \uCCAD\uC18C\uB294 \uC804\uBD80 \uC800\uD76C \uAD81\uB140\uB4E4\uC758 \uC77C\uC774\uB78D\uB2C8\uB2E4."
+--- !u!61 &586808934
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586808930}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 29, y: 47}
+    newSize: {x: 29, y: 47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 29, y: 47}
+  m_EdgeRadius: 0
 --- !u!1 &597548863
 GameObject:
   m_ObjectHideFlags: 0
@@ -13934,6 +14004,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a9c4ca1f783404c8f1df2ae133870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHard: 0
+  seconds: 0
+  isCorrectVote: 0
+  isCheckedHint: 0
+  quizCorrect: 00000000000000000000
   itemInfos:
   - roomName: "\uC9C0\uD765\uC655\uC758 \uBC29"
     items:
@@ -13997,8 +14072,6 @@ MonoBehaviour:
       itemImg: {fileID: 0}
       itemDetailImg: []
       status: 0
-  minutes: 0
-  seconds: 0
 --- !u!1 &1061949074
 GameObject:
   m_ObjectHideFlags: 0
@@ -24055,7 +24128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1945876548
 Transform:
   m_ObjectHideFlags: 0
@@ -24065,7 +24138,7 @@ Transform:
   m_GameObject: {fileID: 1945876547}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1904, y: -134, z: 93.53474}
+  m_LocalPosition: {x: -223, y: -400, z: 93.53474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
