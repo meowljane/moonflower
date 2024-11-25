@@ -6797,6 +6797,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1224748835
       objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1224748835
+      objectReference: {fileID: 0}
     - target: {fileID: 4409254586841773190, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Size.x
       value: 27
