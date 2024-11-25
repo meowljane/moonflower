@@ -21734,6 +21734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomContent: {fileID: 1049346480}
   roomPrefab: {fileID: 5278224971231294796, guid: c9eb6340c256ec648bbae45fe793fda5, type: 3}
+  databaseManager: {fileID: 2009093337}
   itemContent: {fileID: 679806937}
   itemPrefab: {fileID: 2983033026968364198, guid: 7fb087eee5460d147a3ca924ab45ffbe, type: 3}
   itemDetail: {fileID: 52756714}

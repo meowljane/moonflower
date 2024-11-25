@@ -7,6 +7,7 @@ public class ItemStateManager : MonoBehaviour
 {
     public GameObject roomContent;
     public GameObject roomPrefab;
+    public DatabaseManager databaseManager;
 
     public GameObject itemContent;
     public GameObject itemPrefab;
@@ -38,8 +39,6 @@ public class ItemStateManager : MonoBehaviour
 
     private void UpdateButtonState()
     {
-        DatabaseManager databaseManager = DatabaseManager.instance;
-
         // 아이템이 존재하는 방 갯수
         var roomsWithItems = databaseManager.itemInfos
             .Where(itemInfo => itemInfo.items.Any(item => item.status))
