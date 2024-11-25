@@ -6808,6 +6808,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: 'Sprite.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1de446008cb899547a83675c22c8d395, type: 3}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: 'Sprite.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: cf42361fc68846f4ab1586caecb7d240, type: 3}
     - target: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Name
       value: Player
@@ -12809,8 +12817,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125372248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.0847187}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1609760675}
@@ -12821,7 +12829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2738.904, y: -192.759}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 560, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807

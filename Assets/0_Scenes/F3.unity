@@ -14608,6 +14608,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: 'Sprite.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1de446008cb899547a83675c22c8d395, type: 3}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: 'Sprite.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: cf42361fc68846f4ab1586caecb7d240, type: 3}
     - target: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Name
       value: Player
@@ -14624,6 +14632,30 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1224748835
       objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_Size.x
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_Size.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1224748835
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4409254586841773190, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Size.x
       value: 27
@@ -14639,6 +14671,10 @@ PrefabInstance:
     - target: {fileID: 4409254586841773190, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Offset.y
       value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130442574823229215, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
