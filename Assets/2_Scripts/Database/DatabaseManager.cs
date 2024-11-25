@@ -7,11 +7,25 @@ public class DatabaseManager : MonoBehaviour
 
     static public DatabaseManager instance;
 
+    [Header("난이도")]
+    [Tooltip("true일때 Hard")]
+    public bool isHard = false;
+
+    [Header("초과된 시간")]
+    public int seconds = 0;
+
+    [Header("투표 정답 유무")]
+    public bool isCorrectVote = false;
+
+    [Header("힌트 확인 유무")]
+    public bool isCheckedHint = false;
+
+    [Header("퀴즈 정답 상태")]
+    public bool[] quizCorrect = new bool[10];
+
+    [Header("아이템")]
     public List<ItemInfo> itemInfos = new List<ItemInfo>();
 
-    // 게임 진행 시간 기록
-    public int minutes = 0;
-    public int seconds = 0;
 
     private float elapsedTime = 0f;
 
@@ -23,12 +37,6 @@ public class DatabaseManager : MonoBehaviour
         {
             elapsedTime -= 1f;
             seconds++;
-
-            if (seconds >= 60)
-            {
-                seconds = 0;
-                minutes++;
-            }
         }
     }
 

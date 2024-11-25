@@ -2871,7 +2871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &290484114
 Transform:
   m_ObjectHideFlags: 0
@@ -5608,6 +5608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a9c4ca1f783404c8f1df2ae133870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHard: 0
+  seconds: 0
+  isCorrect: 0
+  isCheckedHint: 0
+  quizCorrect: 00000000000000000000
   itemInfos:
   - roomName: "\uC9C0\uD765\uC655\uC758 \uBC29"
     items:
@@ -5915,8 +5920,6 @@ MonoBehaviour:
       itemDetailImg:
       - {fileID: 21300000, guid: fdba81fa18049134fa4419be7db2876c, type: 3}
       status: 0
-  minutes: 0
-  seconds: 0
 --- !u!1 &544424639
 GameObject:
   m_ObjectHideFlags: 0
@@ -18981,6 +18984,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a9c4ca1f783404c8f1df2ae133870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHard: 0
+  seconds: 0
+  isCorrect: 0
+  isCheckedHint: 0
+  quizCorrect: 00000000000000000000
   itemInfos:
   - roomName: "\uC9C0\uD765\uC655\uC758 \uBC29"
     items:
@@ -19044,8 +19052,6 @@ MonoBehaviour:
       itemImg: {fileID: 0}
       itemDetailImg: []
       status: 0
-  minutes: 0
-  seconds: 0
 --- !u!1 &1929291617
 GameObject:
   m_ObjectHideFlags: 0

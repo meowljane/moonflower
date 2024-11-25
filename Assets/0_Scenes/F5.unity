@@ -1549,6 +1549,7 @@ GameObject:
   - component: {fileID: 1735925703}
   - component: {fileID: 1735925705}
   - component: {fileID: 1735925704}
+  - component: {fileID: 1735925706}
   m_Layer: 0
   m_Name: Scene_Mv_5_To_6_Choi
   m_TagString: Untagged
@@ -1634,6 +1635,19 @@ PolygonCollider2D:
       - {x: -20, y: -20}
       - {x: -20, y: 20}
   m_UseDelaunayMesh: 0
+--- !u!114 &1735925706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735925702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecaf38ab3d25f3c44a49a7853862d551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setVote: 1
 --- !u!1 &1842974920
 GameObject:
   m_ObjectHideFlags: 0

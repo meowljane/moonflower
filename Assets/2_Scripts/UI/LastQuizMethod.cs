@@ -8,6 +8,7 @@ public class LastQuizMethod : MonoBehaviour
 {
     //스크립트 캐싱받기
     public WindowManager theWindow;
+    private DatabaseManager theDM;
     public GameObject quizWindow;
     public GameObject nextDial;
 
@@ -30,6 +31,7 @@ public class LastQuizMethod : MonoBehaviour
     public void Awake()
     {
         theWindow = FindFirstObjectByType<WindowManager>();
+        theDM = FindObjectOfType<DatabaseManager>();
         theWindow.OpenWindow(quizWindow);
         answerButton.onClick.AddListener(() => ShowAnswerBtn());
     }
@@ -119,14 +121,22 @@ public class LastQuizMethod : MonoBehaviour
 
         foreach (string child in rightQuiz)
         {
-                if (string.IsNullOrEmpty(child))
-                {
-                    Debug.Log("값이 없습니다.");
-                    return; 
-                }
-                index++;
+            if (child == "true")
+            {
+                theDM.quizCorrect[index] = true;
+            }
+            else
+            {
+                theDM.quizCorrect[index] = false;
+            }
+            if (string.IsNullOrEmpty(child))
+            {
+                Debug.Log("값이 없습니다.");
+                return;
+            }
+            index++;
 
-                continue;
+            continue;
         }
 
         Debug.Log("최종으로.");
