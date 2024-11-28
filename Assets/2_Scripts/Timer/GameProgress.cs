@@ -39,6 +39,14 @@ public class GameProgress : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Update()
+    {
+        if (!isSkipPlay && Input.GetKeyDown(KeyCode.Escape))
+        {
+            isSkipPlay = !isSkipPlay;
+        }
+    }
+
     public void SkipPlayCoroutine()
     {
         isSkipPlay = true;
@@ -175,7 +183,7 @@ public class GameProgress : MonoBehaviour
             {
                 int minutes = remainingTime / 60;
                 int seconds = remainingTime % 60;
-                timerText.text = $"-{minutes:00}:{seconds:00}";
+                timerText.text = $"{minutes:00}:{seconds:00}";
             }
 
             // 매 초마다 총 플레이 타임 증가
