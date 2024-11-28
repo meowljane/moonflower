@@ -348,6 +348,8 @@ GameObject:
   m_Component:
   - component: {fileID: 580515481}
   - component: {fileID: 580515482}
+  - component: {fileID: 580515484}
+  - component: {fileID: 580515483}
   m_Layer: 0
   m_Name: Kim
   m_TagString: Untagged
@@ -425,6 +427,120 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &580515483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580515480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140ea44a3d3c35f41a82088d07cabc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theDM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  dialogueData:
+  - option: 1
+    dialogueText: "\uBC18\uAC11\uB124.\n\uC790\uB124\uAC00 \uC774\uBC88 \uC0AC\uAC74\uC744
+      \uB9E1\uAC8C \uB41C \uD654\uB791\uC774\uAD70."
+  - option: 1
+    dialogueText: "\uC774\uBBF8 \uC54C\uACE0 \uC788\uACA0\uC9C0\uB9CC \uAC04\uB2E8\uD788
+      \uC18C\uAC1C\uD558\uC790\uBA74 \n\uB098\uB294 \uC2E0\uB77C \uC655\uAD6D\uC758
+      2\uC655\uC790\uC774\uBA70, \uC62C\uD574\uB85C 24\uC0B4\uC774\uB124."
+  - option: 5
+    dialogueText: "2\uC655\uC790\uB2D8. . .\n\uADF8\uB7EC\uBA74 \uB9CE\uC740 \uCC45\uC784\uACFC
+      \uC758\uBB34\uAC00 \uC788\uC73C\uC2DC\uACA0\uAD70\uC694."
+  - option: 5
+    dialogueText: "\uD639\uC2DC \uC624\uB298\uC740 \uC5B4\uB5BB\uAC8C \uBCF4\uB0B4\uC168\uC744\uAE4C\uC694?"
+  - option: 1
+    dialogueText: "\uC624\uB298\uC740 \uC800\uB141 \uC2DD\uC0AC \uC774\uD6C4 \uBC29\uC5D0\uC11C
+      \uD63C\uC790 \uC0AC\uC0C9\uC5D0 \uC7A0\uACA8 \uC788\uC5C8\uC18C.\n\uADF8\uB7F0\uB370
+      \uC624\uB298\uB530\uB77C \uB2EC\uC774 \uB108\uBB34 \uC544\uB984\uB2F5\uC9C0
+      \uC54A\uACA0\uC18C? "
+  - option: 1
+    dialogueText: "\uADF8\uB798\uC11C \uB2EC\uC744 \uBC97 \uC0BC\uC544 \uC220\uC744
+      \uD55C \uB450\uC794 \uD588\uC18C."
+  - option: 5
+    dialogueText: "\uADF8\uB807\uAD70\uC694. \uD639\uC2DC \uC220\uC740 \uC5BC\uB9C8\uB098.
+      . .?"
+  - option: 1
+    dialogueText: "\uD558\uD558. \uB098 \uC0AC\uB0B4\uB300\uC7A5\uBD80 \uAE40\uC2E0\uC720!\n\uADF8\uB7F0
+      \uAC78 \uC77C\uC77C\uC774 \uC138\uBA74\uC11C \uBA39\uC9C0\uB294 \uC54A\uC9C0!"
+  - option: 1
+    dialogueText: "\uB9C8\uC2DC\uB2E4 \uBCF4\uB2C8 \uBB38\uB4DD \uC800 \uB2EC\uACFC
+      \uD568\uAED8 \n\uAC80\uC744 \uD718\uB450\uB974\uACE0 \uC2F6\uC5B4\uC9C0\uB354\uAD6C\uB824.\n\uBC14\uB85C
+      \uAC80\uC744 \uCC59\uACA8 \uBC16\uC73C\uB85C \uB098\uAC14\uC9C0."
+  - option: 5
+    dialogueText: "\uBB38\uB4DD \uAC80\uC744 \uD718\uB450\uB974\uACE0 \uC2F6\uC5B4\uC84C\uB2E4\uACE0
+      \uD558\uC168\uB294\uB370, \n\uC774\uC720\uAC00 \uBB54\uAC00\uC694?"
+  - option: 1
+    dialogueText: ". . .  . . .?\n\uC774 \uCE5C\uAD6C \uB0AD\uB9CC\uC744 \uBAA8\uB974\uB294\uAD6C\uB9CC"
+  - option: 5
+    dialogueText: ". . .  . . .(\uD654\uC81C\uB97C \uB3CC\uB9AC\uC790)"
+  - option: 5
+    dialogueText: "\uADF8 \uD6C4\uC5D0\uB294 \uC5B4\uB5BB\uAC8C \uB418\uC168\uB098\uC694?"
+  - option: 1
+    dialogueText: "\uD55C\uCC3D \uBAB8\uC744 \uC4F0\uACE0 \uC788\uB294\uB370 \uAC11\uC790\uAE30
+      \uBE44\uAC00 \uB0B4\uB9AC\uAE30 \uC2DC\uC791\uD558\uB354\uAD70.\n\uD765\uC774
+      \uC2DD\uC5B4\uC11C \uAD81\uC73C\uB85C \uB3CC\uC544\uC640 \uC790\uB824\uACE0
+      \uD588\uB354\uB2C8\n\uAE00\uC384 \uC774\uB7F0 \uC0AC\uB2EC\uC774 \uB09C \uAC8C
+      \uC544\uB2C8\uACA0\uC18C.\n\uB354 \uC774\uC0C1 \uD560 \uB9D0\uC740 \uC5C6\uC18C."
+  - option: 5
+    dialogueText: "\uD611\uC870\uD574 \uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "(\uC77C\uB2E8 \uC774 \uC815\uB3C4\uB85C \uB9CC\uC871\uD560\uAE4C.
+      . .)"
+  isColliding: 0
+  isAwake: 0
+--- !u!61 &580515484
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580515480}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 25, y: 48}
+    newSize: {x: 25, y: 48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 25, y: 48}
+  m_EdgeRadius: 0
 --- !u!1 &675423545
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +583,8 @@ GameObject:
   m_Component:
   - component: {fileID: 758774995}
   - component: {fileID: 758774996}
+  - component: {fileID: 758774997}
+  - component: {fileID: 758774998}
   m_Layer: 0
   m_Name: Choi
   m_TagString: Untagged
@@ -544,6 +662,109 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &758774997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758774994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140ea44a3d3c35f41a82088d07cabc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theDM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  dialogueData:
+  - option: 4
+    dialogueText: "\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C, \uD0D0\uC815\uB2D8.\n\uC800\uB294
+      \uC655\uAD81\uC5D0\uC11C \uC77C\uD558\uB294 \uAD81\uB140 \uCD5C\uB355\uC2E4\uC774\uB77C\uACE0
+      \uD558\uC635\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "\uAD81\uB140 \uCD5C\uB355\uC2E4,\n\uC624\uB298 \uC800\uB141\uC2DC\uAC04\uBD80\uD130
+      \uC9C0\uAE08\uAE4C\uC9C0\n\uBCF4\uACE0 \uB4E4\uC740 \uC77C\uC5D0 \uB300\uD574
+      \uB9D0\uD574\uC904 \uC218 \uC788\uACA0\uB098?"
+  - option: 4
+    dialogueText: "\uBB3C\uB860\uC785\uB2C8\uB2E4, \uD0D0\uC815\uB2D8.\n\uC624\uB298
+      \uC800\uB141 \uC2DC\uAC04\uC5D0 \uB2E4\uB4E4 \uAE30\uC5B5\uD558\uC2E4\uC9C0
+      \uBAA8\uB974\uC2DC\uACA0\uC9C0\uB9CC"
+  - option: 4
+    dialogueText: "\uB300\uC655 \uD3D0\uD558\uC640 1\uC655\uC790 \uC804\uD558\uC640
+      \uC655\uC790\uBE44\uB2D8 \uADF8\uB9AC\uACE0 2\uC655\uC790 \uC804\uD558\uAED8\uC11C\n\uC2DD\uC0AC\uB97C
+      \uD558\uC2DC\uB294 \uB3D9\uC548\n\uC800\uB294 \uB2E4\uB978 \uAD81\uB140\uB4E4\uACFC
+      \uD568\uAED8 \uC2DD\uC0AC \uC2DC\uC911\uC744 \uB4E4\uC5C8\uC2B5\uB2C8\uB2E4."
+  - option: 4
+    dialogueText: "\uC2DD\uC0AC\uAC00 \uB05D\uB09C \uD6C4 \uC8FC\uBC29\uC5D0\uC11C
+      \uC124\uAC70\uC9C0 \uBC0F \uB4B7\uC815\uB9AC\uB97C \uD558\uC600\uACE0\n\uACE0\uB2E8\uD574\uC11C
+      \uBC29\uC73C\uB85C \uB3CC\uC544\uC628 \uB4A4 \uD734\uC2DD\uC744 \uCDE8\uD588\uC2B5\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "(\uBCC4\uB2E4\uB97C \uAC8C \uC5C6\uB294 \uAD81\uB140\uC758 \uC0B6\uC774\uAD70.
+      . .)"
+  - option: 4
+    dialogueText: "\uC870\uAE08 \uC26C\uB2E4\uAC00 \uB2E4\uC74C \uB0A0 \uC544\uCE68
+      \uC2DD\uC790\uC7AC\uB4E4\uC744 \uC190\uC9C8\uD558\uAE30 \uC704\uD574\n\uC8FC\uBC29\uC73C\uB85C
+      \uB0B4\uB824\uAC00 \uC2DD\uD488 \uC800\uC7A5\uACE0 \uBB38\uC744 \uC5F4\uC5C8\uB294\uB370\n\uAE00\uC384
+      1\uC655\uC790 \uC804\uD558\uAED8\uC11C \uB054\uCC0D\uD558\uC2E0 \uBAB0\uACE8\uB85C
+      \uC4F0\uB7EC\uC838 \uC788\uC5C8\uC2B5\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "\uADF8\uB807\uB2E4\uBA74 \uC790\uB124\uAC00 \n1\uC655\uC790 \uC804\uD558\uC758
+      \uC2DC\uC2E0\uC744 \uBC1C\uACAC\uD55C \uCD5C\uCD08 \uBC1C\uACAC\uC790\uB85C\uAD70."
+  - option: 4
+    dialogueText: "\uC9C0\uAE08\uB3C4 \uADF8 \uAD11\uACBD\uC774 \uB108\uBB34 \uC120\uBA85\uD558\uAC8C
+      \uB5A0\uC62C\uB77C \uB108\uBB34 \uBB34\uC12D\uC2B5\uB2C8\uB2E4.\n\uD751\uD751\uD751.
+      . ."
+  - option: 5
+    dialogueText: "\uC9C4\uC815\uD558\uACE0 \uC870\uAE08 \uC26C\uACE0 \uC788\uAC8C."
+  isColliding: 0
+  isAwake: 0
+--- !u!61 &758774998
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758774994}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 29, y: 47}
+    newSize: {x: 29, y: 47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 29, y: 47}
+  m_EdgeRadius: 0
 --- !u!1 &794124455
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +844,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1006842066}
   - component: {fileID: 1006842067}
+  - component: {fileID: 1006842069}
+  - component: {fileID: 1006842068}
   m_Layer: 0
   m_Name: Park
   m_TagString: Untagged
@@ -700,6 +923,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1006842068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006842065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140ea44a3d3c35f41a82088d07cabc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theDM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  dialogueData:
+  - option: 2
+    dialogueText: "\uC120\uBC30\uB2D8 \uC548\uB155\uD558\uC2ED\uB2C8\uAE4C!\n\uC800\uB294
+      \uD654\uB791\uC744 \uAFC8\uAFB8\uACE0 \uC788\uB294 \uD654\uB791 \uB0AD\uB3C4\uC0DD
+      \uBC15\uC9C0\uB2F4 \uC785\uB2C8\uB2E4!"
+  - option: 5
+    dialogueText: "\uD6C4\uBC30\uB2D8\uC774\uC2DC\uAD70\uC694.\n\uC5B4\uCA4C\uB2E4
+      \uC774\uB7F0 \uC77C\uC5D0 \uD718\uB9D0\uB9B0 \uAC83\uC778\uAC00\uC694?"
+  - option: 2
+    dialogueText: "\uB300 \uC2E0\uB77C\uAD6D\uC758 \uC790\uB791\uC2A4\uB7EC\uC6B4
+      \uD654\uB791\uC774 \uB418\uB294 \uAC83\uC774 \n\uC81C \uAFC8\uC774\uC5C8\uC9C0\uB9CC.
+      . ."
+  - option: 2
+    dialogueText: "\uC77C\uC2E0\uC0C1\uC758 \uC0AC\uC720\uB85C \uAFC8\uC744 \uC811\uACE0
+      \n\uACE0\uD5A5\uC73C\uB85C \uB0B4\uB824\uAC00\uB824 \uD558\uB358 \uC911\uC774\uC5C8\uC2B5\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "\uC77C\uC2E0\uC0C1\uC758 \uC0AC\uC720\uB77C\uBA74. . .?"
+  - option: 2
+    dialogueText: . . .  . . .
+  - option: 5
+    dialogueText: "(\uB300\uB2F5\uD558\uAE30 \uACE4\uB780\uD55C \uB208\uCE58\uB2E4.
+      \uC870\uC0AC\uD574 \uBD10\uC57C\uACA0\uAD70)"
+  - option: 5
+    dialogueText: "\uADF8\uB7EC\uBA74 \uC624\uB298 \uC788\uC5C8\uB358 \uC77C\uC744
+      \uB9D0\uC500\uD574 \uC8FC\uC138\uC694."
+  - option: 2
+    dialogueText: "\uC800\uB294 5\uC2DC\uCBE4 \uAD81\uC5D0\uC11C \uB098\uC654\uB294\uB370
+      \n\uD558\uB298\uC744 \uBCF4\uB2C8 \uB0A0\uC774 \uC800\uBB3C\uC5B4 \uAC00\uB354\uAD70\uC694."
+  - option: 2
+    dialogueText: "\uC774 \uC2DC\uAC04\uC5D0 \uBA3C \uAE38\uC744 \uB5A0\uB098\uAE30\uC5D4
+      \uBC24\uAE38\uC774 \uC704\uD5D8\uD560 \uAC70 \uAC19\uC544\n\uC655\uAD81 \uADFC\uCC98
+      \uC5EC\uAD00\uC5D0 \uC9D0\uC744 \uD480\uC5C8\uC2B5\uB2C8\uB2E4."
+  - option: 2
+    dialogueText: "\uADF8\uB807\uAC8C \uC5EC\uAD00\uC5D0\uC11C \uC26C\uACE0 \uC788\uC5C8\uB294\uB370
+      \n\uC800\uB3C4 \uC774\uACF3\uC73C\uB85C \uBD88\uB824\uC654\uC2B5\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "\uC77C\uB2E8 \uC54C\uACA0\uC2B5\uB2C8\uB2E4. \uD6C4\uBC30\uB2D8."
+  - option: 2
+    dialogueText: "\uC800\uB294 \uC815\uB9D0 \uC544\uB2D9\uB2C8\uB2E4. \uC120\uBC30\uB2D8.
+      \uC5B5\uC6B8\uD569\uB2C8\uB2E4. . ."
+  - option: 5
+    dialogueText: "(\uC870\uC0AC\uD574 \uBCF4\uBA74 \uC54C\uACA0\uC9C0. \uB2E4\uC74C\uC73C\uB85C
+      \uB118\uC5B4\uAC00\uC790.)"
+  isColliding: 0
+  isAwake: 0
+--- !u!61 &1006842069
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006842065}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 27, y: 46}
+    newSize: {x: 27, y: 46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 27, y: 46}
+  m_EdgeRadius: 0
 --- !u!1 &1033445935
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +1039,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1033445936}
   - component: {fileID: 1033445937}
+  - component: {fileID: 1033445938}
+  - component: {fileID: 1033445939}
   m_Layer: 0
   m_Name: King
   m_TagString: Untagged
@@ -787,6 +1118,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1033445938
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033445935}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 29, y: 52}
+    newSize: {x: 29, y: 52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 29, y: 52}
+  m_EdgeRadius: 0
+--- !u!114 &1033445939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033445935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140ea44a3d3c35f41a82088d07cabc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theDM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  dialogueData:
+  - option: 0
+    dialogueText: "\uC790\uB124\uB85C\uAD70.\n\uCD5C\uD654\uC6D0 \uB2E8\uC7A5\uC774
+      \uCD94\uCC9C\uD55C \uCD94\uB9AC\uC5D0 \uB2A5\uD55C \uD0D0\uC815 \uAC19\uC740
+      \uD654\uB791\uC774."
+  - option: 5
+    dialogueText: "\uC601\uAD11\uC785\uB2C8\uB2E4. \uD3D0\uD558."
+  - option: 0
+    dialogueText: "\uC775\uD788 \uC54C\uACA0\uC9C0\uB9CC \uB0B4\uAC00 \uBC14\uB85C
+      \uB300 \uC2E0\uB77C \uC655\uAD6D\uC758 \uB300\uC655\uC77C\uC138."
+  - option: 0
+    dialogueText: "\uC804\uD574 \uB4E4\uC5C8\uACA0\uC9C0\uB9CC \uBC29\uAE08 \uC655\uAD81
+      \uC2DD\uD488 \uC800\uC7A5\uACE0\uC5D0\uC11C\n\uB0B4 \uC544\uB4E4 1\uC655\uC790
+      \uAE40\uC9C4\uC601\uC774 \uB054\uCC0D\uD558\uAC8C \uC0B4\uD574\uB2F9\uD55C
+      \uCC44 \uBC1C\uACAC\uB418\uC5C8\uB124."
+  - option: 0
+    dialogueText: "\uC815\uD655\uD55C \uC0AC\uC778\uC740 \uC9C0\uAE08 \uC870\uC0AC
+      \uC911\uC774\uB2C8 \uC870\uAE08\uB9CC \uAE30\uB2E4\uB824\uC8FC\uAC8C."
+  - option: 0
+    dialogueText: "\uC774 \uC790\uB9AC\uC5D0 \uBAA8\uC774\uAC8C \uD55C \uC800 4\uBA85\uC740
+      \uC624\uB298 \uAD81\uC5D0 \uC788\uC5C8\uB358 \uC790\uB4E4 \uC911\uC5D0\n\uB0B4\uAC00
+      \uC9C4\uC601\uC774\uB97C \uB9C8\uC9C0\uB9C9\uC73C\uB85C \uBCF4\uC558\uB358
+      \uC800\uB141 \uC2DD\uC0AC \uC2DC\uAC04 \uC774\uD6C4\uB85C\n\uD589\uC801\uC744
+      \uC815\uD655\uD558\uAC8C \uC54C \uC218 \uC5C6\uB294 4\uBA85\uC744 \uD55C\uC790\uB9AC\uC5D0
+      \uBAA8\uC740 \uAC83\uC774\uB124."
+  - option: 5
+    dialogueText: "\uC800\uB4E4\uC744 \uC870\uC0AC\uD560 \uAD8C\uD55C\uC744 \uC800\uC5D0\uAC8C
+      \uC8FC\uC2DC\uACA0\uC0AC\uC635\uB2C8\uAE4C \uD3D0\uD558?"
+  - option: 0
+    dialogueText: "\uBB3C\uB860\uC774\uB124.\n\uB2E4\uB4E4 \uC774 \uD654\uB791\uC774
+      \uC9C8\uBB38\uD558\uB294 \uAC83\uC740 \n\uB0B4\uAC00 \uC9C8\uBB38\uD558\uB294
+      \uAC83\uC774\uB77C\uACE0 \uC0DD\uAC01\uD558\uACE0 \n\uCD94\uD638\uB3C4 \uAD8C\uC704\uB97C
+      \uB0B4\uC138\uC6B0\uC9C0\uB9D0\uACE0 \uC131\uC2E4\uD788 \uB2F5\uD558\uB3C4\uB85D
+      \uD558\uAC8C."
+  isColliding: 0
+  isAwake: 0
 --- !u!1001 &1054335844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -949,8 +1377,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1382574196}
   - component: {fileID: 1382574197}
+  - component: {fileID: 1382574199}
+  - component: {fileID: 1382574198}
   m_Layer: 0
-  m_Name: Pannel1
+  m_Name: Panel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1026,6 +1456,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1382574198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382574195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+  spriteData:
+  - {fileID: 21300000, guid: fd4c67a2261602f4296c587790bb748a, type: 3}
+--- !u!61 &1382574199
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382574195}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 145, y: 212}
+    newSize: {x: 145, y: 212}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 145, y: 212}
+  m_EdgeRadius: 0
 --- !u!1 &1485110646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1518601457}
   m_Layer: 0
-  m_Name: Notice
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,13 +1751,40 @@ PrefabInstance:
     - {fileID: 8969396813474651596, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
     - {fileID: 599018833369598407, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6110503574067527028, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618887010}
   m_SourcePrefab: {fileID: 100100000, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
 --- !u!4 &1618887008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5924026565642778314, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
   m_PrefabInstance: {fileID: 1618887007}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1618887009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6110503574067527028, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
+  m_PrefabInstance: {fileID: 1618887007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618887010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618887009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 1
+  spriteData:
+  - {fileID: 6491010890265692899, guid: 6e42e98ae2ede36459d4d1245ecb8839, type: 3}
 --- !u!1 &1890807070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +2348,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2142106530}
   - component: {fileID: 2142106531}
+  - component: {fileID: 2142106533}
+  - component: {fileID: 2142106532}
   m_Layer: 0
   m_Name: Lee
   m_TagString: Untagged
@@ -1903,6 +2427,104 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2142106532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142106529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140ea44a3d3c35f41a82088d07cabc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theDM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  dialogueData:
+  - option: 5
+    dialogueText: "\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C \uC655\uC790\uBE44\uB2D8.\n\uB9CC\uB098
+      \uBD59\uAC8C \uB418\uC5B4 \uC601\uAD11\uC785\uB2C8\uB2E4."
+  - option: 3
+    dialogueText: "\uC548\uB155\uD558\uC138\uC694 \uD0D0\uC815\uB2D8.\n\uC800\uB294
+      1\uC655\uC790 \uAE40\uC9C4\uC601\uC758 \uBD80\uC778\uC778 \uC655\uC790\uBE44
+      \uC774\uC9C0\uC720\uB77C\uACE0 \uD569\uB2C8\uB2E4."
+  - option: 5
+    dialogueText: "\uBD80\uAD70\uC758 \uC18C\uC2DD\uC5D0 \uB180\uB77C\uC168\uACA0\uC9C0\uB9CC,\n\uAD1C\uCC2E\uC73C\uC2DC\uB2E4\uBA74
+      \uC624\uB298 \uC800\uB141\uC2DD\uC0AC \uC774\uD6C4\uC5D0 \uC788\uC5C8\uB358
+      \uC77C\uC5D0 \uB300\uD574\n\uAC04\uB2E8\uD558\uAC8C \uB9D0\uC500\uD574 \uC8FC\uC2E4
+      \uC218 \uC788\uC73C\uC2E4\uAE4C\uC694?"
+  - option: 3
+    dialogueText: "\uB0A8\uD3B8\uC774 \uC774\uB807\uAC8C \uAC11\uC791\uC2A4\uB7FD\uAC8C
+      \uC8FD\uC5C8\uB2E4\uB2C8. . .\n\uB108\uBB34 \uC815\uC2E0\uC774 \uC5C6\uACE0
+      \uD63C\uB780\uC2A4\uB7EC\uC6CC\uC694. . . \uD751\uD751\uD751. . ."
+  - option: 3
+    dialogueText: "\uC624\uB298 \uC800\uB141\uC2DD\uC0AC \uC774\uD6C4\uC694?\n\uC2DD\uC0AC\uB97C
+      \uD558\uACE0 \uBC14\uB78C\uB3C4 \uC434 \uACB8 \n\uC870\uAE08 \uAC78\uC73C\uBA74\uC11C
+      \uC0B0\uCC45\uC744 \uB2E4\uB140\uC654\uC5B4\uC694."
+  - option: 3
+    dialogueText: "\uADF8 \uD6C4 \uBC29\uC73C\uB85C \uC62C\uB77C\uC654\uB354\uB2C8\n\uAE00\uC384
+      \uC81C \uBC29\uC774 \uB09C\uC7A5\uD310\uC774 \uB41C \uAC8C \uC544\uB2C8\uACA0\uC5B4\uC694?"
+  - option: 3
+    dialogueText: "\uB108\uBB34 \uBB34\uC11C\uC6CC\uC11C \uC774\uACF3 \uD68C\uC758\uC2E4\uB85C
+      \n\uAE09\uD558\uAC8C \uBAB8\uC744 \uD53C\uD588\uC5B4\uC694."
+  - option: 3
+    dialogueText: "\uB2E4\uB978 \uBD84\uB4E4\uC774 \uC62C \uB54C\uAE4C\uC9C0 \uC228\uC5B4\uC788\uB294\uB2E4\uB294
+      \uAC8C \uAE5C\uBE61 \uC878\uC544\uBC84\uB838\uB294\uB370\n\uBE44\uBA85\uC18C\uB9AC\uC640
+      \uD568\uAED8 \uB0A8\uD3B8\uC774 \uC8FD\uC5C8\uB2E4\uB294 \uC598\uAE30\uB97C
+      \uC804\uD574 \uB4E4\uC5C8\uC2B5\uB2C8\uB2E4.\n\uD751\uD751\uD751. . ."
+  - option: 5
+    dialogueText: "(\uAC10\uC815\uC774 \uACA9\uC559\uB418\uC5B4 \uB354 \uBB3C\uC5B4\uBCF4\uAE30
+      \uD798\uB4E4 \uAC83 \uAC19\uB2E4.)"
+  isColliding: 0
+  isAwake: 0
+--- !u!61 &2142106533
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142106529}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 27, y: 46}
+    newSize: {x: 27, y: 46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 27, y: 46}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,52 +17,77 @@ public class InteractionBubble : MonoBehaviour
     [Header("메시지")]
     [TextArea(1, 10)]
     public string message = "기본 메시지입니다."; // 출력할 메시지
-    
+    public float showTime = 2f; // 메세지 나타낼 시간
+
     //오브젝트 캐싱받기
     private GameObject currentBalloon;
     private TextMeshPro balloonText;
+    public GameObject confirmOn;
+    public WebGLBtn webglBtn;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    //게임 중 변하는 불값
+    public bool isColliding = false;
+    public bool isActive = false;
+    public bool isAwake = false;
+
+    public void Awake()
     {
-        if (other.CompareTag("Player"))
+        confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
+        webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
+        if (isAwake)
         {
-            if (balloonPrefab != null)
-            {
-                currentBalloon = Instantiate(balloonPrefab, transform.position, Quaternion.identity);
-                currentBalloon.SetActive(false);
-
-                balloonText = currentBalloon.GetComponentInChildren<TextMeshPro>();
-            }
             ShowBalloon(message);
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
+        if (isColliding && !isAwake && !isActive)
         {
-            HideBalloon();
+            confirmOn.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
+            {
+                ShowBalloon(message);
+                Invoke("HideBalloon", showTime);
+            }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isColliding = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isColliding = false;
+        confirmOn.SetActive(false);
+        CancelInvoke("HideBalloon");
+        HideBalloon();
     }
 
     public void ShowBalloon(string text)
     {
-        if (currentBalloon != null)
+        if (balloonPrefab != null)
         {
-            balloonText.text = text;
+            currentBalloon = Instantiate(balloonPrefab, transform.position, Quaternion.identity);
+
+            balloonText = currentBalloon.GetComponentInChildren<TextMeshPro>(); balloonText.text = text;
 
             Vector3 newPosition = transform.position + new Vector3(0, offsetY, 0);
             currentBalloon.transform.position = newPosition;
 
-            currentBalloon.SetActive(true);
             AdjustBalloonSize();
         }
+
+        isActive = true;
+        confirmOn.SetActive(false);
     }
 
     public void HideBalloon()
     {
         if (currentBalloon != null)
         {
+            isActive = false;
             Destroy(currentBalloon);
         }
     }

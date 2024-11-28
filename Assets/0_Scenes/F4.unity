@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208090211}
   m_Layer: 0
-  m_Name: Notice
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355917932}
   - component: {fileID: 355917933}
+  - component: {fileID: 355917934}
   m_Layer: 0
   m_Name: Chat1
   m_TagString: Untagged
@@ -336,6 +337,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &355917934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355917931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70d6f6dbfe7f684ba3c4f454c3007c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefab: {fileID: 9220741725682894876, guid: e7aeb3b0c2ecb454c94fdb75670cd2ab, type: 3}
+  offsetY: 30
+  fixedWidth: 120
+  minHeight: 20
+  lineHeight: 15
+  message: "\uD3D0\uD558\uAED8\uC11C \uBA85\uD558\uC2E0 \uB300\uB85C \uC7A5\uC778\uC744
+    \uBD88\uB7EC \uAD81\uC548\uC758 \uBAA8\uB4E0 \uC790\uBB3C\uC1E0\uB97C \uC5F4\uACE0
+    \uC788\uC0AC\uC635\uB2C8\uB2E4. \n\uAE30\uB2E4\uB9AC\uC2DC\uB294 \uB3D9\uC548
+    \uC774\uC57C\uAE30\uB97C \uB098\uB204\uC2DC\uACE0 \uACC4\uC2DC\uC9C0\uC694."
+  showTime: 4
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isActive: 0
+  isAwake: 0
 --- !u!1 &496460450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,8 +1437,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1957518235}
   - component: {fileID: 1957518236}
+  - component: {fileID: 1957518237}
+  - component: {fileID: 1957518238}
   m_Layer: 0
-  m_Name: Pannel1
+  m_Name: Panel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1486,6 +1516,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1957518237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957518234}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 145, y: 212}
+    newSize: {x: 145, y: 212}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 145, y: 212}
+  m_EdgeRadius: 0
+--- !u!114 &1957518238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957518234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+  spriteData:
+  - {fileID: 3665104911069262878, guid: e4e4aa1a25549ee41b1d76da5c77c8f2, type: 3}
 --- !u!1 &1971659119
 GameObject:
   m_ObjectHideFlags: 0
