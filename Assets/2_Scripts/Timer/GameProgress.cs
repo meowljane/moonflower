@@ -177,24 +177,24 @@ public class GameProgress : MonoBehaviour
             remainingTime--;
         }
 
-        while (!isSkipPlay)
-        {
-            if (timerText != null)
-            {
-                int minutes = remainingTime / 60;
-                int seconds = remainingTime % 60;
-                timerText.text = $"{minutes:00}:{seconds:00}";
-            }
+        //while (!isSkipPlay)
+        //{
+        //    if (timerText != null)
+        //    {
+        //        int minutes = remainingTime / 60;
+        //        int seconds = remainingTime % 60;
+        //        timerText.text = $"{minutes:00}:{seconds:00}";
+        //    }
 
-            // 매 초마다 총 플레이 타임 증가
-            totalPlayTime += 1f;
+        //    // 매 초마다 총 플레이 타임 증가
+        //    totalPlayTime += 1f;
 
-            // 총 플레이 타임 업데이트
-            SetPlayTime();
+        //    // 총 플레이 타임 업데이트
+        //    SetPlayTime();
 
-            yield return new WaitForSeconds(1f);
-            remainingTime--;
-        }
+        //    yield return new WaitForSeconds(1f);
+        //    remainingTime--;
+        //}
 
         if (timerText != null)
         {
