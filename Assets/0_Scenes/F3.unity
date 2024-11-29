@@ -818,9 +818,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1035361232}
   - {fileID: 1055955435}
-  m_Father: {fileID: 493975750}
+  - {fileID: 1035361232}
+  m_Father: {fileID: 2039895100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94097572
 GameObject:
@@ -1970,6 +1970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5924026564642921414}
+  - {fileID: 1980899256}
   m_Father: {fileID: 819660921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &146000604
@@ -4655,7 +4656,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 190979223}
-  - {fileID: 696454942}
   - {fileID: 2067955027}
   m_Father: {fileID: 1453113768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5114,7 +5114,6 @@ Transform:
   m_Children:
   - {fileID: 675423546}
   - {fileID: 1890807071}
-  - {fileID: 1218768382}
   - {fileID: 927358166}
   m_Father: {fileID: 1407537283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6091,10 +6090,8 @@ Transform:
   - {fileID: 1051535508}
   - {fileID: 1522126970}
   - {fileID: 570348055}
-  - {fileID: 924793636}
   - {fileID: 2045519802}
   - {fileID: 1170746437}
-  - {fileID: 1589608735}
   - {fileID: 499286551}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6980,7 +6977,6 @@ Transform:
   m_Children:
   - {fileID: 1379775059}
   - {fileID: 1019669251}
-  - {fileID: 93101631}
   - {fileID: 2042752081}
   m_Father: {fileID: 521468686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7033,7 +7029,7 @@ GameObject:
   - component: {fileID: 499286551}
   - component: {fileID: 499286552}
   m_Layer: 0
-  m_Name: Door8
+  m_Name: Door6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7139,6 +7135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1270402072}
+  - {fileID: 1531048968}
   m_Father: {fileID: 1238044039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506100841
@@ -10130,7 +10127,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 249196323}
-  m_Father: {fileID: 278629620}
+  m_Father: {fileID: 1246287426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701103541
 GameObject:
@@ -13435,7 +13432,7 @@ GameObject:
   - component: {fileID: 924793638}
   - component: {fileID: 924793639}
   m_Layer: 0
-  m_Name: Door4
+  m_Name: Chat8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13454,7 +13451,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 389455522}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &924793637
 SpriteRenderer:
@@ -14985,9 +14982,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 691501039}
   - {fileID: 306067246}
-  m_Father: {fileID: 1648096729}
+  - {fileID: 691501039}
+  m_Father: {fileID: 1139960088}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &949800762
 GameObject:
@@ -15306,7 +15303,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 562788766}
-  m_Father: {fileID: 1699656247}
+  m_Father: {fileID: 1615133986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986038433
 GameObject:
@@ -15436,7 +15433,6 @@ Transform:
   m_Children:
   - {fileID: 1113417582}
   - {fileID: 1839728080}
-  - {fileID: 1531048968}
   - {fileID: 15975098}
   m_Father: {fileID: 1238044039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16603,6 +16599,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2064000527281951807}
+  - {fileID: 931661547}
   m_Father: {fileID: 1148178519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1148178518
@@ -16941,7 +16938,7 @@ GameObject:
   - component: {fileID: 1170746437}
   - component: {fileID: 1170746438}
   m_Layer: 0
-  m_Name: Door6
+  m_Name: Door5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17077,11 +17074,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 652029509}
   - {fileID: 1453125978}
   - {fileID: 389455522}
+  - {fileID: 652029509}
   - {fileID: 1049400602}
-  m_Father: {fileID: 322285206}
+  m_Father: {fileID: 1325684215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220225022
 GameObject:
@@ -17422,6 +17419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 267234817}
+  - {fileID: 696454942}
   m_Father: {fileID: 1453113768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1252135541
@@ -17959,6 +17957,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7765149084432987787}
+  - {fileID: 1218768382}
   m_Father: {fileID: 1407537283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327965995
@@ -19696,6 +19695,8 @@ Transform:
   - {fileID: 2064843980}
   - {fileID: 1691386350}
   - {fileID: 665328693}
+  - {fileID: 924793636}
+  - {fileID: 1589608735}
   m_Father: {fileID: 1218768382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460640301
@@ -20802,7 +20803,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1583660011}
-  m_Father: {fileID: 1023752148}
+  m_Father: {fileID: 506018260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549392217
 GameObject:
@@ -21344,7 +21345,7 @@ GameObject:
   - component: {fileID: 1589608738}
   - component: {fileID: 1589608737}
   m_Layer: 0
-  m_Name: Door7
+  m_Name: Chat9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21363,7 +21364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 389455522}
+  m_Father: {fileID: 1453125978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1589608736
 SpriteRenderer:
@@ -22685,6 +22686,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1853947612}
+  - {fileID: 964426457}
   m_Father: {fileID: 986038434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615412364
@@ -23181,7 +23183,6 @@ Transform:
   m_Children:
   - {fileID: 1239748939}
   - {fileID: 741832013}
-  - {fileID: 931661547}
   - {fileID: 1602618011}
   m_Father: {fileID: 1148178519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24032,7 +24033,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 995084785}
-  - {fileID: 1992439890}
   - {fileID: 1706729098}
   m_Father: {fileID: 140545342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24067,7 +24067,6 @@ Transform:
   m_Children:
   - {fileID: 515445485}
   - {fileID: 47139926}
-  - {fileID: 964426457}
   - {fileID: 270239710}
   m_Father: {fileID: 986038434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25873,6 +25872,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676588213}
+  - {fileID: 1992439890}
   m_Father: {fileID: 140545342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815885679
@@ -27055,7 +27055,6 @@ Transform:
   m_Children:
   - {fileID: 1421178154}
   - {fileID: 701103542}
-  - {fileID: 1980899256}
   - {fileID: 693360781}
   m_Father: {fileID: 819660921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27246,9 +27245,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 499172832}
   - {fileID: 178772878}
-  m_Father: {fileID: 1956256991}
+  - {fileID: 499172832}
+  m_Father: {fileID: 143573938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984380001
 GameObject:
@@ -27534,9 +27533,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 732108780}
   - {fileID: 1787848108}
-  m_Father: {fileID: 1691737457}
+  - {fileID: 732108780}
+  m_Father: {fileID: 1809356522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2008106269
 GameObject:
@@ -28393,6 +28392,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1272636941}
+  - {fileID: 93101631}
   m_Father: {fileID: 521468686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2042752080
@@ -29278,7 +29278,7 @@ GameObject:
   - component: {fileID: 2045519802}
   - component: {fileID: 2045519803}
   m_Layer: 0
-  m_Name: Door5
+  m_Name: Door4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
