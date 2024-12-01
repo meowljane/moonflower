@@ -1522,6 +1522,38 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &179550337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179550338}
+  m_Layer: 0
+  m_Name: None
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179550338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179550337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 885491969}
+  m_Father: {fileID: 1337637267}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179888953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,7 +3666,6 @@ Transform:
   m_Children:
   - {fileID: 675423546}
   - {fileID: 1890807071}
-  - {fileID: 1385360927}
   - {fileID: 1989004121}
   m_Father: {fileID: 1065315888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4017,6 +4048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomContent: {fileID: 1934724266}
   roomPrefab: {fileID: 5278224971231294796, guid: c9eb6340c256ec648bbae45fe793fda5, type: 3}
+  databaseManager: {fileID: 0}
   itemContent: {fileID: 345579851}
   itemPrefab: {fileID: 2983033026968364198, guid: 7fb087eee5460d147a3ca924ab45ffbe, type: 3}
   itemDetail: {fileID: 665325814}
@@ -4243,7 +4275,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1499674035}
-  - {fileID: 1337637267}
   - {fileID: 1705921319}
   m_Father: {fileID: 622011703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5610,7 +5641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHard: 0
   seconds: 0
-  isCorrect: 0
+  isCorrectVote: 0
   isCheckedHint: 0
   quizCorrect: 00000000000000000000
   itemInfos:
@@ -8393,7 +8424,7 @@ GameObject:
   - component: {fileID: 885491969}
   - component: {fileID: 885491970}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: None1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8412,7 +8443,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1337637267}
+  m_Father: {fileID: 179550338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &885491970
 SpriteRenderer:
@@ -9816,6 +9847,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1686366554}
+  - {fileID: 1337637267}
   m_Father: {fileID: 622011703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106402715
@@ -10345,6 +10377,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1403838651}
+  - {fileID: 1385360927}
   m_Father: {fileID: 1065315888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1186538214
@@ -11772,8 +11805,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1475702592}
-  - {fileID: 885491969}
-  m_Father: {fileID: 426435831}
+  - {fileID: 179550338}
+  m_Father: {fileID: 1106369897}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344365173
 GameObject:
@@ -12322,10 +12355,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1599175213}
   - {fileID: 832370377}
+  - {fileID: 1599175213}
   - {fileID: 1714007005}
-  m_Father: {fileID: 322285206}
+  m_Father: {fileID: 1148945180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1403838650
 PrefabInstance:
@@ -12899,7 +12932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475702592}
   m_Layer: 0
-  m_Name: Notice
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16217,7 +16250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714007005}
   m_Layer: 0
-  m_Name: Event
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18986,7 +19019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHard: 0
   seconds: 0
-  isCorrect: 0
+  isCorrectVote: 0
   isCheckedHint: 0
   quizCorrect: 00000000000000000000
   itemInfos:
