@@ -470,10 +470,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1313578153}
   - {fileID: 488012786}
   - {fileID: 1468854379}
-  - {fileID: 1313578153}
-  m_Father: {fileID: 395883972}
+  m_Father: {fileID: 292415648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &66143228
 Animator:
@@ -1649,9 +1649,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1863466419}
-  - {fileID: 2027585756}
   - {fileID: 1074731202}
+  - {fileID: 725913176}
   m_Father: {fileID: 89284976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &272592336
@@ -1841,6 +1840,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1455534984}
+  - {fileID: 66143227}
   m_Father: {fileID: 1927373096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &307578871
@@ -2640,7 +2640,6 @@ Transform:
   m_Children:
   - {fileID: 13274717}
   - {fileID: 1948498135}
-  - {fileID: 66143227}
   - {fileID: 1761956359}
   m_Father: {fileID: 1927373096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3820,7 +3819,7 @@ GameObject:
   - component: {fileID: 667869882}
   - component: {fileID: 667869881}
   m_Layer: 0
-  m_Name: NPC1
+  m_Name: Panel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4219,7 +4218,7 @@ Transform:
   m_Children:
   - {fileID: 318728626}
   - {fileID: 1564252127}
-  m_Father: {fileID: 1166856803}
+  m_Father: {fileID: 264723813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &725913177
 Animator:
@@ -6092,7 +6091,7 @@ GameObject:
   - component: {fileID: 1025110310}
   - component: {fileID: 1025110311}
   m_Layer: 0
-  m_Name: NPC2
+  m_Name: Panel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6976,7 +6975,6 @@ Transform:
   m_Children:
   - {fileID: 1040693821}
   - {fileID: 1483076647}
-  - {fileID: 725913176}
   - {fileID: 307578872}
   m_Father: {fileID: 89284976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11115,37 +11113,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1863466418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1863466419}
-  m_Layer: 0
-  m_Name: Event
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1863466419
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863466418}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 264723813}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864443931
 GameObject:
   m_ObjectHideFlags: 0
@@ -12304,37 +12271,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!1 &2027585755
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2027585756}
-  m_Layer: 0
-  m_Name: Item
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2027585756
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027585755}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 264723813}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2036300495
 GameObject:
   m_ObjectHideFlags: 0
