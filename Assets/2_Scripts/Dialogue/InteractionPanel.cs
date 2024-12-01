@@ -56,4 +56,8 @@ public class InteractionPanel : MonoBehaviour
         confirmOn.SetActive(false);
     }
 
+    public void ClickPanelEvent()
+    {
+        thePM.ShowPanel(spriteData);
+    }
 }

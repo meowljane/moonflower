@@ -1126,7 +1126,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 409
+  itemNames:
+  - 409
   isColliding: 0
   spriteData: []
 --- !u!60 &102934149
@@ -2365,7 +2366,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 102
+  itemNames:
+  - 102
   isColliding: 0
   spriteData: []
 --- !u!1 &182685625
@@ -2907,7 +2909,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 210
+  itemNames:
+  - 210
   isColliding: 0
   spriteData: []
 --- !u!60 &189163675
@@ -3107,7 +3110,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 406
+  itemNames:
+  - 406
   isColliding: 0
   spriteData: []
 --- !u!60 &192059052
@@ -3283,7 +3287,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 305
+  itemNames:
+  - 305
   isColliding: 0
   spriteData: []
 --- !u!60 &193648348
@@ -3907,7 +3912,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 105
+  itemNames:
+  - 105
   isColliding: 0
   spriteData: []
 --- !u!1 &267234816
@@ -4549,7 +4555,7 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 308
+  itemNames: []
   isColliding: 0
   spriteData: []
 --- !u!114 &277972684
@@ -4567,7 +4573,9 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 307
+  itemNames:
+  - 307
+  - 308
   isColliding: 0
   spriteData: []
 --- !u!60 &277972685
@@ -5377,7 +5385,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 607
+  itemNames:
+  - 607
   isColliding: 0
   spriteData: []
 --- !u!1 &339910162
@@ -5739,7 +5748,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 606
+  itemNames:
+  - 606
   isColliding: 0
   spriteData: []
 --- !u!1001 &382481689
@@ -5796,11 +5806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8413742984136145299, guid: 9881790803d203144b6e9157642cdd1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -138.5
+      value: -293
       objectReference: {fileID: 0}
     - target: {fileID: 8413742984136145299, guid: 9881790803d203144b6e9157642cdd1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 265
+      value: 308
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5911,7 +5921,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 201
+  itemNames:
+  - 201
   isColliding: 0
   spriteData: []
 --- !u!60 &382801269
@@ -6262,7 +6273,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 602
+  itemNames:
+  - 602
   isColliding: 0
   spriteData: []
 --- !u!1 &406969138
@@ -6702,7 +6714,7 @@ SpriteRenderer:
   m_Size: {x: 50, y: 64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &433071886
@@ -9007,7 +9019,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 205
+  itemNames:
+  - 205
   isColliding: 0
   spriteData: []
 --- !u!60 &679597786
@@ -10510,7 +10523,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 601
+  itemNames:
+  - 601
   isColliding: 0
   spriteData: []
 --- !u!1 &718684576
@@ -10843,7 +10857,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 204
+  itemNames:
+  - 204
   isColliding: 0
   spriteData: []
 --- !u!60 &743764364
@@ -11112,7 +11127,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 404
+  itemNames:
+  - 404
   isColliding: 0
   spriteData: []
 --- !u!60 &750317604
@@ -11364,7 +11380,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 604
+  itemNames:
+  - 604
   isColliding: 0
   spriteData: []
 --- !u!1 &777950975
@@ -12685,7 +12702,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 603
+  itemNames:
+  - 603
   isColliding: 0
   spriteData: []
 --- !u!1 &866236278
@@ -13077,7 +13095,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 101
+  itemNames:
+  - 101
   isColliding: 0
   spriteData: []
 --- !u!1 &900765288
@@ -13253,7 +13272,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 605
+  itemNames:
+  - 605
   isColliding: 0
   spriteData: []
 --- !u!1 &920990762
@@ -13360,7 +13380,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 206
+  itemNames:
+  - 206
   isColliding: 0
   spriteData: []
 --- !u!60 &920990766
@@ -16148,7 +16169,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 407
+  itemNames:
+  - 407
   isColliding: 0
   spriteData: []
 --- !u!60 &1069371388
@@ -16868,7 +16890,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 207
+  itemNames:
+  - 207
   isColliding: 0
   spriteData: []
 --- !u!60 &1165773120
@@ -17265,7 +17288,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 401
+  itemNames:
+  - 401
   isColliding: 0
   spriteData: []
 --- !u!60 &1222082998
@@ -18481,7 +18505,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 408
+  itemNames:
+  - 408
   isColliding: 0
   spriteData: []
 --- !u!60 &1351969597
@@ -19803,7 +19828,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 402
+  itemNames:
+  - 402
   isColliding: 0
   spriteData: []
 --- !u!60 &1460640305
@@ -20629,7 +20655,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 303
+  itemNames:
+  - 303
   isColliding: 0
   spriteData: []
 --- !u!60 &1521553579
@@ -21154,7 +21181,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 209
+  itemNames:
+  - 209
   isColliding: 0
   spriteData: []
 --- !u!60 &1572850550
@@ -22882,7 +22910,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 104
+  itemNames:
+  - 104
   isColliding: 0
   spriteData: []
 --- !u!1 &1628429764
@@ -23202,7 +23231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1657436752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25308,7 +25337,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 103
+  itemNames:
+  - 103
   isColliding: 0
   spriteData: []
 --- !u!1 &1786337159
@@ -28284,7 +28314,8 @@ MonoBehaviour:
   theIPM: {fileID: 0}
   confirmOn: {fileID: 0}
   webglBtn: {fileID: 0}
-  itemName: 304
+  itemNames:
+  - 304
   isColliding: 0
   spriteData: []
 --- !u!60 &2034570320
@@ -30217,7 +30248,7 @@ SpriteRenderer:
   m_Size: {x: 50, y: 64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2130149594

@@ -18,7 +18,7 @@ public class Respawn : MonoBehaviour
     }
     private void OnEnable()
     {
-        startPoint = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "StartPoint");
+        startPoint = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "Start_Point");
         resetPos = startPoint.transform;
     }
 }

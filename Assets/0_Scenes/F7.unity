@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216328069}
   m_Layer: 0
-  m_Name: Object
+  m_Name: None
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1216,6 +1216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028207818}
   - component: {fileID: 1028207819}
+  - component: {fileID: 1028207820}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1293,6 +1294,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1028207820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028207817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0254889fce6a24348819767e419e64b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDisable:
+  - {fileID: 1028207817}
+  - {fileID: 1926138569}
+  objectsToEnable: []
 --- !u!1 &1085087367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,6 +1920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791874137}
   - component: {fileID: 1791874138}
+  - component: {fileID: 1791874139}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -1980,6 +1998,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1791874139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791874136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0254889fce6a24348819767e419e64b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDisable:
+  - {fileID: 1791874136}
+  objectsToEnable: []
 --- !u!1 &1890807070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2056,7 @@ GameObject:
   - component: {fileID: 1926138570}
   - component: {fileID: 1926138571}
   m_Layer: 0
-  m_Name: Ceiling
+  m_Name: None1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

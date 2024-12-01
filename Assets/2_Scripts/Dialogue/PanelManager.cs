@@ -115,8 +115,26 @@ public class PanelManager : MonoBehaviour
             btnLeft.SetActive(false);
             btnRight.SetActive(false);
         }
+        ButtonLocation();
     }
 
+    private void ButtonLocation()
+    {
+        Vector2 spriteSize = sprite.sprite.bounds.size*0.3f;
+        Vector2 parentScale = transform.lossyScale;
+        Vector2 adjustedSize = new Vector2(spriteSize.x * parentScale.x, spriteSize.y * parentScale.y);
+
+        Vector3 topRightPosition = transform.position +
+            new Vector3(adjustedSize.x / 2 - 20f, adjustedSize.y / 2 - 20f, 0); 
+        Vector3 rightPosition = transform.position +
+            new Vector3(adjustedSize.x / 2 - 20f, 0, 0);
+        Vector3 leftPosition = transform.position -
+            new Vector3(adjustedSize.x / 2 - 20f, 0, 0);
+
+        btnClose.transform.position = topRightPosition;
+        btnRight.transform.position = rightPosition;
+        btnLeft.transform.position = leftPosition;
+    }
 
     public void InputFunc()
     {

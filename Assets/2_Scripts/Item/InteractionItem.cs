@@ -13,7 +13,7 @@ public class InteractionItem : MonoBehaviour
     public WebGLBtn webglBtn;
 
     //db관련된 문자열 변수
-    public string itemName;
+    public List<string> itemNames = new List<string>();
 
     //게임 중 변하는 불값
     public bool isColliding = false;
@@ -59,25 +59,30 @@ public class InteractionItem : MonoBehaviour
 
     public void ChangeDb()
     {
-        if (itemName != null)
+        if (itemNames != null && itemNames.Count > 0)
         {
             DatabaseManager databaseManager = FindObjectOfType<DatabaseManager>();
-            databaseManager.UpdateItemStatus(itemName, true);
+            foreach (string name in itemNames)
+            {
+                databaseManager.UpdateItemStatus(name, true);
+            }
         }
     }
 
-    private List<Sprite> GetItemDetailSprites()
+ private List<Sprite> GetItemDetailSprites()
     {
         DatabaseManager databaseManager = FindObjectOfType<DatabaseManager>();
         List<Sprite> sprites = new List<Sprite>();
 
-        foreach (ItemInfo itemInfo in databaseManager.itemInfos)
+        foreach (string name in itemNames)
         {
-            var itemData = itemInfo.items.Find(q => q.itemName == itemName);
-            if (itemData.itemName == itemName)
+            foreach (ItemInfo itemInfo in databaseManager.itemInfos)
             {
-                sprites = itemData.itemDetailImg;
-                break;
+                var itemData = itemInfo.items.Find(q => q.itemName == name);
+                if (itemData.itemDetailImg != null)
+                {
+                    sprites.AddRange(itemData.itemDetailImg);
+                }
             }
         }
 
