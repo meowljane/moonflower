@@ -64,8 +64,8 @@ public class LastQuizMethod : MonoBehaviour
             {
                 if (string.IsNullOrEmpty(inputField.text))
                 {
-                    ActiveText("입력하지 않은 곳이 있습니다.");
-                    //return; 
+                    ActiveText("정답을 모두 입력해주세요.");
+                    return; 
                 }
                 index++;
 
