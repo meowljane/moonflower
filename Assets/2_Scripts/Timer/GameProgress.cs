@@ -37,10 +37,7 @@ public class GameProgress : MonoBehaviour
     void Awake()
     {
         // 씬 로드 이벤트 등록
-        if (!isF6)
-        {
-            //SceneManager.sceneLoaded += OnSceneLoaded;
-        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Update()
@@ -59,10 +56,7 @@ public class GameProgress : MonoBehaviour
     private void OnDestroy()
     {
         // 씬 로드 이벤트 해제
-        if (!isF6)
-        {
-            //SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void PlaySound(AudioClip clip, bool loop = false)
@@ -82,6 +76,11 @@ public class GameProgress : MonoBehaviour
         Debug.Log($"씬 로드됨: {scene.name}");
 
         // 현재 씬에 해당하는 TimerInfo 가져오기
+        if (isF6)
+        {
+            return;
+        }
+
         gameInfos = gameSet.gameProgress.Find(info => info.sceneName == scene.name);
 
         if (gameInfos == null)

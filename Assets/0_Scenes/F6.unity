@@ -8964,11 +8964,11 @@ MonoBehaviour:
       playTime: 1
     textData:
       prepareText:
-      - "1\uCC28 \uD604\uC7A5\uAC80\uC99D 7\uBD84/4"
+      - "1\uCC28 \uD604\uC7A5\uAC80\uC99D 7\uBD84/1"
       - "1\uCC28 \uD604\uC7A5 \uAC80\uC99D \uC911\uC5D0\uB294 \uD0D0\uC815\uB4E4
-        \uAC04\uC758 \uB300\uD654\uAC00 \uBD88\uAC00\uB2A5 \uD569\uB2C8\uB2E4./4"
+        \uAC04\uC758 \uB300\uD654\uAC00 \uBD88\uAC00\uB2A5 \uD569\uB2C8\uB2E4./1"
       - "\uC9C0\uAE08\uBD80\uD130 \uD604\uC7A5\uC744 \uB3CC\uC544\uB2E4\uB2C8\uBA70
-        \uC870\uC0AC\uD558\uC2E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4./4"
+        \uC870\uC0AC\uD558\uC2E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4./1"
       endText:
       - "1\uCC28 \uD604\uC7A5 \uAC80\uC99D\uC774 \uC885\uB8CC \uB410\uC2B5\uB2C8\uB2E4.\\n\uC7A0\uC2DC
         \uD6C4 \uB2E4\uC74C \uC7A5\uC18C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4./8"
@@ -9024,17 +9024,17 @@ MonoBehaviour:
       playTime: 1
     textData:
       prepareText:
-      - "2\uCC28 \uD604\uC7A5 \uAC80\uC99D 15\uBD84/4"
+      - "2\uCC28 \uD604\uC7A5 \uAC80\uC99D 15\uBD84/1"
       - "\uC11C\uB85C \uB300\uD654\uB97C \uB098\uB204\uBA70 \uC790\uC720\uB86D\uAC8C
-        \uD604\uC7A5 \uAC80\uC99D\uC774 \uAC00\uB2A5 \uD569\uB2C8\uB2E4./4"
+        \uD604\uC7A5 \uAC80\uC99D\uC774 \uAC00\uB2A5 \uD569\uB2C8\uB2E4./1"
       - "\uC9C0\uAE08\uBD80\uD130\uB294 \uC11C\uB85C \uC7A5\uC18C\uAC00 \uB2EC\uB77C\uB3C4
         \uBAA8\uB4E0 \uD50C\uB808\uC774\uC5B4\uAC00\\n\uC790\uC720\uB86D\uAC8C \uB300\uD654\uAC00
-        \uAC00\uB2A5\uD569\uB2C8\uB2E4./6"
+        \uAC00\uB2A5\uD569\uB2C8\uB2E4./1"
       - "\uC9C0\uAE08\uBD80\uD130 2\uCC28 \uD604\uC7A5 \uAC80\uC99D\uC744 \uC2DC\uC791
-        \uD558\uACA0\uC2B5\uB2C8\uB2E4./4"
+        \uD558\uACA0\uC2B5\uB2C8\uB2E4./1"
       endText:
       - "2\uCC28 \uD604\uC7A5 \uAC80\uC99D\uC774 \uC885\uB8CC \uB410\uC2B5\uB2C8\uB2E4.\\n\uC7A0\uC2DC
-        \uD6C4 \uB2E4\uC74C \uC7A5\uC18C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4./8"
+        \uD6C4 \uB2E4\uC74C \uC7A5\uC18C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4./1"
     soundData:
       BGM: {fileID: 8300000, guid: 149c2cd97f885084baeabca635abad4d, type: 3}
       startSound: {fileID: 8300000, guid: 5abf5ea1d8da4974ab5388fe2044fc23, type: 3}
@@ -9042,7 +9042,7 @@ MonoBehaviour:
   - sceneName: F7
     timerData:
       infinityTime: 0
-      overTime: 0
+      overTime: 1
       playTime: 15
     textData:
       prepareText:
