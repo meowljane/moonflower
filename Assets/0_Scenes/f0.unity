@@ -3812,11 +3812,11 @@ GameObject:
   - component: {fileID: 667869878}
   - component: {fileID: 667869879}
   - component: {fileID: 667869880}
-  - component: {fileID: 667869882}
   - component: {fileID: 667869881}
+  - component: {fileID: 667869883}
   m_Layer: 0
   m_Name: Panel2
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3956,7 +3956,7 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
---- !u!114 &667869882
+--- !u!114 &667869883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3965,11 +3965,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 667869877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48808acb1405504ba7a82075ff250ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.4669811, g: 0.96964794, b: 1, a: 1}
-  outlineSize: 2
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
 --- !u!1 &697600594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,9 +5663,10 @@ GameObject:
   - component: {fileID: 1025110309}
   - component: {fileID: 1025110310}
   - component: {fileID: 1025110311}
+  - component: {fileID: 1025110312}
   m_Layer: 0
   m_Name: Panel3
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5804,6 +5806,21 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
+--- !u!114 &1025110312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025110307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
 --- !u!1 &1040693820
 GameObject:
   m_ObjectHideFlags: 0
@@ -6653,7 +6670,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751439447}
   m_SourcePrefab: {fileID: 100100000, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
 --- !u!4 &1246016905 stripped
 Transform:
@@ -7473,6 +7493,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5924026565642778314, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
   m_PrefabInstance: {fileID: 1290371847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464517683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+  m_PrefabInstance: {fileID: 1246016904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468854378
 GameObject:
   m_ObjectHideFlags: 0
@@ -7647,9 +7672,10 @@ GameObject:
   - component: {fileID: 1506726303}
   - component: {fileID: 1506726304}
   - component: {fileID: 1506726305}
+  - component: {fileID: 1506726306}
   m_Layer: 0
   m_Name: Panel1
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7789,6 +7815,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 145, y: 212}
   m_EdgeRadius: 0
+--- !u!114 &1506726306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506726301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
 --- !u!1 &1506799753
 GameObject:
   m_ObjectHideFlags: 0
@@ -9359,7 +9400,7 @@ GameObject:
   - component: {fileID: 1701715582}
   m_Layer: 0
   m_Name: Panel1
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9723,12 +9764,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
   m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1464517683}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6549cbbcf4519843b37f2ddeea0e34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1751439447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464517683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
 --- !u!1 &1760109206
 GameObject:
   m_ObjectHideFlags: 0
