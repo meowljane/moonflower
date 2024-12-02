@@ -40,18 +40,14 @@ public class InteractionText : MonoBehaviour
         {
             if (isTouch) //Inspector창에서 true값으로 고정 / 스크립트에서 따로 조절하는 부분이 없음.
             {
-                theTM.ShowText(sentences);
-                isActive = true;
-                Invoke("CloseTMText", closeCount);
+                ActiveText(sentences);
             }
             else
             {
                 confirmOn.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
                 {
-                    theTM.ShowText(sentences);
-                    isActive = true;
-                    Invoke("CloseTMText", closeCount);
+                    ActiveText(sentences);
                 }
             }
 
@@ -67,7 +63,12 @@ public class InteractionText : MonoBehaviour
         isColliding = false;
         confirmOn.SetActive(false);
     }
-
+    void ActiveText(string sentences)
+    {
+        theTM.ShowText(sentences);
+        isActive = true;
+        Invoke("CloseTMText", closeCount);
+    }
     void CloseTMText()
     {
         theTM.CloseText();

@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,8 @@ public class LastQuizMethod : MonoBehaviour
 {
     //스크립트 캐싱받기
     public WindowManager theWindow;
-    private DatabaseManager theDM;
+    public DatabaseManager theDM;
+    public TextManager theTM;
     public GameObject quizWindow;
     public GameObject nextDial;
 
@@ -27,11 +29,17 @@ public class LastQuizMethod : MonoBehaviour
 
     public Button answerButton;
     public Sprite endingBtnImage;
+    public Text playerName;
+    public TextMeshProUGUI gradePageText;
+
+    private string gradeText = "축하합니다 레다님. \r\n당신은 명탐정입니다!\r\n\r\n레다님의 점수는\r\n\r\n100점 S랭크\r\n\r\n문제 점수 20점 중간 투표 20점\r\n힌트 차감 -20점 시간 차잠 -20점\r\n총 점수 100점\r\n";
+    private bool isActive = false;
 
     public void Awake()
     {
         theWindow = FindFirstObjectByType<WindowManager>();
         theDM = FindObjectOfType<DatabaseManager>();
+        theTM = FindFirstObjectByType<TextManager>();
         theWindow.OpenWindow(quizWindow);
         answerButton.onClick.AddListener(() => ShowAnswerBtn());
     }
@@ -56,7 +64,7 @@ public class LastQuizMethod : MonoBehaviour
             {
                 if (string.IsNullOrEmpty(inputField.text))
                 {
-                    Debug.Log("값이 없습니다.");
+                    ActiveText("입력하지 않은 곳이 있습니다.");
                     //return; 
                 }
                 index++;
@@ -119,6 +127,7 @@ public class LastQuizMethod : MonoBehaviour
     {
         int index = 0;
 
+        //dm부분 사실 안써도 되는데.. 일단 그냥 둠.
         foreach (string child in rightQuiz)
         {
             if (child == "true")
@@ -131,7 +140,7 @@ public class LastQuizMethod : MonoBehaviour
             }
             if (string.IsNullOrEmpty(child))
             {
-                Debug.Log("값이 없습니다.");
+                ActiveText("채점하지 않은 곳이 있습니다.");
                 return;
             }
             index++;
@@ -140,10 +149,55 @@ public class LastQuizMethod : MonoBehaviour
         }
 
         Debug.Log("최종으로.");
+        SetGradePage();
         nextDial.SetActive(true);
         quizWindow.SetActive(false);
     }
-    public void ChooseBtn(bool isO, int index)
+
+    void SetGradePage()
+    {
+        int[] scores = { 10, 10, 10, 15, 15, 15, 25, 10, 10, 10 };
+        int totalScore = 0;
+        int quizPoints = 0;
+        int votePoints = theDM.isCorrectVote ? 10 : 0;
+        int hintPenalty = theDM.isCheckedHint ? 10 : 0;
+        int timePenalty = (theDM.seconds * (theDM.isHard ? 1 : 0) / 60) * 2;
+
+        string playerNameText = playerName.text;
+
+        for (int i = 0; i < rightQuiz.Length; i++)
+        {
+            if (rightQuiz[i] == "true")
+            {
+                quizPoints += scores[i];
+            }
+        }
+
+        totalScore = quizPoints + votePoints - hintPenalty - timePenalty;
+        totalScore = Mathf.Clamp(totalScore, 0, 100);
+
+        string rank;
+        if (totalScore >= 90) rank = "S";
+        else if (totalScore >= 80) rank = "A";
+        else if (totalScore >= 70) rank = "B";
+        else if (totalScore >= 60) rank = "C";
+        else rank = "D";
+
+        gradeText = $@"
+축하합니다, {playerNameText}님!
+당신은 명탐정입니다!
+
+{playerNameText}님의 점수는:
+총 점수: {totalScore}점 랭크{rank}
+
+문제 점수: {quizPoints}점, 중간 투표 점수: {votePoints}점
+힌트 차감: {hintPenalty}점, 시간 차감: -{timePenalty}점";
+
+        gradePageText.text = gradeText;
+    }
+
+
+    void ChooseBtn(bool isO, int index)
     {
         // O 버튼을 눌렀을 경우
         if (isO)
@@ -174,5 +228,17 @@ public class LastQuizMethod : MonoBehaviour
                 rightQuiz[index] = "false";
             }
         }
+    }
+
+    void ActiveText(string sentences)
+    {
+        theTM.ShowText(sentences);
+        isActive = true;
+        Invoke("CloseTMText", 2);
+    }
+    void CloseTMText()
+    {
+        theTM.CloseText();
+        isActive = false;
     }
 }
