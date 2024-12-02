@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0_Scenes/F6.unity
     guid: 7bff2f4ca6f1e82458c5cbe0c690ce81
+  - enabled: 1
+    path: Assets/0_Scenes/F7.unity
+    guid: ceb8d8b51cb95084b91f105f5dad37f1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

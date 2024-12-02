@@ -29,7 +29,7 @@ public class GameInfos
         public bool infinityTime;  // 플레이 시간이 무제한인지
 
         [Tooltip("시간 초과를 기록할 것인가 ?")]
-        public bool overTime;  // 플레이 시간이 무제한인지
+        public bool overTime;  // 오버 타임을 기록할 것인지
 
         [Tooltip("본 게임 시간 [ 1 ~ 15 ] (분)")]
         [Range(0, 15)]

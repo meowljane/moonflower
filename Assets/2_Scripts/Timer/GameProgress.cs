@@ -28,6 +28,8 @@ public class GameProgress : MonoBehaviour
     public AudioSource audioSource;
 
     private GameInfos gameInfos;
+    private int nextSceneIndex;
+    public bool isF6 = false;
     private bool isSkipPlay = false;
 
     private float totalPlayTime = 0f; // 총 플레이 타임 (초 단위)
@@ -35,8 +37,10 @@ public class GameProgress : MonoBehaviour
     void Awake()
     {
         // 씬 로드 이벤트 등록
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        DontDestroyOnLoad(gameObject);
+        if (!isF6)
+        {
+            //SceneManager.sceneLoaded += OnSceneLoaded;
+        }
     }
 
     private void Update()
@@ -55,7 +59,10 @@ public class GameProgress : MonoBehaviour
     private void OnDestroy()
     {
         // 씬 로드 이벤트 해제
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (!isF6)
+        {
+            //SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
     }
 
     private void PlaySound(AudioClip clip, bool loop = false)
@@ -177,24 +184,24 @@ public class GameProgress : MonoBehaviour
             remainingTime--;
         }
 
-        //while (!isSkipPlay)
-        //{
-        //    if (timerText != null)
-        //    {
-        //        int minutes = remainingTime / 60;
-        //        int seconds = remainingTime % 60;
-        //        timerText.text = $"{minutes:00}:{seconds:00}";
-        //    }
+        while (!isSkipPlay && gameInfos.timerData.overTime)
+        {
+            if (timerText != null)
+            {
+                int minutes = remainingTime / 60;
+                int seconds = remainingTime % 60;
+                timerText.text = $"{minutes:00}:{seconds:00}";
+            }
 
-        //    // 매 초마다 총 플레이 타임 증가
-        //    totalPlayTime += 1f;
+            // 매 초마다 총 플레이 타임 증가
+            totalPlayTime += 1f;
 
-        //    // 총 플레이 타임 업데이트
-        //    SetPlayTime();
+            // 총 플레이 타임 업데이트
+            SetPlayTime();
 
-        //    yield return new WaitForSeconds(1f);
-        //    remainingTime--;
-        //}
+            yield return new WaitForSeconds(1f);
+            remainingTime--;
+        }
 
         if (timerText != null)
         {
@@ -262,16 +269,20 @@ public class GameProgress : MonoBehaviour
     private void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
+        nextSceneIndex = currentSceneIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
-
         }
         else
         {
             Debug.Log("더 이상 로드할 씬이 없습니다.");
         }
+    }
+
+    public int CheckSceneNum()
+    {
+        return nextSceneIndex;
     }
 }
