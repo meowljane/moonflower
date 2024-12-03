@@ -192,7 +192,7 @@ MonoBehaviour:
   - sceneName: F2
     timerData:
       infinityTime: 0
-      overTime: 0
+      overTime: 1
       playTime: 1
     textData:
       prepareText:
@@ -10875,12 +10875,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSet: {fileID: 6138579}
+  databaseManager: {fileID: 2048148005}
   timerText: {fileID: 462555778}
   centerLabel: {fileID: 1637658593}
   centerLabelPannel: {fileID: 1635092254}
   playTimeText: {fileID: 1145604156}
-  overTimeText: {fileID: 0}
   audioSource: {fileID: 1651800207}
+  isF6: 0
 --- !u!114 &1874954386
 MonoBehaviour:
   m_ObjectHideFlags: 0

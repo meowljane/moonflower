@@ -10,6 +10,9 @@ public class GameProgress : MonoBehaviour
     [Tooltip("GameSet 코드가 들어간 오브젝트")]
     public GameSet gameSet;
 
+    [Tooltip("Database 코드가 들어간 오브젝트")]
+    public DatabaseManager databaseManager;
+
     [Header("Caching Text")]
     [Tooltip("타이머를 담당할 텍스트")]
     public Text timerText;
@@ -21,18 +24,17 @@ public class GameProgress : MonoBehaviour
     [Tooltip("총 플레이 타임을 표시할 텍스트")]
     public Text playTimeText;
 
-    [Tooltip("총 플레이 타임을 표시할 텍스트")]
-    public Text overTimeText;
-
     [Tooltip("전반적인 오디오 소스 출력")]
     public AudioSource audioSource;
 
     private GameInfos gameInfos;
     private int nextSceneIndex;
+
     public bool isF6 = false;
     private bool isSkipPlay = false;
 
     private float totalPlayTime = 0f; // 총 플레이 타임 (초 단위)
+    private float overPlayTime = 0f; // 총 플레이 타임 (초 단위)
 
     void Awake()
     {
@@ -128,6 +130,7 @@ public class GameProgress : MonoBehaviour
         }
 
         isSkipPlay = false;
+        databaseManager.seconds = (int)overPlayTime;
 
         // 3. 종료 텍스트 실행
         float endTotalTime = CalculateTotalTime(textData.endText);
@@ -183,28 +186,21 @@ public class GameProgress : MonoBehaviour
             remainingTime--;
         }
 
+        if (timerText != null)
+        {
+            timerText.text = "00:00";
+        }
+
         while (!isSkipPlay && gameInfos.timerData.overTime)
         {
-            if (timerText != null)
-            {
-                int minutes = remainingTime / 60;
-                int seconds = remainingTime % 60;
-                timerText.text = $"{minutes:00}:{seconds:00}";
-            }
-
             // 매 초마다 총 플레이 타임 증가
             totalPlayTime += 1f;
+            overPlayTime += 1f;
 
             // 총 플레이 타임 업데이트
             SetPlayTime();
 
             yield return new WaitForSeconds(1f);
-            remainingTime--;
-        }
-
-        if (timerText != null)
-        {
-            timerText.text = "00:00";
         }
     }
 

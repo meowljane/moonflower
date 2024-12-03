@@ -29,16 +29,16 @@ public class DatabaseManager : MonoBehaviour
 
     private float elapsedTime = 0f;
 
-    void Update()
-    {
-        elapsedTime += Time.deltaTime;
+    //void Update()
+    //{
+    //    elapsedTime += Time.deltaTime;
 
-        if (elapsedTime >= 1f)
-        {
-            elapsedTime -= 1f;
-            seconds++;
-        }
-    }
+    //    if (elapsedTime >= 1f)
+    //    {
+    //        elapsedTime -= 1f;
+    //        seconds++;
+    //    }
+    //}
 
     public void UpdateItemStatus(string itemName, bool newStatus)
     {
