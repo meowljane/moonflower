@@ -542,6 +542,89 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 25, y: 48}
   m_EdgeRadius: 0
+--- !u!1 &654574613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654574614}
+  - component: {fileID: 654574615}
+  m_Layer: 0
+  m_Name: DontMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654574614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654574613}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -136, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2074284958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &654574615
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654574613}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -74.5432, y: -39.839653}
+      - {x: -52.91107, y: -64.220665}
+      - {x: 67.767105, y: 10.68869}
+      - {x: 49.553127, y: 35.00775}
+  m_UseDelaunayMesh: 0
 --- !u!1 &675423545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1623,7 @@ GameObject:
   - component: {fileID: 1485110647}
   - component: {fileID: 1485110648}
   - component: {fileID: 1485110650}
-  - component: {fileID: 1485110649}
+  - component: {fileID: 1485110651}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Interactable
@@ -1618,21 +1701,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1485110649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485110646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0254889fce6a24348819767e419e64b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToDisable:
-  - {fileID: 1485110646}
-  objectsToEnable: []
 --- !u!60 &1485110650
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1663,7 +1731,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1694,6 +1762,29 @@ PolygonCollider2D:
       - {x: -2, y: -17.5}
       - {x: 22, y: -3.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &1485110651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485110646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable:
+  - {fileID: 1485110646}
+  - {fileID: 654574613}
+  objectsToEnable: []
+  spriteData:
+  - {fileID: 21300000, guid: 6df13f35c91225b4a9488aa8689ee92a, type: 3}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
 --- !u!1 &1518601456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,7 +2634,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8228657473782298638, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 654574614}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8432934011264719429, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       insertIndex: -1
