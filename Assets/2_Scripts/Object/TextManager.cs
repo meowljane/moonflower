@@ -29,7 +29,7 @@ public class TextManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        CloseText();
+        //CloseText();
     }
 
     //대화창을 여는 함수

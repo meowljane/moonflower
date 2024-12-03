@@ -10888,9 +10888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSet: {fileID: 6138579}
   databaseManager: {fileID: 2048148005}
+  textManager: {fileID: 1874954388}
   timerText: {fileID: 462555778}
-  centerLabel: {fileID: 1637658593}
-  centerLabelPannel: {fileID: 1635092254}
   playTimeText: {fileID: 1145604156}
   audioSource: {fileID: 1651800207}
   isF6: 0

@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: lensSize
       value: 115
       objectReference: {fileID: 0}
+    - target: {fileID: 7554625438418220858, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
+      propertyPath: delayTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8112851886000807830, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
       propertyPath: m_Name
       value: Move

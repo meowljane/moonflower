@@ -27214,7 +27214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineCamera: {fileID: 0}
-  lensSize: 190
+  lensSize: 165
   delayTime: 0
 --- !u!1 &1978258013
 GameObject:
