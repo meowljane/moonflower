@@ -3823,9 +3823,9 @@ GameObject:
   m_Component:
   - component: {fileID: 667869878}
   - component: {fileID: 667869879}
-  - component: {fileID: 667869880}
   - component: {fileID: 667869881}
   - component: {fileID: 667869883}
+  - component: {fileID: 667869884}
   m_Layer: 0
   m_Name: Panel2
   m_TagString: Interactable
@@ -3871,7 +3871,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3903,8 +3903,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &667869880
-BoxCollider2D:
+--- !u!114 &667869881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667869877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+  spriteData:
+  - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
+--- !u!114 &667869883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667869877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
+--- !u!60 &667869884
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3947,42 +3981,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 50, y: 64}
-  m_EdgeRadius: 0
---- !u!114 &667869881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667869877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePM: {fileID: 0}
-  confirmOn: {fileID: 0}
-  webglBtn: {fileID: 0}
-  isColliding: 0
-  isTouch: 0
-  spriteData:
-  - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
---- !u!114 &667869883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667869877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
+  m_Points:
+    m_Paths:
+    - - {x: 10.7135315, y: -28.240784}
+      - {x: 15.144714, y: -13.798218}
+      - {x: 10.129211, y: -1.5854187}
+      - {x: -5.5680847, y: -1.5678253}
+      - {x: -13.659119, y: -13.908813}
+      - {x: -6.979843, y: -28.422913}
+  m_UseDelaunayMesh: 0
 --- !u!1 &697600594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,9 +5680,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1025110308}
   - component: {fileID: 1025110309}
-  - component: {fileID: 1025110310}
   - component: {fileID: 1025110311}
   - component: {fileID: 1025110312}
+  - component: {fileID: 1025110313}
   m_Layer: 0
   m_Name: Panel3
   m_TagString: Interactable
@@ -5753,8 +5760,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1025110310
-BoxCollider2D:
+--- !u!114 &1025110311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025110307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+  spriteData:
+  - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
+--- !u!114 &1025110312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025110307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
+--- !u!60 &1025110313
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5797,42 +5838,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 50, y: 64}
-  m_EdgeRadius: 0
---- !u!114 &1025110311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025110307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1d0aefebae14c47b6e0e0b0226824f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePM: {fileID: 0}
-  confirmOn: {fileID: 0}
-  webglBtn: {fileID: 0}
-  isColliding: 0
-  isTouch: 0
-  spriteData:
-  - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
---- !u!114 &1025110312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025110307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
+  m_Points:
+    m_Paths:
+    - - {x: 10.7135315, y: -28.240784}
+      - {x: 15.144714, y: -13.798218}
+      - {x: 10.129211, y: -1.5854187}
+      - {x: -5.5680847, y: -1.5678253}
+      - {x: -13.659119, y: -13.908813}
+      - {x: -6.979843, y: -28.422913}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1040693820
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,8 +7697,8 @@ GameObject:
   - component: {fileID: 1506726302}
   - component: {fileID: 1506726303}
   - component: {fileID: 1506726304}
-  - component: {fileID: 1506726305}
   - component: {fileID: 1506726306}
+  - component: {fileID: 1506726307}
   m_Layer: 0
   m_Name: Panel1
   m_TagString: Interactable
@@ -7781,8 +7795,23 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: b3994a1fd37ec0542b63cbff195f4c89, type: 3}
---- !u!61 &1506726305
-BoxCollider2D:
+--- !u!114 &1506726306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506726301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+  targetTag: Interactable
+--- !u!60 &1506726307
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7825,23 +7854,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 145, y: 212}
-  m_EdgeRadius: 0
---- !u!114 &1506726306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506726301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
+  m_Points:
+    m_Paths:
+    - - {x: 24.205933, y: -91.69769}
+      - {x: 57.361855, y: -59.5515}
+      - {x: 43.49843, y: -24.705124}
+      - {x: -14.885139, y: -22.978256}
+      - {x: -48.234406, y: -52.547607}
+      - {x: -33.82396, y: -91.67768}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1506799753
 GameObject:
   m_ObjectHideFlags: 0
@@ -9408,8 +9429,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1701715580}
   - component: {fileID: 1701715581}
-  - component: {fileID: 1701715583}
   - component: {fileID: 1701715582}
+  - component: {fileID: 1701715583}
   m_Layer: 0
   m_Name: Panel1
   m_TagString: Interactable
@@ -9506,8 +9527,8 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: 64b8b21e7c04a3d48846197296373e12, type: 3}
---- !u!61 &1701715583
-BoxCollider2D:
+--- !u!60 &1701715583
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9550,8 +9571,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 145, y: 212}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 24.205933, y: -91.69769}
+      - {x: 57.361855, y: -59.5515}
+      - {x: 43.49843, y: -24.705124}
+      - {x: -14.885139, y: -22.978256}
+      - {x: -48.234406, y: -52.547607}
+      - {x: -33.82396, y: -91.67768}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1723574961
 GameObject:
   m_ObjectHideFlags: 0
@@ -10043,7 +10071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.size
-      value: 23
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[0].x
@@ -10079,11 +10107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[4].x
-      value: -215.63242
+      value: -215.26564
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[4].y
-      value: -284.63098
+      value: -282.43033
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[5].x
@@ -10111,35 +10139,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[8].x
-      value: -859.97095
+      value: -853.98566
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[8].y
-      value: 14.071394
+      value: 13.273352
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[9].x
-      value: -859.14404
+      value: -853.9568
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[9].y
-      value: 40.226463
+      value: 39.428425
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[10].x
-      value: -528.64496
+      value: -459.6898
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[10].y
-      value: 229.52725
+      value: 266.774
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[11].x
-      value: -460.76163
+      value: -460.30627
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[11].y
-      value: 229.7172
+      value: 230.6279
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[12].x
@@ -10167,23 +10195,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[15].x
-      value: -269.26025
+      value: -264.33316
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[15].y
-      value: 332.20523
+      value: 330.7975
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[16].x
-      value: -269.32758
+      value: -263.6966
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[16].y
-      value: 388.13412
+      value: 387.43024
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[17].x
-      value: -20.451368
+      value: -13.869108
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[17].y
@@ -10191,7 +10219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[18].x
-      value: 42.27162
+      value: 31.878586
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[18].y
@@ -10199,34 +10227,98 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[19].x
-      value: 858.2377
+      value: 291.75098
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[19].y
-      value: 56.807674
+      value: 378.40363
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[20].x
-      value: 857.90234
+      value: 304.39914
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[20].y
-      value: -22.281952
+      value: 382.53
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[21].x
-      value: 84.370544
+      value: 334.0978
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[21].y
-      value: -472.03098
+      value: 366.692
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[22].x
-      value: 49
+      value: 333.98682
       objectReference: {fileID: 0}
     - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
       propertyPath: m_Points.Array.data[22].y
+      value: 353.0094
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[23].x
+      value: 460.11108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[23].y
+      value: 281.48248
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[24].x
+      value: 472.32455
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[24].y
+      value: 285.72784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[25].x
+      value: 501.34344
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[25].y
+      value: 268.13733
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[26].x
+      value: 501.3702
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[26].y
+      value: 258.22986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[27].x
+      value: 857.8059
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[27].y
+      value: 52.058746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[28].x
+      value: 857.90234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[28].y
+      value: -22.281952
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[29].x
+      value: 84.370544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[29].y
+      value: -472.03098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[30].x
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082535399506089218, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+      propertyPath: m_Points.Array.data[30].y
       value: -487.5
       objectReference: {fileID: 0}
     - target: {fileID: 6365082773774780247, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
