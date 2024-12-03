@@ -193,7 +193,7 @@ MonoBehaviour:
     timerData:
       infinityTime: 0
       overTime: 1
-      playTime: 1
+      playTime: 10
     textData:
       prepareText:
       - "\uC6A9\uC758\uC790 \uC870\uC0AC 10\uBD84/3"
@@ -214,7 +214,7 @@ MonoBehaviour:
     timerData:
       infinityTime: 0
       overTime: 0
-      playTime: 1
+      playTime: 7
     textData:
       prepareText:
       - "1\uCC28 \uD604\uC7A5\uAC80\uC99D 7\uBD84/4"
@@ -274,7 +274,7 @@ MonoBehaviour:
     timerData:
       infinityTime: 0
       overTime: 0
-      playTime: 1
+      playTime: 15
     textData:
       prepareText:
       - "2\uCC28 \uD604\uC7A5 \uAC80\uC99D 15\uBD84/4"
@@ -295,7 +295,7 @@ MonoBehaviour:
   - sceneName: F7
     timerData:
       infinityTime: 0
-      overTime: 0
+      overTime: 1
       playTime: 15
     textData:
       prepareText:
@@ -311,7 +311,7 @@ MonoBehaviour:
         \uC0AC\uAC74 \uD574\uACB0 \uBC29\uC73C\uB85C \uC785\uC7A5\uD574\uC8FC\uC138\uC694./5"
       endText:
       - "\uC0AC\uAC74 \uC218\uC0AC\uAC00 \uC644\uB8CC \uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC774\uC81C
-        \uC0AC\uAC74 \uD574\uACB0\uC744 \uC704\uD574 \uC774\uB3D9 \uD558\uACA0\uC2B5\uB2C8\uB2E4."
+        \uC0AC\uAC74 \uD574\uACB0\uC744 \uC704\uD574 \uC774\uB3D9 \uD558\uACA0\uC2B5\uB2C8\uB2E4./8"
     soundData:
       BGM: {fileID: 8300000, guid: 824d2b6770d051142aa696b608296407, type: 3}
       startSound: {fileID: 8300000, guid: bfc0b40b37b4c494dbc3bd02adbeaaf9, type: 3}
@@ -326,6 +326,18 @@ MonoBehaviour:
       endText: []
     soundData:
       BGM: {fileID: 8300000, guid: ee081ad7210e9f445a3223c22759adeb, type: 3}
+      startSound: {fileID: 0}
+      endSound: {fileID: 0}
+  - sceneName: F9
+    timerData:
+      infinityTime: 1
+      overTime: 0
+      playTime: 0
+    textData:
+      prepareText: []
+      endText: []
+    soundData:
+      BGM: {fileID: 8300000, guid: 0d25b75a0216f634d8213a413a7652b9, type: 3}
       startSound: {fileID: 0}
       endSound: {fileID: 0}
 --- !u!1 &13274716

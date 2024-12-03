@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineCamera: {fileID: 0}
-  lensSize: 200
+  lensSize: 190
   delayTime: 0
 --- !u!1 &140545341
 GameObject:
@@ -23569,12 +23569,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSet: {fileID: 1365257455}
+  databaseManager: {fileID: 0}
   timerText: {fileID: 142198217}
   centerLabel: {fileID: 1220225024}
   centerLabelPannel: {fileID: 1631575865}
   playTimeText: {fileID: 1943284418}
-  overTimeText: {fileID: 0}
   audioSource: {fileID: 509770530}
+  isF6: 0
 --- !u!114 &1675259503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27213,7 +27214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineCamera: {fileID: 0}
-  lensSize: 200
+  lensSize: 190
   delayTime: 0
 --- !u!1 &1978258013
 GameObject:

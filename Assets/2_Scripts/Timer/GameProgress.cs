@@ -44,7 +44,7 @@ public class GameProgress : MonoBehaviour
 
     private void Update()
     {
-        if (!isSkipPlay && Input.GetKeyDown(KeyCode.Escape))
+        if (!isSkipPlay && Input.GetKeyDown(KeyCode.N))
         {
             isSkipPlay = !isSkipPlay;
         }
