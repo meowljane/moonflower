@@ -15,6 +15,9 @@ public class GameProgress : MonoBehaviour
     
     [Tooltip("Database 코드가 들어간 오브젝트")]
     public TextManager textManager;
+    
+    [Tooltip("AudioManager 코드가 들어간 오브젝트")]
+    public AudioManager audioManager;
 
     [Header("Caching Text")]
     [Tooltip("타이머를 담당할 텍스트")]
@@ -22,9 +25,6 @@ public class GameProgress : MonoBehaviour
 
     [Tooltip("총 플레이 타임을 표시할 텍스트")]
     public Text playTimeText;
-
-    [Tooltip("전반적인 오디오 소스 출력")]
-    public AudioSource audioSource;
 
     private GameInfos gameInfos;
     private int nextSceneIndex;
@@ -58,18 +58,6 @@ public class GameProgress : MonoBehaviour
     {
         // 씬 로드 이벤트 해제
         SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void PlaySound(AudioClip clip, bool loop = false)
-    {
-        if (audioSource == null || clip == null)
-        {
-            return;
-        }
-
-        audioSource.loop = loop;
-        audioSource.clip = clip;
-        audioSource.Play();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -109,15 +97,18 @@ public class GameProgress : MonoBehaviour
     private IEnumerator StartTimer()
     {
         var textData = gameInfos.textData;
+        var timerData = gameInfos.timerData;
+        float endTotalTime = CalculateTotalTime(textData.endText);
+        float prepareTotalTime = CalculateTotalTime(textData.prepareText);
 
         // 1. 준비 텍스트 실행
-        float prepareTotalTime = CalculateTotalTime(textData.prepareText);
-        PlaySound(gameInfos.soundData.startSound);
+
+        audioManager.PlaySound("START");
         yield return StartCoroutine(RunTextCountdown(prepareTotalTime, textData.prepareText));
 
         // 2. 본 게임 타이머 실행
-        var timerData = gameInfos.timerData;
-        PlaySound(gameInfos.soundData.BGM);
+
+        audioManager.PlaySound("BGM");
         if (timerData.infinityTime)
         {
             yield return StartCoroutine(RunInfinityTimer()); // InfinityTimer 실행
@@ -132,8 +123,8 @@ public class GameProgress : MonoBehaviour
         databaseManager.seconds = (int)overPlayTime;
 
         // 3. 종료 텍스트 실행
-        float endTotalTime = CalculateTotalTime(textData.endText);
-        PlaySound(gameInfos.soundData.endSound);
+
+        audioManager.PlaySound("END");
         yield return StartCoroutine(RunTextCountdown(endTotalTime, textData.endText));
 
         // 4. 씬 전환
