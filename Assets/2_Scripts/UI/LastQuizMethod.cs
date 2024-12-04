@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,8 @@ public class LastQuizMethod : MonoBehaviour
     public WindowManager theWindow;
     public DatabaseManager theDM;
     public TextManager theTM;
+
+    public Camera mainCamera;
     public GameObject quizWindow;
     public GameObject nextDial;
 
@@ -37,6 +40,13 @@ public class LastQuizMethod : MonoBehaviour
 
     public void Awake()
     {
+        mainCamera = FindFirstObjectByType<Camera>();
+        Canvas canvas = GetComponent<Canvas>();
+        if (canvas != null && mainCamera != null)
+        {
+            canvas.worldCamera = mainCamera;
+        }
+
         theWindow = FindFirstObjectByType<WindowManager>();
         theDM = FindObjectOfType<DatabaseManager>();
         theTM = FindFirstObjectByType<TextManager>();

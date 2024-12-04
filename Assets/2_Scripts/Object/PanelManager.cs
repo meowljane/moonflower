@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PanelManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PanelManager : MonoBehaviour
     public GameObject btnClose;
     public GameObject btnLeft;
     public GameObject btnRight;
+    public GameObject btnConfirm;
+    public GameObject btnCancel;
 
     //현재 스프라이트 리스트와 인덱스
     public List<Sprite> listSprites;
@@ -21,6 +24,11 @@ public class PanelManager : MonoBehaviour
 
     //게임 중 변하는 불값(InteractionDialogue가 바꿔줌)
     public bool isTalking = false;
+    public bool isDoor = false;
+
+    //활성화, 비활성화할 오브젝트들
+    public GameObject[] objectsToDisable;
+    public GameObject[] objectsToEnable;
 
     void Update()
     {
@@ -31,7 +39,7 @@ public class PanelManager : MonoBehaviour
     }
 
     //대화창을 여는 함수
-    public void ShowPanel(List<Sprite> sprites)
+    public void ShowPanel(List<Sprite> sprites, bool interactWithDoor)
     {
         if (sprites != null && sprites.Count > 0 && !isTalking)
         {
@@ -42,6 +50,7 @@ public class PanelManager : MonoBehaviour
             listSprites = sprites;
             currentIndex = 0;
 
+            isDoor = interactWithDoor;
             ShowSprite();
 
             theWindow.OpenWindow(PanelWindow);
@@ -55,8 +64,11 @@ public class PanelManager : MonoBehaviour
             isTalking = false;
 
             PanelWindow.gameObject.SetActive(false);
+            btnClose.SetActive(false);
             btnLeft.SetActive(false);
             btnRight.SetActive(false);
+            btnConfirm.SetActive(false);
+            btnCancel.SetActive(false);
 
             currentIndex = 0;
 
@@ -105,27 +117,31 @@ public class PanelManager : MonoBehaviour
 
     private void UpdateButtons()
     {
-        if (listSprites.Count != 1)
+        if (isDoor)
         {
-            btnLeft.SetActive(true);
-            btnRight.SetActive(true);
+            btnConfirm.SetActive(true);
+            btnCancel.SetActive(true);
         }
         else
         {
-            btnLeft.SetActive(false);
-            btnRight.SetActive(false);
+            btnClose.SetActive(true);
+            if (listSprites.Count != 1)
+            {
+                btnLeft.SetActive(true);
+                btnRight.SetActive(true);
+            }
+            ButtonLocation();
         }
-        ButtonLocation();
     }
 
     private void ButtonLocation()
     {
-        Vector2 spriteSize = sprite.sprite.bounds.size*0.3f;
+        Vector2 spriteSize = sprite.sprite.bounds.size * 0.3f;
         Vector2 parentScale = transform.lossyScale;
         Vector2 adjustedSize = new Vector2(spriteSize.x * parentScale.x, spriteSize.y * parentScale.y);
 
         Vector3 topRightPosition = transform.position +
-            new Vector3(adjustedSize.x / 2 - 20f, adjustedSize.y / 2 - 20f, 0); 
+            new Vector3(adjustedSize.x / 2 - 20f, adjustedSize.y / 2 - 20f, 0);
         Vector3 rightPosition = transform.position +
             new Vector3(adjustedSize.x / 2 - 20f, 0, 0);
         Vector3 leftPosition = transform.position -
@@ -152,6 +168,18 @@ public class PanelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             ClosePanel();
+        }
+    }
+
+    public void UpdateObjects()
+    {
+        foreach (GameObject obj in objectsToDisable)
+        {
+            obj.SetActive(false);
+        }
+        foreach (GameObject obj in objectsToEnable)
+        {
+            obj.SetActive(true);
         }
     }
 }

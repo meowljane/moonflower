@@ -11,15 +11,14 @@ public class GameProgress : MonoBehaviour
     public GameSet gameSet;
 
     [Tooltip("Database 코드가 들어간 오브젝트")]
-    public DatabaseManager databaseManager;
+    public DatabaseManager databaseManager;    
+    
+    [Tooltip("Database 코드가 들어간 오브젝트")]
+    public TextManager textManager;
 
     [Header("Caching Text")]
     [Tooltip("타이머를 담당할 텍스트")]
     public Text timerText;
-
-    [Tooltip("센터라벨을 담당할 텍스트와 배경")]
-    public Text centerLabel;
-    public GameObject centerLabelPannel;
 
     [Tooltip("총 플레이 타임을 표시할 텍스트")]
     public Text playTimeText;
@@ -218,8 +217,7 @@ public class GameProgress : MonoBehaviour
 
             float displayTime = parts.Length > 1 && float.TryParse(parts[1], out float time) ? time : 2f;
 
-            centerLabel.text = message;
-            centerLabelPannel.SetActive(true);
+            textManager.ShowText(message);
 
             while (displayTime > 0)
             {
@@ -238,8 +236,8 @@ public class GameProgress : MonoBehaviour
         }
 
         // 텍스트 초기화
-        centerLabel.text = "";
-        centerLabelPannel.SetActive(false);
+        textManager.CloseText();
+
         if (timerText != null)
         {
             timerText.text = "00:00"; // 텍스트 완료 후 타이머 00:00으로 초기화

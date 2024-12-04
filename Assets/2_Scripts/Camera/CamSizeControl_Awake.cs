@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-public class CamSizeControl : MonoBehaviour
+public class CamSizeControl_Awake : MonoBehaviour
 {
     // 플레이어 매니저를 받아올 공간
     private PlayerManager playerManager;
@@ -24,18 +24,12 @@ public class CamSizeControl : MonoBehaviour
         {
             cinemachineCamera = FindObjectOfType<CinemachineCamera>();
         }
+
+        CamSize();
     }
 
-    public void CamSize()
+    private void CamSize()
     {
         cinemachineCamera.Lens.OrthographicSize = lensSize;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player")
-        {
-            CamSize();
-        }
     }
 }

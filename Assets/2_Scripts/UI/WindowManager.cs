@@ -95,7 +95,6 @@ public class WindowManager : MonoBehaviour
 
     public void OpenWindow(GameObject windowToOpen)
     {
-        Debug.Log(windowToOpen+"ÄÑÁü");
         DeactivateAllWindows();
         TextWindow.SetActive(false);
         windowToOpen.SetActive(true);

@@ -3364,6 +3364,7 @@ MonoBehaviour:
   theWindow: {fileID: 0}
   theDM: {fileID: 0}
   theTM: {fileID: 0}
+  mainCamera: {fileID: 0}
   quizWindow: {fileID: 1989602843}
   nextDial: {fileID: 2083948273}
   rectTransform: {fileID: 163221040}
@@ -12757,9 +12758,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 422468942945222761, guid: 9881790803d203144b6e9157642cdd1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603567536}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9881790803d203144b6e9157642cdd1c, type: 3}
+--- !u!4 &1186538215 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 422468942945222761, guid: 9881790803d203144b6e9157642cdd1c, type: 3}
+  m_PrefabInstance: {fileID: 1186538214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1200574295
 GameObject:
   m_ObjectHideFlags: 0
@@ -15930,6 +15939,52 @@ Transform:
   - {fileID: 1882371140}
   m_Father: {fileID: 1385360927}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1603567535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603567536}
+  - component: {fileID: 1603567537}
+  m_Layer: 0
+  m_Name: Awake_Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1603567536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603567535}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1186538215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603567537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603567535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898b1febe5f751747a45bdf5a5d65649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineCamera: {fileID: 0}
+  lensSize: 115
 --- !u!1 &1621085170
 GameObject:
   m_ObjectHideFlags: 0
