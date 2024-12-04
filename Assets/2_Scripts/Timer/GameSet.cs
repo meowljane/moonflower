@@ -18,9 +18,6 @@ public class GameInfos
     [Header("텍스트 데이터")]
     public TextData textData;
 
-    [Header("사운드 데이터")]
-    public SoundData soundData;
-
     // Timer 관련 데이터
     [System.Serializable]
     public struct TimerData
@@ -45,19 +42,5 @@ public class GameInfos
 
         [Tooltip("완료 시 사용될 텍스트 내용 / 대기 시간")]
         public List<string> endText; // 끝나기 전 텍스트 내용
-    }
-
-    // 씬 사운드 소스 데이터
-    [System.Serializable]
-    public struct SoundData
-    {
-        [Tooltip("씬에서 재생될 BGM")]
-        public AudioClip BGM;
-
-        [Tooltip("시작 시 재생될 사운드")]
-        public AudioClip startSound;
-
-        [Tooltip("종료 시 재생될 사운드")]
-        public AudioClip endSound;
     }
 }

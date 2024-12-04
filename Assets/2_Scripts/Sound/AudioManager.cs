@@ -4,135 +4,65 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class AudioManager : MonoBehaviour
 {
-    static public AudioManager instance;
+    [Header("Audio Source")]
+    public AudioSource audioSource;
 
-    public PlayerManager thePlayer; //플레이어의 씬 카운트를 부르기 위한 변수
+    public GameObject soundData;
+    public SoundData data;
 
-    public AudioSource bgmAudioSource;
-    public AudioSource effectAudioSource;
-
-    public AudioClip[] bgmClips;
-    public AudioClip[] effectClips;
-
-    //윤성이사운드 변수
-    //public bool isSound = true;
-    private bool isBgm = true;
-    private bool isClick = true;
-    
-    private float bgmVolume;
-    private float effectSoundVolume;
-
-    /// <summary>
-    /// 각 씬에 알맞은 사운드 출력하는 메서드
-    /// </summary>
-#region
-    public void SelectSceneSound(int num)
+    private void Awake()
     {
-        if (thePlayer.isTransfer)
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GetSoundData();
+    }
+
+    public void GetSoundData()
+    {
+        soundData = GameObject.Find("SoundData");
+        data = soundData.GetComponent<SoundData>();
+    }
+
+    public void PlaySound(string sound)
+    {
+        switch(sound)
         {
-            bgmAudioSource.clip = bgmClips[num]; //monologue
-            bgmAudioSource.Play();
-            thePlayer.isTransfer = false;
+            case "START":
+                if (data.startSound == null)
+                {
+                    return;
+                }
+
+                audioSource.clip = data.startSound;
+                audioSource.Play();
+                break;
+
+            case "BGM":
+                if (data.BGM == null)
+                {
+                    return;
+                }
+
+                audioSource.clip = data.BGM;
+                audioSource.Play();
+                break;
+
+            case "END":
+                if (data.endSound == null)
+                {
+                    return;
+                }
+
+                audioSource.clip = data.endSound;
+                audioSource.Play();
+                break;
         }
-    }
-    #endregion
 
-    public void SelectMapSound(int num)
-    {
-        bgmAudioSource.clip = bgmClips[num];
-        bgmAudioSource.Play();
-        thePlayer.isTransfer = false;
-    }
-
-    /// <summary>
-    /// 효과음 출력해주는 메서드
-    /// </summary>
-    /// <param name="num"></param>
-    public void TestPlay(int num , bool isLoop)
-    {
-        Debug.Log("임시 엔터사운드 출력");
-        effectAudioSource.clip = effectClips[num];
-        effectAudioSource.loop = isLoop;
-
-        effectAudioSource.Play();
-    }
-
-    public void OnePlay(int num)
-    {
-        effectAudioSource.clip = bgmClips[num];
-        effectAudioSource.Play();
-    }
-
-    public void TestStop()
-    {
-        Debug.Log("사운드 정지");
-
-        effectAudioSource.Stop();
-    }
-    /// <summary>
-    /// 윤성이 사운드 조절 메서드
-    /// </summary>
-    /// <param name="volume"></param>
-
-    public void SetMusicVolume(float volume) //배경음 사운드 슬라이더
-    {
-        if (isBgm)
-            bgmAudioSource.volume = volume;
-    }
-
-    public void SetButtonVolume(float volume) //효과음 사운드 슬라이더
-    {
-        if (isClick)
-            effectAudioSource.volume = volume;
-        else
-            effectSoundVolume = volume;
-    }
-
-    /// <summary>
-    /// 브금 사운드 On Off 버튼 메서드
-    /// </summary>
-    public void OnBgmMuteVolume()
-    {
-        if (isBgm)
-        {
-            bgmVolume = bgmAudioSource.volume;
-            bgmAudioSource.volume = 0;
-            isBgm = false;
-        }
-        else if (!isBgm)
-        {
-            bgmAudioSource.volume = bgmVolume;
-            isBgm = true;
-        }
-    }
-
-    /// <summary>
-    /// 효과음 사운드 On Off 버튼 메서드
-    /// </summary>
-    public void OnMusicMuteVolume()
-    {
-        if (isClick)
-        {
-            effectSoundVolume = effectAudioSource.volume;
-            effectAudioSource.volume = 0;
-            isClick = false;
-        }
-        else
-        {
-            effectAudioSource.volume = effectSoundVolume;
-            isClick = true;
-        }
-    }
-
-    /// <summary>
-    /// F25 마지막 씬에서 영상 출력되면 VidPlayer에서 BGM을 꺼주게 하는 메서드
-    /// </summary>
-    public void OffBgmSound()
-    {
-        bgmAudioSource.Stop();
+        audioSource.Play();
     }
 }
