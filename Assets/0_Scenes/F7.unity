@@ -8557,7 +8557,7 @@ MonoBehaviour:
   isColliding: 0
   isTouch: 0
   spriteData:
-  - {fileID: 223852361761972823, guid: b3efcf5575553b041a99d66aaaa3bc3f, type: 3}
+  - {fileID: 21300000, guid: b3efcf5575553b041a99d66aaaa3bc3f, type: 3}
 --- !u!1 &1538063410
 GameObject:
   m_ObjectHideFlags: 0

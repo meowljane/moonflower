@@ -32781,7 +32781,7 @@ MonoBehaviour:
   isColliding: 0
   isTouch: 0
   spriteData:
-  - {fileID: 25385640372165783, guid: 3361f4add2e03c94a9061f29a9b5b456, type: 3}
+  - {fileID: 21300000, guid: 3361f4add2e03c94a9061f29a9b5b456, type: 3}
 --- !u!61 &1241566420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35625,8 +35625,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -783696367
-  m_SortingLayer: 2
+  m_SortingLayerID: -1473490469
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 49230da6ec8e2bf438397b97994d7c96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
