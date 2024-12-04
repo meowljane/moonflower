@@ -128,6 +128,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3499371}
   - component: {fileID: 3499372}
+  - component: {fileID: 3499374}
+  - component: {fileID: 3499373}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Interactable
@@ -205,6 +207,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3499373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 627042110}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+--- !u!60 &3499374
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499370}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 160}
+    newSize: {x: 128, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -14, y: 79}
+      - {x: -14, y: -27}
+      - {x: 27, y: -52}
+      - {x: 33, y: -52}
+      - {x: 34, y: -51}
+      - {x: 34, y: 56}
+      - {x: -6, y: 79}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5881746
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4524849160538641356}
+  isOnOffDoor: 0
 --- !u!60 &22079292
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1337,9 +1415,14 @@ MonoBehaviour:
   btnClose: {fileID: 1131332538}
   btnLeft: {fileID: 1008674529}
   btnRight: {fileID: 1641556614}
+  btnConfirm: {fileID: 0}
+  btnCancel: {fileID: 0}
   listSprites: []
   currentIndex: 0
   isTalking: 0
+  isDoor: 0
+  objectsToDisable: []
+  objectsToEnable: []
 --- !u!114 &43134464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,9 +1519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSet: {fileID: 335627008}
   databaseManager: {fileID: 0}
+  textManager: {fileID: 0}
   timerText: {fileID: 415808088}
-  centerLabel: {fileID: 1465394212}
-  centerLabelPannel: {fileID: 1230019205}
   playTimeText: {fileID: 1287505206}
   audioSource: {fileID: 455901904}
   isF6: 0
@@ -2150,7 +2232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &104620285
 Transform:
   m_ObjectHideFlags: 0
@@ -2192,6 +2274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1607625791}
+  isOnOffDoor: 1
 --- !u!60 &104620288
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3692,6 +3775,8 @@ GameObject:
   m_Component:
   - component: {fileID: 191044848}
   - component: {fileID: 191044849}
+  - component: {fileID: 191044851}
+  - component: {fileID: 191044850}
   m_Layer: 0
   m_Name: Door6
   m_TagString: Interactable
@@ -3769,6 +3854,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &191044850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191044847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 1827358832}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+--- !u!60 &191044851
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191044847}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 160}
+    newSize: {x: 128, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -21, y: 78}
+      - {x: -59, y: 55}
+      - {x: -59, y: -52}
+      - {x: -51, y: -52}
+      - {x: -15, y: -33}
+      - {x: -11, y: -26}
+      - {x: -11, y: 78}
+  m_UseDelaunayMesh: 0
 --- !u!1 &194269061
 GameObject:
   m_ObjectHideFlags: 0
@@ -5765,6 +5925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1765749110}
+  isOnOffDoor: 0
 --- !u!60 &219258637
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7056,6 +7217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2004218185}
+  isOnOffDoor: 0
 --- !u!60 &275099632
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7288,6 +7450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2111967115}
+  isOnOffDoor: 0
 --- !u!60 &296568887
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9356,6 +9519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1716178478}
+  isOnOffDoor: 0
 --- !u!60 &352143988
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9754,6 +9918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4524849159447084754}
+  isOnOffDoor: 0
 --- !u!60 &366385453
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -11119,6 +11284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 258211599}
+  isOnOffDoor: 0
 --- !u!60 &448509657
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12232,6 +12398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 993525391}
+  isOnOffDoor: 0
 --- !u!60 &456026359
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13116,6 +13283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1245077939}
+  isOnOffDoor: 0
 --- !u!60 &486539871
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13520,6 +13688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1994822377}
+  isOnOffDoor: 0
 --- !u!60 &505789552
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15656,6 +15825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1112669648}
+  isOnOffDoor: 0
 --- !u!60 &617591640
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15724,7 +15894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &627042111
 Transform:
   m_ObjectHideFlags: 0
@@ -16582,6 +16752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8735525947613189100}
+  isOnOffDoor: 0
 --- !u!60 &683993370
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -19050,7 +19221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &799155281
 Transform:
   m_ObjectHideFlags: 0
@@ -19092,6 +19263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1459856469}
+  isOnOffDoor: 1
 --- !u!60 &799155284
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -19509,7 +19681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &834207329
 Transform:
   m_ObjectHideFlags: 0
@@ -19551,6 +19723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1032578183}
+  isOnOffDoor: 1
 --- !u!60 &834207332
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -20963,6 +21136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 315296257}
+  isOnOffDoor: 0
 --- !u!60 &911221681
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22821,6 +22995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 186738535}
+  isOnOffDoor: 0
 --- !u!60 &974559860
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22966,6 +23141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1381899737}
+  isOnOffDoor: 0
 --- !u!60 &985715110
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -23027,6 +23203,8 @@ GameObject:
   m_Component:
   - component: {fileID: 989659698}
   - component: {fileID: 989659699}
+  - component: {fileID: 989659701}
+  - component: {fileID: 989659700}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Interactable
@@ -23104,6 +23282,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &989659700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989659697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 1383370637}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+--- !u!60 &989659701
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989659697}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 160}
+    newSize: {x: 128, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -14, y: 79}
+      - {x: -14, y: -27}
+      - {x: 27, y: -52}
+      - {x: 33, y: -52}
+      - {x: 34, y: -51}
+      - {x: 34, y: 56}
+      - {x: -6, y: 79}
+  m_UseDelaunayMesh: 0
 --- !u!1 &993525390
 GameObject:
   m_ObjectHideFlags: 0
@@ -25335,6 +25588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1658083293}
+  isOnOffDoor: 0
 --- !u!60 &1036571996
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25890,7 +26144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1073533480
 Transform:
   m_ObjectHideFlags: 0
@@ -25947,6 +26201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1401169802}
+  isOnOffDoor: 1
 --- !u!60 &1073533484
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -28336,6 +28591,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1114613470}
   - component: {fileID: 1114613471}
+  - component: {fileID: 1114613472}
+  - component: {fileID: 1114613473}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Interactable
@@ -28413,6 +28670,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1114613472
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114613469}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 71, y: 157}
+    newSize: {x: 96, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -17.5, y: -62.5}
+      - {x: -15.5, y: -64.5}
+      - {x: -11.5, y: -63.5}
+      - {x: 21.5, y: -53.5}
+      - {x: 21.5, y: 41.5}
+      - {x: 8.5, y: 41.5}
+      - {x: -17.5, y: 25.5}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1114613473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114613469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 1817851720}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
 --- !u!1 &1115041586
 GameObject:
   m_ObjectHideFlags: 0
@@ -28538,6 +28870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 738219145}
+  isOnOffDoor: 0
 --- !u!60 &1117189199
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -30777,6 +31110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7495681221290808648}
+  isOnOffDoor: 0
 --- !u!60 &1180557403
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -30933,6 +31267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 582923305}
+  isOnOffDoor: 0
 --- !u!60 &1184717792
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -34591,6 +34926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 738672864}
+  isOnOffDoor: 0
 --- !u!60 &1310136970
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -36103,6 +36439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 826726588}
+  isOnOffDoor: 0
 --- !u!60 &1355949177
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -36593,7 +36930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1383370638
 Transform:
   m_ObjectHideFlags: 0
@@ -36635,6 +36972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1096400759}
+  isOnOffDoor: 1
 --- !u!60 &1383370641
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -37241,6 +37579,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1410924333}
   - component: {fileID: 1410924334}
+  - component: {fileID: 1410924336}
+  - component: {fileID: 1410924335}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Interactable
@@ -37318,6 +37658,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1410924335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410924332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 799155280}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+--- !u!60 &1410924336
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410924332}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 160}
+    newSize: {x: 128, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -14, y: 79}
+      - {x: -14, y: -27}
+      - {x: 27, y: -52}
+      - {x: 33, y: -52}
+      - {x: 34, y: -51}
+      - {x: 34, y: 56}
+      - {x: -6, y: 79}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1417074050
 GameObject:
   m_ObjectHideFlags: 0
@@ -40223,6 +40638,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1549587913}
   - component: {fileID: 1549587914}
+  - component: {fileID: 1549587916}
+  - component: {fileID: 1549587915}
   m_Layer: 0
   m_Name: Door4
   m_TagString: Interactable
@@ -40300,6 +40717,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1549587915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549587912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 104620284}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+--- !u!60 &1549587916
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549587912}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 160}
+    newSize: {x: 128, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -21, y: 78}
+      - {x: -59, y: 55}
+      - {x: -59, y: -52}
+      - {x: -51, y: -52}
+      - {x: -15, y: -33}
+      - {x: -11, y: -26}
+      - {x: -11, y: 78}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1552019237
 GameObject:
   m_ObjectHideFlags: 0
@@ -40547,6 +41039,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1563791793}
   - component: {fileID: 1563791794}
+  - component: {fileID: 1563791795}
+  - component: {fileID: 1563791796}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Interactable
@@ -40624,6 +41118,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1563791795
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563791792}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 96, y: 160}
+    newSize: {x: 32, y: 64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -15, y: 48}
+      - {x: -17, y: 48}
+      - {x: -17, y: -43}
+      - {x: 16, y: -59}
+      - {x: 21, y: -59}
+      - {x: 23, y: -58}
+      - {x: 23, y: 27}
+      - {x: -5, y: 47}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1563791796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563791792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 834207328}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
 --- !u!1 &1571581277
 GameObject:
   m_ObjectHideFlags: 0
@@ -43712,6 +44282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1186900001}
+  isOnOffDoor: 0
 --- !u!60 &1705030651
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -45579,6 +46150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1348741084}
+  isOnOffDoor: 0
 --- !u!60 &1751244026
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -46933,7 +47505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1817851721
 Transform:
   m_ObjectHideFlags: 0
@@ -46975,6 +47547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1083761568}
+  isOnOffDoor: 1
 --- !u!60 &1817851724
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -47627,7 +48200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1827358833
 Transform:
   m_ObjectHideFlags: 0
@@ -47684,6 +48257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 732676185}
+  isOnOffDoor: 1
 --- !u!60 &1827358837
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -49038,6 +49612,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1882495421}
   - component: {fileID: 1882495422}
+  - component: {fileID: 1882495424}
+  - component: {fileID: 1882495423}
   m_Layer: 0
   m_Name: Door5
   m_TagString: Interactable
@@ -49115,6 +49691,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1882495423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882495420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e556b9010f0a442a66a9c12786e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePM: {fileID: 0}
+  objectsToDisable: []
+  objectsToEnable:
+  - {fileID: 1073533479}
+  spriteData: []
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isTouch: 0
+--- !u!60 &1882495424
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882495420}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 160}
+    newSize: {x: 128, y: 160}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -21, y: 78}
+      - {x: -59, y: 55}
+      - {x: -59, y: -52}
+      - {x: -51, y: -52}
+      - {x: -15, y: -33}
+      - {x: -11, y: -26}
+      - {x: -11, y: 78}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1886549871
 GameObject:
   m_ObjectHideFlags: 0
@@ -49685,6 +50336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1573068167}
+  isOnOffDoor: 0
 --- !u!60 &1917667854
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -50877,6 +51529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 463171773}
+  isOnOffDoor: 0
 --- !u!60 &1990461932
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -51778,6 +52431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 342661373}
+  isOnOffDoor: 0
 --- !u!60 &2010971782
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -53724,6 +54378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 839818927}
+  isOnOffDoor: 0
 --- !u!60 &2071371101
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -55303,6 +55958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2128225345}
+  isOnOffDoor: 0
 --- !u!114 &270709899034723184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55493,6 +56149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 244385652}
+  isOnOffDoor: 0
 --- !u!114 &2462387791273070836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55506,6 +56163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1417074051}
+  isOnOffDoor: 0
 --- !u!1 &3077311958933611478
 GameObject:
   m_ObjectHideFlags: 0
@@ -55853,6 +56511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 416305969}
+  isOnOffDoor: 0
 --- !u!114 &6128481228637996532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55895,6 +56554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1486817727}
+  isOnOffDoor: 0
 --- !u!4 &7495681221290808648
 Transform:
   m_ObjectHideFlags: 0

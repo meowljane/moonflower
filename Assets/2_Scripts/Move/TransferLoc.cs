@@ -7,6 +7,7 @@ public class TransferLoc : MonoBehaviour
 {
     private PlayerManager thePlayer;
     public Transform target;
+    public bool isOnOffDoor = false;
 
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class TransferLoc : MonoBehaviour
         // 플레이어 위치 설정
         PlayerMove(thePlayer, target);
         TransferPlayerSet();
+        if(isOnOffDoor)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     public void PlayerMove(PlayerManager thePlayer, Transform transform)
