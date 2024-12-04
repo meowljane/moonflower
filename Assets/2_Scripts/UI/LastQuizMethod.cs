@@ -170,8 +170,8 @@ public class LastQuizMethod : MonoBehaviour
         int totalScore = 0;
         int quizPoints = 0;
         int votePoints = theDM.isCorrectVote ? 10 : 0;
-        int hintPenalty = theDM.isCheckedHint ? 10 : 0;
-        int timePenalty = (theDM.seconds * (theDM.isHard ? 1 : 0) / 60) * 2;
+        int hintPenalty = theDM.isCheckedHint ? -10 : 0;
+        int timePenalty = -(theDM.seconds * (theDM.isHard ? 1 : 0) / 60) * 2;
 
         string playerNameText = playerName.text;
 
@@ -183,7 +183,7 @@ public class LastQuizMethod : MonoBehaviour
             }
         }
 
-        totalScore = quizPoints + votePoints - hintPenalty - timePenalty;
+        totalScore = quizPoints + votePoints + hintPenalty + timePenalty;
         totalScore = Mathf.Clamp(totalScore, 0, 100);
 
         string rank;
@@ -201,7 +201,7 @@ public class LastQuizMethod : MonoBehaviour
 총 점수: {totalScore}점 랭크{rank}
 
 문제 점수: {quizPoints}점, 중간 투표 점수: {votePoints}점
-힌트 차감: {hintPenalty}점, 시간 차감: -{timePenalty}점";
+힌트 차감: {hintPenalty}점, 시간 차감: {timePenalty}점";
 
         gradePageText.text = gradeText;
     }
