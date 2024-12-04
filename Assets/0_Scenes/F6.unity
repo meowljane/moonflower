@@ -17865,6 +17865,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 80, y: 87}
   m_EdgeRadius: 0
+--- !u!60 &725759359 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5707832080602767183, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+  m_PrefabInstance: {fileID: 2055361553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &728581446
 GameObject:
   m_ObjectHideFlags: 0
@@ -19249,7 +19254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f436ce38fed3ee4ea427fe0adaaea00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bound2D: {fileID: 0}
+  bound2D: {fileID: 2003211981}
 --- !u!114 &799155283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36958,7 +36963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f436ce38fed3ee4ea427fe0adaaea00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bound2D: {fileID: 0}
+  bound2D: {fileID: 725759359}
 --- !u!114 &1383370640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52212,6 +52217,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2003211981 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5707832080602767183, guid: 718bd8cd6f13b2840a91fb860277393b, type: 3}
+  m_PrefabInstance: {fileID: 453259259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2004218183
 PrefabInstance:
   m_ObjectHideFlags: 0
