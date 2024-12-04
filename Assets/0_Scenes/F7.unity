@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7171273657934987154, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
       propertyPath: m_Name
-      value: Scene_Mv_7_To_8_Cam
+      value: Scene_Mv_7_To_8
       objectReference: {fileID: 0}
     - target: {fileID: 7171273657934987154, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
       propertyPath: m_IsActive
@@ -226,7 +226,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Move
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7554625438418220858, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6110503574067527028, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
     - {fileID: 8969396813474651596, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}

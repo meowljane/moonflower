@@ -6285,7 +6285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7171273657934987154, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
       propertyPath: m_Name
-      value: Scene_Mv_F0_To_F1_Cam_Normal
+      value: Scene_Mv_F0_To_F1_Normal
       objectReference: {fileID: 0}
     - target: {fileID: 7171273657934987154, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
       propertyPath: m_IsActive
@@ -6309,6 +6309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7967220810207229866, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
+    - {fileID: 7554625438418220858, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
     m_RemovedGameObjects:
     - {fileID: 599018833369598407, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
     - {fileID: 8969396813474651596, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
@@ -9130,10 +9131,9 @@ GameObject:
   - component: {fileID: 1606893531}
   - component: {fileID: 1606893534}
   - component: {fileID: 1606893533}
-  - component: {fileID: 1606893532}
   - component: {fileID: 1606893535}
   m_Layer: 0
-  m_Name: Scene_Mv_F0_To_F1_Cam_Hard
+  m_Name: Scene_Mv_F0_To_F1_Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9154,21 +9154,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1074731202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1606893532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606893530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1849957df64068847969d8f351fa07f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cinemachineCamera: {fileID: 0}
-  lensSize: 115
-  delayTime: 3
 --- !u!114 &1606893533
 MonoBehaviour:
   m_ObjectHideFlags: 0
