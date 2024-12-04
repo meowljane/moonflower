@@ -63,6 +63,10 @@ public class DialManager : MonoBehaviour
                 timer = 0;
             }
         }
+        else if(currentList != null)
+        {
+            UpdateButtons();
+        }
     }
 
     //대화창을 여는 함수
@@ -78,6 +82,7 @@ public class DialManager : MonoBehaviour
             currentList = dialogueData;
             currentIndex = 0;
 
+            UpdateButtons();
             ShowSprite();
 
             theWindow.OpenWindow(dialogueWindow);
@@ -120,13 +125,14 @@ public class DialManager : MonoBehaviour
             {
                 currentIndex++;
                 ShowSprite();
-
             }
         }
         else
         {
-            currentIndex = 0;
-            ShowSprite();
+            text.text = fullText;
+            currentCharIndex = 99999;
+            timer = 0;
+            UpdateButtons();
         }
     }
 
@@ -154,8 +160,6 @@ public class DialManager : MonoBehaviour
             {
                 sprite.sprite = matchedSprite;
             }
-
-            UpdateButtons();
         }
     }
 
