@@ -108,6 +108,7 @@ public class GameProgress : MonoBehaviour
 
         // 2. 본 게임 타이머 실행
 
+        audioManager.StopSound("");
         audioManager.PlaySound("BGM");
         if (timerData.infinityTime)
         {
@@ -124,6 +125,7 @@ public class GameProgress : MonoBehaviour
 
         // 3. 종료 텍스트 실행
 
+        audioManager.StopSound("BGM");
         audioManager.PlaySound("END");
         yield return StartCoroutine(RunTextCountdown(endTotalTime, textData.endText));
 

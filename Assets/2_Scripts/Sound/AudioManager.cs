@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Source")]
-    public AudioSource audioSource;
+    public AudioSource audioStartEnd;
+    public AudioSource audioBgm;
 
     public GameObject soundData;
     public SoundData data;
@@ -26,6 +27,11 @@ public class AudioManager : MonoBehaviour
     {
         soundData = GameObject.Find("SoundData");
         data = soundData.GetComponent<SoundData>();
+
+        audioStartEnd.clip = data.startSound;
+        audioBgm.clip = data.BGM;
+        audioBgm.Play();
+        audioBgm.Pause();
     }
 
     public void PlaySound(string sound)
@@ -38,8 +44,7 @@ public class AudioManager : MonoBehaviour
                     return;
                 }
 
-                audioSource.clip = data.startSound;
-                audioSource.Play();
+                audioStartEnd.Play();
                 break;
 
             case "BGM":
@@ -48,8 +53,7 @@ public class AudioManager : MonoBehaviour
                     return;
                 }
 
-                audioSource.clip = data.BGM;
-                audioSource.Play();
+                audioBgm.Play();
                 break;
 
             case "END":
@@ -58,11 +62,33 @@ public class AudioManager : MonoBehaviour
                     return;
                 }
 
-                audioSource.clip = data.endSound;
-                audioSource.Play();
+                audioStartEnd.clip = data.endSound;
+                audioStartEnd.Play();
                 break;
         }
+    }
 
-        audioSource.Play();
+    public void StopSound(string sound)
+    {
+        switch (sound)
+        {
+            case "BGM":
+                if (data.BGM == null)
+                {
+                    return;
+                }
+
+                audioBgm.Stop();
+                break;
+
+            default:
+                if (data.startSound == null && data.endSound == null)
+                {
+                    return;
+                }
+
+                audioStartEnd.Stop();
+                break;
+        }
     }
 }

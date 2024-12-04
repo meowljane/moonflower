@@ -2704,6 +2704,75 @@ PolygonCollider2D:
       - {x: 107.84236, y: 154.9596}
       - {x: 28.94299, y: 203.32385}
   m_UseDelaunayMesh: 0
+--- !u!1001 &2122869660
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2527095694440561565, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: BGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 149c2cd97f885084baeabca635abad4d, type: 3}
+    - target: {fileID: 2527095694440561565, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: endSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3da9923e2690a6a4e8bb92b0a8f82c98, type: 3}
+    - target: {fileID: 2527095694440561565, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: startSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d7e8aae17c752e46a9ae2b564191f48, type: 3}
+    - target: {fileID: 8640347891945538200, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_Name
+      value: SoundData
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054618165740119317, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a54530421e903040aaf963fcbcfb20c, type: 3}
 --- !u!1 &2142106529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,5 +2964,6 @@ BoxCollider2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2122869660}
   - {fileID: 1054335844}
   - {fileID: 998486879}
