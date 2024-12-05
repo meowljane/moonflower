@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4582991495960302433, guid: 9881790803d203144b6e9157642cdd1c, type: 3}
       propertyPath: m_Name
-      value: Spawn
+      value: 'Spawn '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2339,7 +2339,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 29, y: 52}
+    oldSize: {x: 34, y: 56}
     newSize: {x: 29, y: 52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
