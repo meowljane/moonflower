@@ -9,9 +9,9 @@ using UnityEngine.UI;
 public class WindowManager : MonoBehaviour
 {
     private PlayerManager thePlayer;
-    public GameObject button;
     public GameObject TextWindow;
 
+    public GameObject button;
     public GameObject[] UIwindows;
     public GameObject[] Elsewindows;
 
