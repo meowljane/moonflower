@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class GameProgress : MonoBehaviour
 {
     public GameObject button;
+    private WindowManager theWM;
 
     [Header("Caching Script")]
     [Tooltip("GameSet 코드가 들어간 오브젝트")]
@@ -40,6 +41,7 @@ public class GameProgress : MonoBehaviour
 
     void Awake()
     {
+        theWM = FindFirstObjectByType<WindowManager>();
         // 씬 로드 이벤트 등록
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -133,6 +135,7 @@ public class GameProgress : MonoBehaviour
         audioManager.StopSound("BGM");
         audioManager.PlaySound("END");
         button.SetActive(false);
+        theWM.DeactivateTotalWindows();
         yield return StartCoroutine(RunTextCountdown(endTotalTime, textData.endText));
 
         // 4. 씬 전환

@@ -12,26 +12,15 @@ public class WindowManager : MonoBehaviour
     public GameObject button;
     public GameObject TextWindow;
 
-    [System.Serializable]
-    public class WindowSettings
-    {
-        public GameObject window;
-    }
-    public WindowSettings[] windowsSettings;
+    public GameObject[] UIwindows;
+    public GameObject[] Elsewindows;
 
-    public GameObject[] onWindow;
-    public GameObject[] offWindow;
-
-    public GameObject[] testObj;
-    public List<bool> testList;
-    //public bool isUp = false;
     void Awake()
     {
         thePlayer = FindFirstObjectByType<PlayerManager>();
         //불값 list를 만들어주고
         //확인해야하는 오브젝트 리스트의 길이 만큼 반복문 돌리고
         //그 값을 list에 앞에서부터 차곡차곡 넣어주면 끝
-        DeactivateAllWindows();
     }
     private void Update()
     {
@@ -39,7 +28,7 @@ public class WindowManager : MonoBehaviour
         {
             if (button.activeInHierarchy)
             {
-                windowsSettings[0].window.SetActive(true);
+                UIwindows[0].SetActive(true);
                 button.SetActive(false);
             }
         }
@@ -47,7 +36,7 @@ public class WindowManager : MonoBehaviour
         {
             if (button.activeInHierarchy)
             {
-                windowsSettings[1].window.SetActive(true);
+                UIwindows[1].SetActive(true);
                 button.SetActive(false);
             }
         }
@@ -55,17 +44,17 @@ public class WindowManager : MonoBehaviour
         {
             if (button.activeInHierarchy)
             {
-                windowsSettings[2].window.SetActive(true);
+                UIwindows[2].SetActive(true);
                 button.SetActive(false);
             }
         }
-        foreach (var settings in windowsSettings)
+        foreach (var settings in UIwindows)
         {
-            if (settings.window.activeInHierarchy)
+            if (settings.activeInHierarchy)
             {
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    DeactivateAllWindows();
+                    DeactivateUIWindows();
                     button.SetActive(true);
                 }
             }
@@ -76,27 +65,44 @@ public class WindowManager : MonoBehaviour
         if (button.activeInHierarchy)
         {
             thePlayer.canMove = true;
-            WindowInit();
         }
         else
         {
             thePlayer.canMove = false;
         }
     }
-    public void DeactivateAllWindows()
+    public void DeactivateUIWindows()
     {
-        foreach (var settings in windowsSettings)
+        foreach (var settings in UIwindows)
         {
-            if (settings.window != null)
+            if (settings != null)
             {
-                settings.window.SetActive(false);
+                settings.SetActive(false);
+            }
+        }
+    }
+
+    public void DeactivateTotalWindows()
+    {
+        foreach (var settings in UIwindows)
+        {
+            if (settings != null)
+            {
+                settings.SetActive(false);
+            }
+        }
+        foreach (var settings in Elsewindows)
+        {
+            if (settings != null)
+            {
+                settings.SetActive(false);
             }
         }
     }
 
     public void OpenWindow(GameObject windowToOpen)
     {
-        DeactivateAllWindows();
+        DeactivateTotalWindows();
         TextWindow.SetActive(false);
         windowToOpen.SetActive(true);
         button.SetActive(false);
@@ -105,17 +111,5 @@ public class WindowManager : MonoBehaviour
     public void CloseWindow()
     {
         button.SetActive(true);
-    }
-
-    public void WindowInit()
-    {
-        foreach (var windows in onWindow)
-        {
-            windows.SetActive(true);
-        }
-        foreach (var windows in offWindow)
-        {
-            windows.SetActive(false);
-        }
     }
 }

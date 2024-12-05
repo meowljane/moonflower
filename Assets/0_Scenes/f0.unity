@@ -11581,15 +11581,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 595929253}
   TextWindow: {fileID: 1635092254}
-  windowsSettings:
-  - window: {fileID: 1277975785}
-  - window: {fileID: 822209460}
-  - window: {fileID: 1585669479}
-  onWindow:
-  - {fileID: 1371879254}
-  offWindow: []
-  testObj: []
-  testList: 
+  UIwindows:
+  - {fileID: 1277975785}
+  - {fileID: 822209460}
+  - {fileID: 1585669479}
+  Elsewindows:
+  - {fileID: 1618591052}
+  - {fileID: 2125372248}
+  - {fileID: 1003756370}
 --- !u!114 &1874954385
 MonoBehaviour:
   m_ObjectHideFlags: 0
