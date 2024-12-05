@@ -2281,7 +2281,7 @@ GameObject:
   - component: {fileID: 1232152728}
   m_Layer: 0
   m_Name: Event
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2335,7 +2335,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.22361183, y: -13.881924}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2345,7 +2345,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 29, y: 52}
+  m_Size: {x: 32.01005, y: 34.48742}
   m_EdgeRadius: 0
 --- !u!114 &1232152726
 MonoBehaviour:
@@ -2709,11 +2709,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1392832970}
   - component: {fileID: 1392832971}
-  - component: {fileID: 1392832972}
   - component: {fileID: 1392832973}
+  - component: {fileID: 1392832974}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2788,8 +2788,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1392832972
-BoxCollider2D:
+--- !u!114 &1392832973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392832969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70d6f6dbfe7f684ba3c4f454c3007c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefab: {fileID: 9220741725682894876, guid: e7aeb3b0c2ecb454c94fdb75670cd2ab, type: 3}
+  offsetY: 30
+  fixedWidth: 120
+  minHeight: 20
+  lineHeight: 15
+  message: "\uD654\uB791\uB2E8\uC7A5\uB2D8\uC758 \uC804\uC5B8\uC785\uB2C8\uB2E4.
+    \n\uAC01 \uB2E8\uC790\uB9C8\uB2E4 \uC0AC\uAC74\uC5D0 \uB3C4\uC6C0\uC774 \uB418\uB294
+    \uC815\uBCF4\uB4E4\uC744 \uB2F4\uC544\uB450\uC5C8\uB2E4\uACE0 \uD569\uB2C8\uB2E4.
+    \r\n\uD655\uC778\uD574 \uBD10\uC8FC\uC138\uC694."
+  showTime: 4
+  confirmOn: {fileID: 0}
+  webglBtn: {fileID: 0}
+  isColliding: 0
+  isActive: 0
+  isAwake: 0
+--- !u!60 &1392832974
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2818,7 +2845,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2832,35 +2859,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 51, y: 64}
-  m_EdgeRadius: 0
---- !u!114 &1392832973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392832969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70d6f6dbfe7f684ba3c4f454c3007c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balloonPrefab: {fileID: 9220741725682894876, guid: e7aeb3b0c2ecb454c94fdb75670cd2ab, type: 3}
-  offsetY: 30
-  fixedWidth: 120
-  minHeight: 20
-  lineHeight: 15
-  message: "\uD654\uB791\uB2E8\uC7A5\uB2D8\uC758 \uC804\uC5B8\uC785\uB2C8\uB2E4.
-    \n\uAC01 \uB2E8\uC790\uB9C8\uB2E4 \uC0AC\uAC74\uC5D0 \uB3C4\uC6C0\uC774 \uB418\uB294
-    \uC815\uBCF4\uB4E4\uC744 \uB2F4\uC544\uB450\uC5C8\uB2E4\uACE0 \uD569\uB2C8\uB2E4.
-    \r\n\uD655\uC778\uD574 \uBD10\uC8FC\uC138\uC694."
-  showTime: 4
-  confirmOn: {fileID: 0}
-  webglBtn: {fileID: 0}
-  isColliding: 0
-  isActive: 0
-  isAwake: 0
+  m_Points:
+    m_Paths:
+    - - {x: -16.424316, y: -32.55603}
+      - {x: -3.5163574, y: -32.499146}
+      - {x: 1.1269531, y: -24.401062}
+      - {x: -3.3586426, y: -15.486206}
+      - {x: -15.789551, y: -15.486206}
+      - {x: -20.00879, y: -23.945435}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1471395928
 GameObject:
   m_ObjectHideFlags: 0

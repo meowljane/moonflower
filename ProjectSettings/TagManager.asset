@@ -8,7 +8,7 @@ TagManager:
   - QuizPannel
   - ButtonO
   - ButtonX
-  - Interactable
+  - Interaction
   layers:
   - Default
   - TransparentFX

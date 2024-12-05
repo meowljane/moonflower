@@ -3,6 +3,7 @@ using System.Collections.Generic;//기존 namespace
 using UnityEngine; //기존 namespace
 using UnityEngine.SceneManagement; //기존 namespace
 
+[ExecuteInEditMode]
 public class PlayerManager : AbstractPlayer
 {
     public static PlayerManager instance;
@@ -217,16 +218,17 @@ public class PlayerManager : AbstractPlayer
             Renderer rend = collision.GetComponent<Renderer>();
             if (rend != null) //닿은 오브젝트의 renderer가 존재한다면
             {
+                //UpdateOutline(apply, rend);
                 if (apply) //OnTriggerEnter의 값이 true이면서 HashSet에 아무것도 없을때
                 {
                     rend.material = outlineMaterial; //OutLine 메테리얼 적용
-                    //Debug.Log("색 변하는중");
+                    Debug.Log("색 변하는중");
                 }
 
                 else //OnTriggerEnter의 값이 false 혹은 HashSet에 값이 있다면
                 {
                     rend.material = originalMaterial;
-                    //Debug.Log("색 변하는중");
+                    Debug.Log("색 변하는중");
                 }
             }
         }

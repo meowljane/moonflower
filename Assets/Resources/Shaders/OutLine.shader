@@ -2,18 +2,18 @@ Shader "Sprites/Outline"
 {
     Properties
     {
-        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
+        _MainTex ("Sprite Texture", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
-        [MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
-        [HideInInspector] _RendererColor ("RendererColor", Color) = (1,1,1,1)
-        [HideInInspector] _Flip ("Flip", Vector) = (1,1,1,1)
-        [PerRendererData] _AlphaTex ("External Alpha", 2D) = "white" {}
-        [PerRendererData] _EnableExternalAlpha ("Enable External Alpha", Float) = 0
+        PixelSnap ("Pixel snap", Float) = 0
+        _RendererColor ("RendererColor", Color) = (1,1,1,1)
+        _Flip ("Flip", Vector) = (1,1,1,1)
+        _AlphaTex ("External Alpha", 2D) = "white" {}
+        _EnableExternalAlpha ("Enable External Alpha", Float) = 0
 
         // Add values to determine if outlining is enabled and outline color.
-        [PerRendererData] _Outline("Outline", Float) = 0
-        [PerRendererData] _OutlineColor("Outline Color", Color) = (1,1,1,1)
-        [PerRendererData] _OutlineSize("Outline Size", int) = 1
+        _Outline("Outline", Float) = 0
+        _OutlineColor("Outline Color", Color) = (1,1,1,1)
+        _OutlineSize("Outline Size", int) = 1
     }
 
     SubShader

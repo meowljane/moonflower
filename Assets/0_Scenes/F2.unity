@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 580515483}
   m_Layer: 0
   m_Name: Kim
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +530,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -540,7 +540,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 25, y: 48}
+  m_Size: {x: 30, y: 24}
   m_EdgeRadius: 0
 --- !u!1 &654574613
 GameObject:
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 758774998}
   m_Layer: 0
   m_Name: Choi
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -837,7 +837,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -847,7 +847,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 29, y: 47}
+  m_Size: {x: 30, y: 24}
   m_EdgeRadius: 0
 --- !u!1 &794124455
 GameObject:
@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 1006842068}
   m_Layer: 0
   m_Name: Park
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1101,7 +1101,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1111,7 +1111,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 27, y: 46}
+  m_Size: {x: 30, y: 24}
   m_EdgeRadius: 0
 --- !u!1 &1033445935
 GameObject:
@@ -1127,7 +1127,7 @@ GameObject:
   - component: {fileID: 1033445939}
   m_Layer: 0
   m_Name: King
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1236,7 +1236,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1246,7 +1246,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 29, y: 52}
+  m_Size: {x: 30, y: 24}
   m_EdgeRadius: 0
 --- !u!114 &1033445939
 MonoBehaviour:
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 1382574199}
   m_Layer: 0
   m_Name: Panel1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1626,7 +1626,7 @@ GameObject:
   - component: {fileID: 1485110651}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2787,7 +2787,7 @@ GameObject:
   - component: {fileID: 2142106532}
   m_Layer: 0
   m_Name: Lee
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2948,7 +2948,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2958,7 +2958,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 27, y: 46}
+  m_Size: {x: 30, y: 24}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

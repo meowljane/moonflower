@@ -24,7 +24,7 @@ public abstract class AbstractPlayer : MonoBehaviour
     public Material outlineMaterial;
 
     //상호작용되는 오브젝트 받아올 리스트
-    [HideInInspector]
+    //[HideInInspector]
     public List<Collider2D> list = new List<Collider2D>();
 
     [HideInInspector]

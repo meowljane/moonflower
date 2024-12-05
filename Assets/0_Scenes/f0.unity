@@ -1201,7 +1201,7 @@ GameObject:
   - component: {fileID: 133636853}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3693,7 +3693,7 @@ GameObject:
   - component: {fileID: 510294817}
   m_Layer: 0
   m_Name: Door2
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4212,11 +4212,10 @@ GameObject:
   - component: {fileID: 667869878}
   - component: {fileID: 667869879}
   - component: {fileID: 667869881}
-  - component: {fileID: 667869883}
   - component: {fileID: 667869884}
   m_Layer: 0
   m_Name: Panel2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4310,21 +4309,6 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
---- !u!114 &667869883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667869877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
 --- !u!60 &667869884
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6203,11 +6187,10 @@ GameObject:
   - component: {fileID: 1025110308}
   - component: {fileID: 1025110309}
   - component: {fileID: 1025110311}
-  - component: {fileID: 1025110312}
   - component: {fileID: 1025110313}
   m_Layer: 0
   m_Name: Panel3
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6301,21 +6284,6 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: a4b7597efcf900a4697aaad60127749d, type: 3}
---- !u!114 &1025110312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025110307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
 --- !u!60 &1025110313
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7165,9 +7133,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1751439450}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: spriteOutline
+      value: 
+      objectReference: {fileID: 1751439452}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: outlineMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
+      objectReference: {fileID: 2100000, guid: 289791efa662dde4081d2e4d13e1c973, type: 2}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: 'Sprite.Array.data[0]'
       value: 
@@ -7222,7 +7198,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1751439447}
+      addedObject: {fileID: 1751439452}
   m_SourcePrefab: {fileID: 100100000, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
 --- !u!4 &1246016905 stripped
 Transform:
@@ -7947,7 +7923,7 @@ GameObject:
   - component: {fileID: 1400555630}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8452,11 +8428,10 @@ GameObject:
   - component: {fileID: 1506726302}
   - component: {fileID: 1506726303}
   - component: {fileID: 1506726304}
-  - component: {fileID: 1506726306}
   - component: {fileID: 1506726307}
   m_Layer: 0
   m_Name: Panel1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8550,21 +8525,6 @@ MonoBehaviour:
   isTouch: 0
   spriteData:
   - {fileID: 21300000, guid: b3994a1fd37ec0542b63cbff195f4c89, type: 3}
---- !u!114 &1506726306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506726301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
 --- !u!60 &1506726307
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10093,7 +10053,7 @@ GameObject:
   - component: {fileID: 1701715583}
   m_Layer: 0
   m_Name: Panel1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10470,7 +10430,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6549cbbcf4519843b37f2ddeea0e34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1751439447
+--- !u!95 &1751439450 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8964680419767730385, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+  m_PrefabInstance: {fileID: 1246016904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1751439452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10479,12 +10444,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464517683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cca54d8baf17a46b92ca667da91e66, type: 3}
+  m_Script: {fileID: 11500000, guid: c48808acb1405504ba7a82075ff250ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  outlineMaterial: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
-  targetTag: Interactable
+  color: {r: 1, g: 1, b: 1, a: 1}
+  outlineSize: 1
 --- !u!1 &1760109206
 GameObject:
   m_ObjectHideFlags: 0
