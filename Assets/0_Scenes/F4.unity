@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balloonPrefab: {fileID: 9220741725682894876, guid: e7aeb3b0c2ecb454c94fdb75670cd2ab, type: 3}
   offsetY: 30
-  fixedWidth: 120
+  fixedWidth: 150
   minHeight: 20
   lineHeight: 15
   message: "\uD3D0\uD558\uAED8\uC11C \uBA85\uD558\uC2E0 \uB300\uB85C \uC7A5\uC778\uC744

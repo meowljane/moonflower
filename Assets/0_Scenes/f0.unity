@@ -1289,7 +1289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePM: {fileID: 0}
-  objectsToDisable: []
+  objectsToDisable:
+  - {fileID: 133636850}
   objectsToEnable:
   - {fileID: 1074731203}
   spriteData:
@@ -3842,7 +3843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePM: {fileID: 0}
-  objectsToDisable: []
+  objectsToDisable:
+  - {fileID: 510294813}
   objectsToEnable:
   - {fileID: 1606893530}
   spriteData:
