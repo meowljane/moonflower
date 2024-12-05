@@ -3,9 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UIElements;
 
 public class GameProgress : MonoBehaviour
 {
+    public GameObject button;
+
     [Header("Caching Script")]
     [Tooltip("GameSet 코드가 들어간 오브젝트")]
     public GameSet gameSet;
@@ -104,12 +107,14 @@ public class GameProgress : MonoBehaviour
         // 1. 준비 텍스트 실행
 
         audioManager.PlaySound("START");
+        button.SetActive(false);
         yield return StartCoroutine(RunTextCountdown(prepareTotalTime, textData.prepareText));
 
         // 2. 본 게임 타이머 실행
 
         audioManager.StopSound("");
         audioManager.PlaySound("BGM");
+        button.SetActive(true);
         if (timerData.infinityTime)
         {
             yield return StartCoroutine(RunInfinityTimer()); // InfinityTimer 실행
@@ -127,9 +132,11 @@ public class GameProgress : MonoBehaviour
 
         audioManager.StopSound("BGM");
         audioManager.PlaySound("END");
+        button.SetActive(false);
         yield return StartCoroutine(RunTextCountdown(endTotalTime, textData.endText));
 
         // 4. 씬 전환
+        button.SetActive(true);
         LoadNextScene();
     }
 

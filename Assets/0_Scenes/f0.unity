@@ -11638,6 +11638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae9b5c3ae9028b4ea829c29030f923d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 595929253}
   gameSet: {fileID: 6138579}
   databaseManager: {fileID: 2048148005}
   textManager: {fileID: 1874954388}
