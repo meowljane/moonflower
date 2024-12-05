@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 23042447}
   m_Layer: 0
   m_Name: 503
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2996,7 +2996,7 @@ GameObject:
   - component: {fileID: 176861072}
   m_Layer: 0
   m_Name: Chat3
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4448,7 +4448,7 @@ GameObject:
   - component: {fileID: 199256316}
   m_Layer: 0
   m_Name: 504
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6962,7 +6962,7 @@ GameObject:
   - component: {fileID: 270268866}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10938,7 +10938,7 @@ GameObject:
   - component: {fileID: 443357134}
   m_Layer: 0
   m_Name: Chat5
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17674,7 +17674,7 @@ GameObject:
   - component: {fileID: 723768889}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17919,7 +17919,7 @@ GameObject:
   - component: {fileID: 733691066}
   m_Layer: 0
   m_Name: 803
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20552,7 +20552,7 @@ GameObject:
   - component: {fileID: 892955269}
   m_Layer: 0
   m_Name: 703
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21782,7 +21782,7 @@ GameObject:
   - component: {fileID: 943573345}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22413,7 +22413,7 @@ GameObject:
   - component: {fileID: 961281910}
   m_Layer: 0
   m_Name: 505
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23597,7 +23597,7 @@ GameObject:
   - component: {fileID: 1005401386}
   m_Layer: 0
   m_Name: Chat2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23945,7 +23945,7 @@ GameObject:
   - component: {fileID: 1008729677}
   m_Layer: 0
   m_Name: Chat2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25414,7 +25414,7 @@ GameObject:
   - component: {fileID: 1035601704}
   m_Layer: 0
   m_Name: Chat3
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25684,7 +25684,7 @@ GameObject:
   - component: {fileID: 1050722282}
   m_Layer: 0
   m_Name: None1
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28302,7 +28302,7 @@ GameObject:
   - component: {fileID: 1088927323}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30936,7 +30936,7 @@ GameObject:
   - component: {fileID: 1175234997}
   m_Layer: 0
   m_Name: Chat4
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31931,7 +31931,7 @@ GameObject:
   - component: {fileID: 1213049603}
   m_Layer: 0
   m_Name: 802
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32333,7 +32333,7 @@ GameObject:
   - component: {fileID: 1219169996}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36140,7 +36140,7 @@ GameObject:
   - component: {fileID: 1352605719}
   m_Layer: 0
   m_Name: 506
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37297,7 +37297,7 @@ GameObject:
   - component: {fileID: 1401853520}
   m_Layer: 0
   m_Name: Chat2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38289,7 +38289,7 @@ GameObject:
   - component: {fileID: 1452404874}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39352,7 +39352,7 @@ GameObject:
   - component: {fileID: 1527427166}
   m_Layer: 0
   m_Name: 801
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40089,7 +40089,7 @@ GameObject:
   - component: {fileID: 1541191605}
   m_Layer: 0
   m_Name: 701
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41074,7 +41074,7 @@ GameObject:
   - component: {fileID: 1563791796}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43149,7 +43149,7 @@ GameObject:
   - component: {fileID: 1659659423}
   m_Layer: 0
   m_Name: Chat2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43539,7 +43539,7 @@ GameObject:
   - component: {fileID: 1667142331}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45806,7 +45806,7 @@ GameObject:
   - component: {fileID: 1747597771}
   m_Layer: 0
   m_Name: Chat1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46280,7 +46280,7 @@ GameObject:
   - component: {fileID: 1754295770}
   m_Layer: 0
   m_Name: Chat3
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46608,7 +46608,7 @@ GameObject:
   - component: {fileID: 1769820767}
   m_Layer: 0
   m_Name: 507
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49913,7 +49913,7 @@ GameObject:
   - component: {fileID: 1906024793}
   m_Layer: 0
   m_Name: Chat6
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50073,7 +50073,7 @@ GameObject:
   - component: {fileID: 1916657702}
   m_Layer: 0
   m_Name: Chat2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52698,7 +52698,7 @@ GameObject:
   - component: {fileID: 2028430613}
   m_Layer: 0
   m_Name: Chat2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54612,7 +54612,7 @@ GameObject:
   - component: {fileID: 2093530766}
   m_Layer: 0
   m_Name: 702
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55576,7 +55576,7 @@ GameObject:
   - component: {fileID: 2132519985}
   m_Layer: 0
   m_Name: 501,502
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
