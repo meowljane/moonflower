@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 80283709}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: 429917143}
   m_Layer: 0
   m_Name: Door3
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1584,7 +1584,7 @@ GameObject:
   - component: {fileID: 885812940}
   m_Layer: 0
   m_Name: Dial1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1886,7 +1886,7 @@ GameObject:
   - component: {fileID: 1085087371}
   m_Layer: 0
   m_Name: Dial3
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 1502220492}
   m_Layer: 0
   m_Name: Dial4
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2354,7 +2354,7 @@ GameObject:
   - component: {fileID: 1535058256}
   m_Layer: 0
   m_Name: Panel1
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2508,7 +2508,7 @@ GameObject:
   - component: {fileID: 1566662700}
   m_Layer: 0
   m_Name: Dial5
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2715,7 +2715,7 @@ GameObject:
   - component: {fileID: 1660560035}
   m_Layer: 0
   m_Name: Dial2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2990,7 +2990,7 @@ GameObject:
   - component: {fileID: 1791874140}
   m_Layer: 0
   m_Name: Door2
-  m_TagString: Interactable
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
