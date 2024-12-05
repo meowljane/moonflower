@@ -17,7 +17,7 @@ public class PlayerManager : AbstractPlayer
     {
 #if !(!UNITY_EDITOR && UNITY_WEBGL)
         // WebGL이 아닌 Unity일때는 조이스틱 off / unity 이동함수 사용
-        isMoblie = false;
+        isMoblie = true;
         ConrirmOn.sprite = Sprite[0];
 #endif
         // WebGL이면서 모바일일때
@@ -31,7 +31,7 @@ public class PlayerManager : AbstractPlayer
         //WebGL이면서 컴퓨터 일때
         else
         {
-            isMoblie = false;
+            isMoblie = true;
             ConrirmOn.sprite = Sprite[0];
         }
 
