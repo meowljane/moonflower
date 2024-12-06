@@ -167,7 +167,7 @@ MonoBehaviour:
     timerData:
       infinityTime: 1
       overTime: 0
-      playTime: 0
+      playTime: 15
     textData:
       prepareText: []
       endText:
@@ -4961,9 +4961,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 730037076}
-        m_TargetAssemblyTypeName: CallLinkBtn, Assembly-CSharp
-        m_MethodName: CallKakao
+      - m_Target: {fileID: 1874954385}
+        m_TargetAssemblyTypeName: GameProgress, Assembly-CSharp
+        m_MethodName: SkipPlayCoroutine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4972,6 +4972,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454172307}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &730037076
 MonoBehaviour:
@@ -11708,7 +11720,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -679164593
+  m_SortingLayerID: 491203177
   m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1874954381

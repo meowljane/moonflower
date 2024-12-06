@@ -57,6 +57,10 @@ public class GameProgress : MonoBehaviour
     public void SkipPlayCoroutine()
     {
         isSkipPlay = true;
+        if (isF6)
+        {
+            isF6 = false;
+        }
     }
 
     private void OnDestroy()
@@ -116,7 +120,9 @@ public class GameProgress : MonoBehaviour
 
         audioManager.StopSound("");
         audioManager.PlaySound("BGM");
+
         button.SetActive(true);
+
         if (timerData.infinityTime)
         {
             yield return StartCoroutine(RunInfinityTimer()); // InfinityTimer ½ÇÇà
@@ -134,8 +140,11 @@ public class GameProgress : MonoBehaviour
 
         audioManager.StopSound("BGM");
         audioManager.PlaySound("END");
+
         button.SetActive(false);
+
         theWM.DeactivateTotalWindows();
+
         yield return StartCoroutine(RunTextCountdown(endTotalTime, textData.endText));
 
         // 4. ¾À ÀüÈ¯
