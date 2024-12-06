@@ -7165,6 +7165,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1751439453}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: isTest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: canMove
       value: 1
       objectReference: {fileID: 0}
@@ -7183,7 +7187,7 @@ PrefabInstance:
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: spriteOutline
       value: 
-      objectReference: {fileID: 1751439452}
+      objectReference: {fileID: 0}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: outlineMaterial
       value: 
@@ -7239,10 +7243,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1751439452}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
 --- !u!4 &1246016905 stripped
 Transform:
@@ -8293,11 +8294,6 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5924026565642778314, guid: 341ffc5316dab214e85c043ab81cad46, type: 3}
   m_PrefabInstance: {fileID: 1290371847}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1464517683 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1326401699909009178, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
-  m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468854378
 GameObject:
@@ -10581,7 +10577,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
   m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464517683}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6549cbbcf4519843b37f2ddeea0e34d, type: 3}
@@ -10592,20 +10588,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8964680419767730385, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
   m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1751439452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464517683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48808acb1405504ba7a82075ff250ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
-  outlineSize: 1
 --- !u!50 &1751439453 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5129292598463727885, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}

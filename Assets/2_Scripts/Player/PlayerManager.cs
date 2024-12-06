@@ -8,63 +8,32 @@ public class PlayerManager : AbstractPlayer
 {
     public static PlayerManager instance;
 
-    //업데이트좀 제대로 돼라
     /// <summary>
     /// 생명주기함수
     /// </summary>
     #region
     void Awake()
     {
-#if !(!UNITY_EDITOR && UNITY_WEBGL)
-        // WebGL이 아닌 Unity일때는 조이스틱 off / unity 이동함수 사용
-        isMoblie = true;
-        ConrirmOn.sprite = Sprite[0];
-#endif
-        // WebGL이면서 모바일일때
-        if (Application.isMobilePlatform)
-        {
-            joystick.enabled = true;
-            webglBtn.SetActive(true);
-            isMoblie = true;
-            ConrirmOn.sprite = Sprite[1];
-        }
-        //WebGL이면서 컴퓨터 일때
-        else
-        {
-            isMoblie = true;
-            ConrirmOn.sprite = Sprite[0];
-        }
-
-        rigid = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-    }
-    void Start()
-    {
         SetValues();
     }
+
     void Update()
     {
         AnimController();
-
-        //관리자모드 부스터
-        //if (Input.GetKeyDown(KeyCode.LeftShift))
-        //    playerSpeed = 150f;
-        //if (Input.GetKeyDown(KeyCode.LeftControl))
-        //    playerSpeed = 1100f;
     }
     void FixedUpdate()
     {
         if (canMove)
         {
-            if (isMoblie)
+            if (!isTest)
             {
                 JoystickMove();
             }
-
+            //isTest를 체크하면 키보드로 플레이어 조작 가능
             else
             {
                 Move();
-            }
+            }          
         }
     }
     #endregion
@@ -240,8 +209,14 @@ public class PlayerManager : AbstractPlayer
     #region
     public override void SetValues()
     {
+        ConrirmOn.sprite = Sprite[1]; // 지금은 1로 쓰지만 나중에는 그냥 하나만쓸거임 0지우고
         canMove = true;
-        //playerSpeed = 150f; //기존속도 150f;
+
+        joystick.enabled = true;
+        webglBtn.SetActive(true);
+
+        rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     #endregion
 }

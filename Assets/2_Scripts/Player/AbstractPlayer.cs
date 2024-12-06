@@ -44,8 +44,8 @@ public abstract class AbstractPlayer : MonoBehaviour
     public bool canMove; //팝업창 On/Off에 따라 플레이어 이동을 제한하는 bool값
     //[HideInInspector]
     public bool isTransfer; //씬 이동을 체크하는 bool값
-    //[HideInInspector]
-    public bool isMoblie; //모바일인지 아닌지 판단하는 bool값
+
+    public bool isTest;
 
     
     public abstract void Move(); //플레이어 이동 메서드 - Unity
