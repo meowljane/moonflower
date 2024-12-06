@@ -45,7 +45,7 @@ public abstract class AbstractPlayer : MonoBehaviour
     //[HideInInspector]
     public bool isTransfer; //씬 이동을 체크하는 bool값
     //[HideInInspector]
-    protected bool isMoblie; //모바일인지 아닌지 판단하는 bool값
+    public bool isMoblie; //모바일인지 아닌지 판단하는 bool값
 
     
     public abstract void Move(); //플레이어 이동 메서드 - Unity
