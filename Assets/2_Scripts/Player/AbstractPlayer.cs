@@ -12,7 +12,7 @@ public abstract class AbstractPlayer : MonoBehaviour
 
     [Header("*[ Direct Assignment ]*")]
     //모바일 UI오브젝트
-    public FixedJoystick joystick; //조이스틱 프리팹
+    public FloatingJoystick joystick; //조이스틱 프리팹
     public GameObject webglBtn; //웹에서 사용하는 버튼
 
     //플레이어 상호작용 안내 Sprite
