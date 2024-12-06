@@ -19,7 +19,7 @@ MonoBehaviour:
     rid: 6391717412252418048
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/0_Scenes/F0.unity
+    m_path: Assets/0_Scenes/f0.unity
   - m_enabled: 1
     m_path: Assets/0_Scenes/F1.unity
   - m_enabled: 1

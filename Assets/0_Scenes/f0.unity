@@ -7323,7 +7323,7 @@ PrefabInstance:
       objectReference: {fileID: 1751439453}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: isTest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: canMove
@@ -7352,7 +7352,7 @@ PrefabInstance:
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: outlineMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 289791efa662dde4081d2e4d13e1c973, type: 2}
+      objectReference: {fileID: 2100000, guid: 49510a35cf6a1844eb268f7807f3f70c, type: 2}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: 'Sprite.Array.data[0]'
       value: 
