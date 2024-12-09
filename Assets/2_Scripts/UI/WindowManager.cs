@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class WindowManager : MonoBehaviour
 {
-    private PlayerManager thePlayer;
+    public PlayerManager thePlayer;
     public GameObject TextWindow;
 
     public GameObject button;
@@ -17,7 +17,7 @@ public class WindowManager : MonoBehaviour
 
     void Awake()
     {
-        thePlayer = FindFirstObjectByType<PlayerManager>();
+        //thePlayer = FindFirstObjectByType<PlayerManager>();
         //불값 list를 만들어주고
         //확인해야하는 오브젝트 리스트의 길이 만큼 반복문 돌리고
         //그 값을 list에 앞에서부터 차곡차곡 넣어주면 끝

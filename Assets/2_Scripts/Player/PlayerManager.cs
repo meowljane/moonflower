@@ -49,6 +49,9 @@ public class PlayerManager : AbstractPlayer
     {
         if ((collision.tag == "Interaction" || collision.tag == "OnlyOneTouch") && (list.Count == 0 || list.Count == 1))
         {
+            confirmOn.SetActive(true);
+            //말풍선 / 팝업이 떴을때 꺼지는 기능 고려해야함
+
             if (!list.Contains(collision))
                 list.Add(collision);
 
@@ -61,6 +64,7 @@ public class PlayerManager : AbstractPlayer
     {
         if (collision.tag == "Interaction" || collision.tag == "OnlyOneTouch" || collision.tag == "NeverTouch")
         {
+            confirmOn.SetActive(false);
             if (list.Count == 0)
             {
                 Debug.Log("리스트에 없으므로 종료");

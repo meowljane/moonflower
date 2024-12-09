@@ -27,14 +27,12 @@ public class InteractionDoor : MonoBehaviour
     {
         thePM = FindFirstObjectByType<PanelManager>();
         webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
-        confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
     }
 
     private void Update()
     {
         if (isColliding && !thePM.isTalking)
         {
-            confirmOn.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
             {
                 if (spriteData != null && spriteData.Count > 0)
@@ -59,7 +57,7 @@ public class InteractionDoor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isColliding = false;
-        confirmOn.SetActive(false);
+        //confirmOn.SetActive(false);
     }
 
     public void ClickPanelEvent()

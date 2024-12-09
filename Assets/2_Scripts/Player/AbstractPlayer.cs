@@ -17,6 +17,7 @@ public abstract class AbstractPlayer : MonoBehaviour
 
     //플레이어 상호작용 안내 Sprite
     public Sprite[] Sprite; //모바일,컴퓨터에 각각 다른 이미지 sprite
+    public GameObject confirmOn;
     public SpriteRenderer ConrirmOn;
 
     //상호작용을 위한 메테리얼
