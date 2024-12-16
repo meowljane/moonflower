@@ -156,8 +156,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 10
-        width: 451
+        y: 11
+        width: 448
         height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -169,28 +169,6 @@ TextureImporter:
       bones: []
       spriteID: e345c017b667d3370800000000000000
       internalID: 8303923491771274302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: manual_bg_1
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 82
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7680faecb506db545a1cd1c411c96937
-      internalID: -2031157104
       vertices: []
       indices: 
       edges: []
@@ -210,7 +188,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       manual_bg_0: 8303923491771274302
-      manual_bg_1: -2031157104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
