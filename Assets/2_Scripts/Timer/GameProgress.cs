@@ -71,7 +71,7 @@ public class GameProgress : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Debug.Log($"¾À ·ÎµåµÊ: {scene.name}");
+        Debug.Log($"¾À ·ÎµåµÊ: {scene.name}");
 
         // ÇöÀç ¾À¿¡ ÇØ´çÇÏ´Â TimerInfo °¡Á®¿À±â
         if (isF6)
