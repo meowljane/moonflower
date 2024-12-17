@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 01b1a680d41234d4eaeb9c5eefacc2fb
+guid: 49f202e68c6f7704d8675fce8ed8488c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3672603136544092297
-    second: quiz_bg_0
+      213: -7531007938904698924
+    second: select_yes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quiz_bg_0
+      name: select_yes_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 11
-        width: 476
-        height: 160
+        x: 0
+        y: 0
+        width: 123
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98032ba2815b7f230800000000000000
-      internalID: 3672603136544092297
+      spriteID: 4df40f83e2c7c7790800000000000000
+      internalID: -7531007938904698924
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quiz_bg_0: 3672603136544092297
+      select_yes_0: -7531007938904698924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
