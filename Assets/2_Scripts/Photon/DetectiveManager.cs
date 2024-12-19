@@ -32,19 +32,24 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     }
 
 
-    public void Connect() => PhotonNetwork.ConnectUsingSettings();
+    public void Connect()
+    {
+        PhotonNetwork.ConnectUsingSettings();
+
+        int randomNum = Random.Range(100, 1000);
+        PhotonNetwork.LocalPlayer.NickName = "Player" + randomNum;
+    }
 
     public override void OnConnectedToMaster()
     {
         print("서버접속완료");
-        int randomNum = Random.Range(100, 1000);
-
-        PhotonNetwork.LocalPlayer.NickName = "Player" + randomNum;
     }
 
-
-
-    public void Disconnect() => PhotonNetwork.Disconnect();
+    public void Disconnect()
+    {
+        PhotonNetwork.Disconnect();
+        PhotonNetwork.LocalPlayer.NickName = "";
+    }
 
     public override void OnDisconnected(DisconnectCause cause) => print("연결끊김");
 
@@ -149,13 +154,13 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
             }
         }
 
-        //if(PhotonNetwork.PlayerList.Length - PhotonNetwork.CurrentRoom.MaxPlayers <= -1)
-        //{
-        //    for (int i = PhotonNetwork.PlayerList.Length; i < PhotonNetwork.CurrentRoom.MaxPlayers; i++)
-        //    {
-        //        WaitList[i].text = "대기 중...";
-        //    }
-        //}
+        if(PhotonNetwork.PlayerList.Length - PhotonNetwork.CurrentRoom.MaxPlayers <= -1)
+        {
+            for (int i = PhotonNetwork.PlayerList.Length; i < PhotonNetwork.CurrentRoom.MaxPlayers; i++)
+            {
+                WaitList[i].text = "대기 중...";
+            }
+        }
     }
 
     private void ServerOnOff()

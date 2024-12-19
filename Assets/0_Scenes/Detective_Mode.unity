@@ -7665,6 +7665,8 @@ MonoBehaviour:
   - {fileID: 2021322822}
   - {fileID: 1108782777}
   - {fileID: 953804830}
+  - {fileID: 438717243}
+  - {fileID: 624685867}
   RoomInfo:
   - {fileID: 1736079942}
   - {fileID: 1709370696}
