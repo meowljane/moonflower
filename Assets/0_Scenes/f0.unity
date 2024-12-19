@@ -14073,6 +14073,7 @@ GameObject:
   - component: {fileID: 2050511816}
   - component: {fileID: 2050511815}
   - component: {fileID: 2050511817}
+  - component: {fileID: 2050511818}
   m_Layer: 0
   m_Name: NaverAPI
   m_TagString: Untagged
@@ -14092,10 +14093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03363cce85291e43a2b9b4e3e2140a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  code: 1ayjSUpgQ2cr7EOjTu
-  returnState: a4eb2d96-d9e2-488d-8de2-570f9999b990
-  authorizationCode: {fileID: 241781687}
-  returnedState: {fileID: 1385357609}
+  accessToken: 
 --- !u!4 &2050511816
 Transform:
   m_ObjectHideFlags: 0
@@ -14118,9 +14116,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050511814}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f32ffe863a73da4bb94759854cc396c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginServer: {fileID: 2050511815}
+--- !u!114 &2050511818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050511814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4d81c6e882fa14cbb95471ef756b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2065964588
