@@ -17,10 +17,19 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public GameObject Room;
     public GameObject Server;
 
+    public List<TMP_Text> WaitList;
+    public List<TMP_Text> RoomInfo;
+
+    public string roomCode;
+
     void Awake() => Screen.SetResolution(960, 540, false);
 
-    void Update() => StatusText.text = "Log : " + PhotonNetwork.NetworkClientState.ToString();
+    void Update()
+    {
+        StatusText.text = "Log : " + PhotonNetwork.NetworkClientState.ToString();
 
+        //RoomUpdate();
+    }
 
 
     public void Connect() => PhotonNetwork.ConnectUsingSettings();
@@ -28,7 +37,9 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         print("서버접속완료");
-        PhotonNetwork.LocalPlayer.NickName = "Player";
+        int randomNum = Random.Range(100, 1000);
+
+        PhotonNetwork.LocalPlayer.NickName = "Player" + randomNum;
     }
 
 
@@ -43,11 +54,17 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby() => print("로비접속완료");
 
-
-
-    public void CreateRoom()
+    public void CreateRoom2P()
     {
-        string roomCode = GenerateRoomCode();
+        roomCode = GenerateRoomCode();
+
+        PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = 2 });
+        Debug.Log($"Room Created with Code : {roomCode}");
+    }
+
+    public void CreateRoom3P()
+    {
+        roomCode = GenerateRoomCode();
 
         PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = 3 });
         Debug.Log($"Room Created with Code : {roomCode}");
@@ -55,7 +72,10 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public void CreateRandomRoom() => PhotonNetwork.CreateRoom(roomCode_Input.text, new RoomOptions { MaxPlayers = 3 });
 
-    public void JoinRoom() => PhotonNetwork.JoinRoom(roomCode_Input.text);
+    public void JoinRoom()
+    {
+        PhotonNetwork.JoinRoom(roomCode_Input.text);
+    }
 
     public void JoinOrCreateRoom() => PhotonNetwork.JoinOrCreateRoom(roomCode_Input.text, new RoomOptions { MaxPlayers = 3 }, null);
 
@@ -63,7 +83,11 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
-        roomCode_Input.text = "";
+        if (photonView.IsMine)
+        {
+            roomCode_Input.text = "";
+        }
+        RoomUpdate();
         PhotonNetwork.LeaveRoom();
     }
 
@@ -71,6 +95,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         print("방만들기완료");
 
+        RoomUpdate();
         ServerOnOff();
     }
 
@@ -78,6 +103,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         print("방참가완료");
 
+        RoomUpdate();
         ServerOnOff();
         //Player -> 생성해야하는 프리팹의 이름
         //PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
@@ -86,7 +112,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         Debug.Log($"Room creation failed : {message}");
-        CreateRoom();
+        //CreateRoom();
     }
     public override void OnJoinRoomFailed(short returnCode, string message) => print("방참가실패");
 
@@ -97,6 +123,32 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         System.Random random = new System.Random();
 
         return new string(Enumerable.Repeat(characters, 6).Select(s => s[random.Next(s.Length)]).ToArray());
+    }
+
+    private void RoomUpdate()
+    {
+        RoomInfoUpdate();
+        WaitRoomUpdate();
+    }
+
+    private void RoomInfoUpdate()
+    {
+        RoomInfo[0].text = "방 코드 : " + roomCode;
+        RoomInfo[1].text = "플레이어 : " + PhotonNetwork.PlayerList.Length + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+    }
+    private void WaitRoomUpdate()
+    {
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        {
+            if (i == 0)
+            {
+                WaitList[i].text = "M - " + PhotonNetwork.PlayerList[i].NickName;
+            }
+            else
+            {
+                WaitList[i].text = "P - " + PhotonNetwork.PlayerList[i].NickName;
+            }
+        }
     }
 
     private void ServerOnOff()
