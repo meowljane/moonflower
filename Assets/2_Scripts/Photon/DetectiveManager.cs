@@ -22,7 +22,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public string roomCode;
 
-    void Awake() => Screen.SetResolution(960, 540, false);
+    void Awake() => Screen.SetResolution(1920,1080, false);
 
     void Update()
     {
@@ -48,36 +48,26 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause) => print("연결끊김");
 
-
-
     public void JoinLobby() => PhotonNetwork.JoinLobby();
 
     public override void OnJoinedLobby() => print("로비접속완료");
 
-    public void CreateRoom2P()
+    public void CreateRoom(int num)
     {
         roomCode = GenerateRoomCode();
 
-        PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = 2 });
+        PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = num });
         Debug.Log($"Room Created with Code : {roomCode}");
     }
 
-    public void CreateRoom3P()
-    {
-        roomCode = GenerateRoomCode();
-
-        PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = 3 });
-        Debug.Log($"Room Created with Code : {roomCode}");
-    }
-
-    public void CreateRandomRoom() => PhotonNetwork.CreateRoom(roomCode_Input.text, new RoomOptions { MaxPlayers = 3 });
+    //public void CreateRandomRoom() => PhotonNetwork.CreateRoom(roomCode_Input.text, new RoomOptions { MaxPlayers = 3 });
 
     public void JoinRoom()
     {
         PhotonNetwork.JoinRoom(roomCode_Input.text);
     }
 
-    public void JoinOrCreateRoom() => PhotonNetwork.JoinOrCreateRoom(roomCode_Input.text, new RoomOptions { MaxPlayers = 3 }, null);
+    //public void JoinOrCreateRoom() => PhotonNetwork.JoinOrCreateRoom(roomCode_Input.text, new RoomOptions { MaxPlayers = 3 }, null);
 
     public void JoinRandomRoom() => PhotonNetwork.JoinRandomRoom();
 
@@ -95,7 +85,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         print("방만들기완료");
 
-        RoomUpdate();
         ServerOnOff();
     }
 
@@ -107,6 +96,16 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         ServerOnOff();
         //Player -> 생성해야하는 프리팹의 이름
         //PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        RoomUpdate();
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        RoomUpdate();
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -133,7 +132,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     private void RoomInfoUpdate()
     {
-        RoomInfo[0].text = "방 코드 : " + roomCode;
+        RoomInfo[0].text = "방 코드 : " + PhotonNetwork.CurrentRoom.Name;
         RoomInfo[1].text = "플레이어 : " + PhotonNetwork.PlayerList.Length + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
     }
     private void WaitRoomUpdate()
@@ -149,6 +148,14 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
                 WaitList[i].text = "P - " + PhotonNetwork.PlayerList[i].NickName;
             }
         }
+
+        //if(PhotonNetwork.PlayerList.Length - PhotonNetwork.CurrentRoom.MaxPlayers <= -1)
+        //{
+        //    for (int i = PhotonNetwork.PlayerList.Length; i < PhotonNetwork.CurrentRoom.MaxPlayers; i++)
+        //    {
+        //        WaitList[i].text = "대기 중...";
+        //    }
+        //}
     }
 
     private void ServerOnOff()
