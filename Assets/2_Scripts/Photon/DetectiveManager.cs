@@ -28,12 +28,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     void Awake() => Screen.SetResolution(1920,1080, false);
 
-    void Update()
-    {
-        //메서드로 분리 후 모든 Title씬 버튼 기능에 할당하기
-        StatusText.text = "Log : " + PhotonNetwork.NetworkClientState.ToString();
-    }
-
     #region 자체 함수 모음
 
     /// <summary>
@@ -45,6 +39,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
         int randomNum = Random.Range(100, 1000);
         PhotonNetwork.LocalPlayer.NickName = "Player" + randomNum;
+        LogUpdate();
     }
 
     /// <summary>
@@ -54,6 +49,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.Disconnect();
         PhotonNetwork.LocalPlayer.NickName = "";
+        LogUpdate();
     }
 
     /// <summary>
@@ -67,11 +63,21 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = num });
 
         Debug.Log($"Room Created with Code : {roomCode}");
+
+        LogUpdate();
     }
 
-    public void JoinLobby() => PhotonNetwork.JoinLobby();
+    public void JoinLobby()
+    {
+        PhotonNetwork.JoinLobby();
+        LogUpdate();
+    }
 
-    public void JoinRoom() => PhotonNetwork.JoinRoom(roomCode_Input.text);
+    public void JoinRoom()
+    {
+        PhotonNetwork.JoinRoom(roomCode_Input.text);
+        LogUpdate();
+    }
 
     /// <summary>
     /// 방 코드 복사 / WebGL에서 잘 되는지 테스트 할것
@@ -89,6 +95,8 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         SetWaitList(true);
 
         PhotonNetwork.LeaveRoom();
+
+        LogUpdate();
     }
 
     /// <summary>
@@ -180,21 +188,53 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         }
     }
 
+    /// <summary>
+    /// 6자리 방코드 만들어주는 곳
+    /// </summary>
+    /// <returns> 방 코드 6자리 </returns>
+    private string GenerateRoomCode()
+    {
+        System.Random random = new System.Random();
+
+        return new string(Enumerable.Repeat(characters, 6).Select(s => s[random.Next(s.Length)]).ToArray());
+    }
+
+    /// <summary>
+    /// 게임 상태 Log로 확인
+    /// </summary>
+    private void LogUpdate()
+    {
+        //메서드로 분리 후 모든 Title씬 버튼 기능에 할당하기
+        StatusText.text = "Log : " + PhotonNetwork.NetworkClientState.ToString();
+    }
 
     #endregion
 
-    public override void OnConnectedToMaster() => print("서버접속완료");
+    public override void OnConnectedToMaster()
+    {
+        print("서버접속완료");
+        LogUpdate();
+    }
 
-    public override void OnDisconnected(DisconnectCause cause) => print("연결끊김");
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        print("연결끊김");
+        LogUpdate();
+    }
 
-    public override void OnJoinedLobby() => print("로비접속완료");
-    
+    public override void OnJoinedLobby()
+    {
+        print("로비접속완료");
+        LogUpdate();
+    }
+
     public override void OnCreatedRoom()
     {
         print("방만들기완료");
 
         ServerOnOff();
         SetWaitList(false);
+        LogUpdate();
     }
 
     public override void OnJoinedRoom()
@@ -204,23 +244,32 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         RoomUpdate();
         ServerOnOff();
         SetWaitList(false);
+        LogUpdate();
     }
 
-    public override void OnPlayerEnteredRoom(Player newPlayer) => RoomUpdate();
-
-    public override void OnPlayerLeftRoom(Player otherPlayer) => RoomUpdate();
-
-    public override void OnCreateRoomFailed(short returnCode, string message) => Debug.Log($"Room creation failed : {message}");
-
-    public override void OnJoinRoomFailed(short returnCode, string message) => print("방참가실패");
-
-    public override void OnJoinRandomFailed(short returnCode, string message) => print("방랜덤참가실패");
-
-    private string GenerateRoomCode()
+    public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        System.Random random = new System.Random();
+        RoomUpdate();
+    }
 
-        return new string(Enumerable.Repeat(characters, 6).Select(s => s[random.Next(s.Length)]).ToArray());
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        RoomUpdate();
+    }
+
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        Debug.Log($"Room creation failed : {message}");
+    }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        print("방참가실패");
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        print("방랜덤참가실패");
     }
 
     [ContextMenu("정보")]
