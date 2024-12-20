@@ -39,7 +39,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
         int randomNum = Random.Range(100, 1000);
         PhotonNetwork.LocalPlayer.NickName = "Player" + randomNum;
-        LogUpdate();
     }
 
     /// <summary>
@@ -49,13 +48,12 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.Disconnect();
         PhotonNetwork.LocalPlayer.NickName = "";
-        LogUpdate();
     }
 
     /// <summary>
     /// 랜덤 6자리 코드를 사용하여 방 생성
     /// </summary>
-    /// <param name="num">방 최대 인원수</param>
+    /// <param name="num"> 방 최대 인원수 </param>
     public void CreateRoom(int num)
     {
         roomCode = GenerateRoomCode();
@@ -63,26 +61,25 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomCode, new RoomOptions { MaxPlayers = num });
 
         Debug.Log($"Room Created with Code : {roomCode}");
-
-        LogUpdate();
     }
 
     public void JoinLobby()
     {
         PhotonNetwork.JoinLobby();
-        LogUpdate();
     }
 
     public void JoinRoom()
     {
         PhotonNetwork.JoinRoom(roomCode_Input.text);
-        LogUpdate();
     }
 
     /// <summary>
     /// 방 코드 복사 / WebGL에서 잘 되는지 테스트 할것
     /// </summary>
-    public void CopyToClipBoard() => GUIUtility.systemCopyBuffer = roomCode; 
+    public void CopyToClipBoard()
+    {
+        GUIUtility.systemCopyBuffer = PhotonNetwork.CurrentRoom.Name;
+    }
 
     /// <summary>
     /// 방을 떠날 때 인풋 필드 값 초기화
@@ -95,8 +92,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         SetWaitList(true);
 
         PhotonNetwork.LeaveRoom();
-
-        LogUpdate();
     }
 
     /// <summary>
@@ -150,30 +145,14 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         {
             TMP_Text childText = WaitList[i].GetComponentInChildren<TMP_Text>();
 
-            // 본인 닉네임인지 확인
-            if (PhotonNetwork.PlayerList[i].NickName == PhotonNetwork.NickName)
-            {
-                if (i == 0)
-                    childText.text = $"M - {PhotonNetwork.PlayerList[i].NickName}";
+            // 플레이어 닉네임과 역할(M 또는 P) 설정
+            string role = (i == 0) ? "M" : "P";
+            childText.text = $"{role} - {PhotonNetwork.PlayerList[i].NickName}";
 
-                else
-                    childText.text = $"P - {PhotonNetwork.PlayerList[i].NickName}";
-
-                childText.color = Color.red; // 본인 이름은 빨간색
-            }
-            else
-            {
-                if (i == 0)
-                {
-                    childText.text = $"M - {PhotonNetwork.PlayerList[i].NickName}";
-                }
-                else
-                {
-                    childText.text = $"P - {PhotonNetwork.PlayerList[i].NickName}";
-                }
-
-                childText.color = Color.black; // 다른 플레이어 이름은 검은색
-            }
+            // 본인 닉네임인지 확인하여 색상 설정
+            childText.color = (PhotonNetwork.PlayerList[i].NickName == PhotonNetwork.NickName)
+                ? Color.red
+                : Color.black;
         }
 
         if (PhotonNetwork.PlayerList.Length - PhotonNetwork.CurrentRoom.MaxPlayers <= -1)
@@ -210,6 +189,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     #endregion
 
+    #region 콜백 함수 모음
     public override void OnConnectedToMaster()
     {
         print("서버접속완료");
@@ -271,6 +251,8 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         print("방랜덤참가실패");
     }
+
+    #endregion
 
     [ContextMenu("정보")]
     void Info()
