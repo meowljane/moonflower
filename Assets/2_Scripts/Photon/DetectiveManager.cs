@@ -8,6 +8,7 @@ using System.Linq;
 
 public class DetectiveManager : MonoBehaviourPunCallbacks
 {
+    public PhotonView PV; 
     // 방 코드 사용되는 영어 대, 소문자 및 숫자
     private const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -18,6 +19,8 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     // Button 이벤트로 즉각적으로 오브젝트가 꺼지는 것이 아닌 상황에 맞게 ON/OFF 가능하게 캐싱
     public GameObject Room;
     public GameObject Server;
+    public GameObject GameStartBtn;
+    public GameObject CenterLabel;
 
     // 유저명과 서버 정보를 나타내주는 오브젝트
     public List<GameObject> WaitList;
@@ -26,8 +29,14 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     // 방 코드
     private string roomCode;
 
-    void Awake() => Screen.SetResolution(1920,1080, false);
+    // 센터라벨 텍스트
+    private TMP_Text CenterLabelText;
 
+    void Awake()
+    {
+        Screen.SetResolution(1920, 1080, false);
+        CenterLabelText = CenterLabel.GetComponentInChildren<TMP_Text>();
+    }
     #region 자체 함수 모음
 
     /// <summary>
@@ -36,9 +45,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public void Connect()
     {
         PhotonNetwork.ConnectUsingSettings();
-
-        int randomNum = Random.Range(100, 1000);
-        PhotonNetwork.LocalPlayer.NickName = "Player" + randomNum;
     }
 
     /// <summary>
@@ -109,6 +115,19 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         }
     }
 
+    public void LoadNextScene2P_3P()
+    {
+        if (PhotonNetwork.PlayerList.Length <= PhotonNetwork.CurrentRoom.MaxPlayers - 1)
+        {
+            PhotonNetwork.LoadLevel("Multi_F0");
+        }
+        else
+        {
+            CenterLabelOn("현재 모드는 2, 3인 플레이만 지원합니다. 로비 화면에서 1인을 선택해주세요.");
+        }
+        
+    }
+
     /// <summary>
     /// 서버 -> 방 이동 시 조건에 따라 실행되는 매서드
     /// </summary>
@@ -125,6 +144,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         RoomInfoUpdate();
         WaitRoomUpdate();
+        MasterStartBtnOnOff();
     }
 
     /// <summary>
@@ -134,6 +154,35 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         RoomInfo[0].text = "방 코드 : " + PhotonNetwork.CurrentRoom.Name;
         RoomInfo[1].text = "플레이어 : " + PhotonNetwork.PlayerList.Length + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+    }
+
+    private void CenterLabelOn(string labelText)
+    {
+        CenterLabelText.text = labelText;
+        CenterLabel.SetActive(true);
+
+        Invoke("CenterLabelOff", 2f);
+    }
+
+    private void CenterLabelOff()
+    {
+        CenterLabelText.text = "";
+        CenterLabel.SetActive(false);
+    }
+
+    /// <summary>
+    /// 마스터한테만 게임 스타트 버튼 표시
+    /// </summary>
+    private void MasterStartBtnOnOff()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            GameStartBtn.SetActive(true);
+        }
+        else
+        {
+            GameStartBtn.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -146,8 +195,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
             TMP_Text childText = WaitList[i].GetComponentInChildren<TMP_Text>();
 
             // 플레이어 닉네임과 역할(M 또는 P) 설정
-            string role = (i == 0) ? "M" : "P";
-            childText.text = $"{role} - {PhotonNetwork.PlayerList[i].NickName}";
+            childText.text = (i == 0) ? $"{PhotonNetwork.PlayerList[i].NickName = "Master"}" : $"{PhotonNetwork.PlayerList[i].NickName = "Player" + i}";
 
             // 본인 닉네임인지 확인하여 색상 설정
             childText.color = (PhotonNetwork.PlayerList[i].NickName == PhotonNetwork.NickName)
@@ -165,6 +213,11 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
                 childText.color = Color.gray; // 대기 중 메시지는 회색
             }
         }
+    }
+
+    private void LeaveRoomCenterLabel()
+    {
+
     }
 
     /// <summary>
@@ -230,6 +283,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         RoomUpdate();
+        print("안녕");
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
