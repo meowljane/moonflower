@@ -126,6 +126,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.PlayerList.Length >= PhotonNetwork.CurrentRoom.MaxPlayers - 1)
         {
             PhotonNetwork.LoadLevel("Multi_F0");
+            PV.RPC("MoveNextScene", RpcTarget.OthersBuffered);
         }
         else
         {
@@ -134,6 +135,11 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
+    public void MoveNextScene()
+    {
+        PhotonNetwork.LoadLevel("Multi_F0");
+    }
     private void ResetPlayerRoomInfo()
     {
         roomCode_Input.text = "";

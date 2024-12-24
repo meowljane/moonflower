@@ -1,5 +1,7 @@
 using NUnit.Framework;
+using Photon.Pun;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,7 +10,8 @@ using UnityEngine.UI;
 
 public class WindowManager : MonoBehaviour
 {
-    private PlayerManager thePlayer;
+    public PhotonView PV;
+    public PlayerManager thePlayer;
     public GameObject TextWindow;
 
     public GameObject button;
@@ -17,7 +20,8 @@ public class WindowManager : MonoBehaviour
 
     void Awake()
     {
-        thePlayer = FindFirstObjectByType<PlayerManager>();
+        StartCoroutine(FindPlayerCoroutine());
+        //thePlayer = FindFirstObjectByType<PlayerManager>();
         //불값 list를 만들어주고
         //확인해야하는 오브젝트 리스트의 길이 만큼 반복문 돌리고
         //그 값을 list에 앞에서부터 차곡차곡 넣어주면 끝
@@ -60,15 +64,38 @@ public class WindowManager : MonoBehaviour
             }
         }
 
-
-
         if (button.activeInHierarchy)
         {
-            thePlayer.canMove = true;
+            if(thePlayer != null)
+            {
+                thePlayer.canMove = true;
+            }
         }
         else
         {
             thePlayer.canMove = false;
+        }
+    }
+
+    public IEnumerator FindPlayerCoroutine()
+    {
+        while (thePlayer == null)
+        {
+            // 모든 PlayerManager 객체를 찾음
+            PlayerManager[] players = FindObjectsOfType<PlayerManager>();
+
+            // 로컬 플레이어를 찾음 (PhotonView.IsMine이 true인 플레이어)
+            foreach (PlayerManager player in players)
+            {
+                PhotonView playerPV = player.GetComponent<PhotonView>();
+                if (playerPV != null && playerPV.IsMine) // 나 자신의 플레이어인지 확인
+                {
+                    thePlayer = player;
+                    break;
+                }
+            }
+
+            yield return null; // 다음 프레임까지 대기
         }
     }
     public void DeactivateUIWindows()
