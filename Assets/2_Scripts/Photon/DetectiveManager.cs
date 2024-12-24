@@ -21,6 +21,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public GameObject Server;
     public GameObject GameStartBtn;
     public GameObject CenterLabel;
+    public GameObject CheckMyName;
 
     // 유저명과 서버 정보를 나타내주는 오브젝트
     public List<GameObject> WaitList;
@@ -53,7 +54,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     public void Disconnect()
     {
         PhotonNetwork.Disconnect();
-        PhotonNetwork.LocalPlayer.NickName = "";
     }
 
     /// <summary>
@@ -76,6 +76,13 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public void JoinRoom()
     {
+        if (roomCode_Input.text == "")
+        {
+            RoomCodeIsNull();
+
+            return;
+        }
+
         PhotonNetwork.JoinRoom(roomCode_Input.text);
     }
 
@@ -92,9 +99,8 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void LeaveRoom()
     {
-        roomCode_Input.text = "";
+        ResetPlayerRoomInfo();
         RoomUpdate();
-
         SetWaitList(true);
 
         PhotonNetwork.LeaveRoom();
@@ -117,15 +123,26 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public void LoadNextScene2P_3P()
     {
-        if (PhotonNetwork.PlayerList.Length <= PhotonNetwork.CurrentRoom.MaxPlayers - 1)
+        if (PhotonNetwork.PlayerList.Length >= PhotonNetwork.CurrentRoom.MaxPlayers - 1)
         {
             PhotonNetwork.LoadLevel("Multi_F0");
         }
         else
         {
+            // 인원이 충분하지 않습니다. @명 모두 입장 후 시작해 주세요.
             CenterLabelOn("현재 모드는 2, 3인 플레이만 지원합니다. 로비 화면에서 1인을 선택해주세요.");
         }
-        
+    }
+
+    private void ResetPlayerRoomInfo()
+    {
+        roomCode_Input.text = "";
+        PhotonNetwork.NickName = "";
+    }
+
+    private void RoomCodeIsNull()
+    {
+        CenterLabelOn("코드가 입력되지 않습니다. 코드를 입력해주세요.");
     }
 
     /// <summary>
@@ -156,6 +173,10 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         RoomInfo[1].text = "플레이어 : " + PhotonNetwork.PlayerList.Length + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
     }
 
+    /// <summary>
+    /// 센터 라벨을 켜주는 매서드
+    /// </summary>
+    /// <param name="labelText"></param>
     private void CenterLabelOn(string labelText)
     {
         CenterLabelText.text = labelText;
@@ -164,6 +185,9 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         Invoke("CenterLabelOff", 2f);
     }
 
+    /// <summary>
+    ///  센터 라벨을 꺼주는 매서드
+    /// </summary>
     private void CenterLabelOff()
     {
         CenterLabelText.text = "";
@@ -190,13 +214,19 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     /// </summary>
     private void WaitRoomUpdate()
     {
+        PhotonNetwork.NickName = "";
+
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
             TMP_Text childText = WaitList[i].GetComponentInChildren<TMP_Text>();
+            
+            PhotonNetwork.PlayerList[i].NickName = "";
 
             // 플레이어 닉네임과 역할(M 또는 P) 설정
             childText.text = (i == 0) ? $"{PhotonNetwork.PlayerList[i].NickName = "Master"}" : $"{PhotonNetwork.PlayerList[i].NickName = "Player" + i}";
 
+            Debug.Log(i + "번째 이름: " + PhotonNetwork.PlayerList[i].NickName);
+            
             // 본인 닉네임인지 확인하여 색상 설정
             childText.color = (PhotonNetwork.PlayerList[i].NickName == PhotonNetwork.NickName)
                 ? Color.red
@@ -215,11 +245,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         }
     }
 
-    private void LeaveRoomCenterLabel()
-    {
-
-    }
-
     /// <summary>
     /// 6자리 방코드 만들어주는 곳
     /// </summary>
@@ -229,6 +254,13 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         System.Random random = new System.Random();
 
         return new string(Enumerable.Repeat(characters, 6).Select(s => s[random.Next(s.Length)]).ToArray());
+    }
+
+    private void CheckMyNickName()
+    {
+        TMP_Text childText = CheckMyName.GetComponentInChildren<TMP_Text>();
+
+        childText.text = $"나의 닉네임 : {PhotonNetwork.NickName} ==> 닉네임 가챠";
     }
 
     /// <summary>
@@ -275,10 +307,12 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         print("방참가완료");
 
         RoomUpdate();
+        CheckMyNickName();
         ServerOnOff();
         SetWaitList(false);
         LogUpdate();
     }
+
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
@@ -298,7 +332,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
-        print("방참가실패");
+        CenterLabelOn("코드가 올바르지 않습니다. 확인 후 다시 입력해 주세요.");
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
