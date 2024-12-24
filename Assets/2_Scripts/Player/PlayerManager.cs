@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections; //기존 namespace
 using System.Collections.Generic;//기존 namespace
 using UnityEngine; //기존 namespace
@@ -6,24 +7,27 @@ using UnityEngine.SceneManagement; //기존 namespace
 [ExecuteInEditMode]
 public class PlayerManager : AbstractPlayer
 {
-    public static PlayerManager instance;
-
+    public PhotonView PV;
     /// <summary>
     /// 생명주기함수
     /// </summary>
     #region
     void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         SetValues();
     }
 
     void Update()
     {
-        AnimController();
+        if ((PV.IsMine))
+        {
+            AnimController();
+        }        
     }
     void FixedUpdate()
     {
-        if (canMove)
+        if (PV.IsMine && canMove)
         {
             if (!isTest)
             {
@@ -212,8 +216,8 @@ public class PlayerManager : AbstractPlayer
         ConrirmOn.sprite = Sprite[1]; // 지금은 1로 쓰지만 나중에는 그냥 하나만쓸거임 0지우고
         canMove = true;
 
-        joystick.enabled = true;
-        webglBtn.SetActive(true);
+        //joystick.enabled = true;
+        //webglBtn.SetActive(true);
 
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
