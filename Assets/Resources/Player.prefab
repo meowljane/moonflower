@@ -276,7 +276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3422028921299379161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6549cbbcf4519843b37f2ddeea0e34d, type: 3}
   m_Name: 
@@ -288,7 +288,7 @@ MonoBehaviour:
   Sprite:
   - {fileID: 21300000, guid: 1de446008cb899547a83675c22c8d395, type: 3}
   - {fileID: 21300000, guid: cf42361fc68846f4ab1586caecb7d240, type: 3}
-  ConrirmOn: {fileID: 5653905907586888193}
+  ConfirmOn: {fileID: 5653905907586888193}
   originalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   outlineMaterial: {fileID: 2100000, guid: 289791efa662dde4081d2e4d13e1c973, type: 2}
   list: []

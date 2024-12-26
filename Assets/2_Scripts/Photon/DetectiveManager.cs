@@ -167,6 +167,7 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
     {
         RoomInfoUpdate();
         WaitRoomUpdate();
+        CheckMyNickName();
         MasterStartBtnOnOff();
     }
 
@@ -313,7 +314,6 @@ public class DetectiveManager : MonoBehaviourPunCallbacks
         print("방참가완료");
 
         RoomUpdate();
-        CheckMyNickName();
         ServerOnOff();
         SetWaitList(false);
         LogUpdate();

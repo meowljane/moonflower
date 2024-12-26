@@ -213,7 +213,7 @@ public class PlayerManager : AbstractPlayer
     #region
     public override void SetValues()
     {
-        ConrirmOn.sprite = Sprite[1]; // 지금은 1로 쓰지만 나중에는 그냥 하나만쓸거임 0지우고
+        ConfirmOn.sprite = Sprite[1]; // 지금은 1로 쓰지만 나중에는 그냥 하나만쓸거임 0지우고
         canMove = true;
 
         //joystick.enabled = true;
