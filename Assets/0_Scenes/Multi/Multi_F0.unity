@@ -659,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 320
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11558,7 +11558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ad8517ccdb7a4fbd20462c0e3a93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: {fileID: 1874954390}
   thePlayer: {fileID: 0}
   TextWindow: {fileID: 1635092254}
   button: {fileID: 454172307}

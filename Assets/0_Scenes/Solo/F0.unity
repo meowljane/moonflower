@@ -549,6 +549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 454172308}
     m_Modifications:
+    - target: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: axisOptions
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -659,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 320
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7349,7 +7353,7 @@ PrefabInstance:
       objectReference: {fileID: 1246016906}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: spriteOutline
@@ -10637,7 +10641,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6549cbbcf4519843b37f2ddeea0e34d, type: 3}
   m_Name: 
@@ -11807,7 +11811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ad8517ccdb7a4fbd20462c0e3a93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: {fileID: 0}
   thePlayer: {fileID: 0}
   TextWindow: {fileID: 1635092254}
   button: {fileID: 454172307}

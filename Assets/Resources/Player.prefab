@@ -300,7 +300,6 @@ MonoBehaviour:
   canMove: 1
   isTransfer: 1
   isTest: 1
-  PV: {fileID: 4714978862308978776}
 --- !u!114 &4714978862308978776
 MonoBehaviour:
   m_ObjectHideFlags: 0

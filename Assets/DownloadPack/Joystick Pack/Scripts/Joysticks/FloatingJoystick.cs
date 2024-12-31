@@ -8,7 +8,7 @@ public class FloatingJoystick : Joystick
     protected override void Start()
     {
         base.Start();
-        background.anchoredPosition = Vector2.zero;
+        background.anchoredPosition = new Vector2(300, 242);
     }
 
     public override void OnPointerDown(PointerEventData eventData)
@@ -19,7 +19,7 @@ public class FloatingJoystick : Joystick
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        background.anchoredPosition = Vector2.zero;
+        background.anchoredPosition = new Vector2(300, 242);
         base.OnPointerUp(eventData);
     }
 }

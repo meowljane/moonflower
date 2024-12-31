@@ -25,6 +25,12 @@ public class PlayerManager_Multi : AbstractPlayer_Multi
             AnimController();
         }        
     }
+
+    public IEnumerator FindPlayerCoroutine()
+    {
+        yield return null;
+    }
+
     void FixedUpdate()
     {
         if (PV.IsMine && canMove)
