@@ -1,27 +1,33 @@
+using Photon.Pun;
 using System.Collections; //기존 namespace
 using System.Collections.Generic;//기존 namespace
 using UnityEngine; //기존 namespace
 using UnityEngine.SceneManagement; //기존 namespace
 
 [ExecuteInEditMode]
-public class PlayerManager : AbstractPlayer
+public class PlayerManager_Multi : AbstractPlayer_Multi
 {
+    public PhotonView PV;
     /// <summary>
     /// 생명주기함수
     /// </summary>
     #region
     void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         SetValues();
     }
 
     void Update()
     {
-        AnimController();
+        if ((PV.IsMine))
+        {
+            AnimController();
+        }        
     }
     void FixedUpdate()
     {
-        if (canMove)
+        if (PV.IsMine && canMove)
         {
             if (!isTest)
             {

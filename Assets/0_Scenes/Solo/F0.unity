@@ -635,19 +635,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.x
@@ -659,11 +659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 242
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6856,7 +6856,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd08a8f1f0015e54f8c2dd6c2814b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thePlayer: {fileID: 0}
   confiner2D: {fileID: 1086537453}
+  cinemachineCamera: {fileID: 0}
 --- !u!1 &1114573624
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,8 +7344,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 67215189}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+      propertyPath: ConfirmOn
+      value: 
+      objectReference: {fileID: 1246016906}
+    - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 828269824288808425, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
       propertyPath: spriteOutline
@@ -7409,6 +7415,11 @@ PrefabInstance:
 --- !u!4 &1246016905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 754292769242498112, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
+  m_PrefabInstance: {fileID: 1246016904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1246016906 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3245711351930201606, guid: e9d16cf423b27a847bf0f80e98319a77, type: 3}
   m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1277975785
@@ -10626,7 +10637,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1246016904}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6549cbbcf4519843b37f2ddeea0e34d, type: 3}
   m_Name: 
@@ -11796,6 +11807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ad8517ccdb7a4fbd20462c0e3a93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PV: {fileID: 0}
+  thePlayer: {fileID: 0}
   TextWindow: {fileID: 1635092254}
   button: {fileID: 454172307}
   UIwindows:
