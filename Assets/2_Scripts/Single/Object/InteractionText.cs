@@ -50,7 +50,6 @@ public class InteractionText : MonoBehaviour
                     ActiveText(sentences);
                 }
             }
-
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

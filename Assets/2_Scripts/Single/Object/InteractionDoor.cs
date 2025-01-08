@@ -25,9 +25,9 @@ public class InteractionDoor : MonoBehaviour
 
     private void Awake()
     {
-        thePM = FindFirstObjectByType<PanelManager>();
-        webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
-        confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
+        //thePM = FindFirstObjectByType<PanelManager>();
+        //webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
+        //confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
     }
 
     private void Update()

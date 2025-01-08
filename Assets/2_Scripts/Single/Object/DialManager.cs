@@ -200,5 +200,10 @@ public class DialManager : MonoBehaviour
             NextSprite();
         }
     }
+
+    internal void ShowDialogue(List<InteractionDialogue_Multi.DialogueData> dialogueData)
+    {
+        throw new NotImplementedException();
+    }
 }
 

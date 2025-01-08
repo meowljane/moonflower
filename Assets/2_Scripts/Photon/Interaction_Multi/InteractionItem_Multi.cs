@@ -1,60 +1,59 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static InteractionDialogue;
+using static InteractionDialogue_Multi;
 
-public class InteractionItem : MonoBehaviour
+public class InteractionItem_Multi : AbstractInteraction
 {
     //스크립트 캐싱
-    public ItemPopUpManager theIPM;
-
-    //오브젝트 캐싱
-    public GameObject confirmOn;
-    public WebGLBtn webglBtn;
+    public ItemPopUpManager_Multi itemPopUpManager_Multi;
 
     //db관련된 문자열 변수
     public List<string> itemNames = new List<string>();
 
-    //게임 중 변하는 불값
-    public bool isColliding = false;
-
     // Sprite 배열 미리 받아두는곳
     public List<Sprite> spriteData;
 
-    private void Awake()
+    void Awake()
     {
-        theIPM = FindFirstObjectByType<ItemPopUpManager>();
-        webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
-        confirmOn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
+    //    theIPM = FindFirstObjectByType<ItemPopUpManager>();
+    //    webglBtn = Resources.FindObjectsOfTypeAll<WebGLBtn>().FirstOrDefault();
+    //    confirmn = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.name == "ConfirmOn");
     }
-    private void Update()
+
+    void Update()
     {
-        if (isColliding && !theIPM.isTalking)
+        UpdateMethod();
+    }
+
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+
+        itemPopUpManager_Multi = playerManager_Multi.canvas.GetComponent<ItemPopUpManager_Multi>();
+    }
+
+    public override void OnTriggerExit2D(Collider2D other)
+    {
+        base.OnTriggerExit2D(other);
+    }
+
+    public override void UpdateMethod()
+    {
+        if (isColliding && !isActive)
         {
-            confirmOn.SetActive(true);
+            confirmBtn.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) || webglBtn.isClick)
             {
                 List<Sprite> itemSprites = GetItemDetailSprites();
                 if (itemSprites != null && itemSprites.Count > 0)
                 {
-                    theIPM.ShowItem(itemSprites);
+                    itemPopUpManager_Multi.ShowItem(itemSprites);
                 }
                 ChangeDb();
                 webglBtn.isClick = false;
             }
-
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        isColliding = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        isColliding = false;
-        confirmOn.SetActive(false);
     }
 
     public void ChangeDb()
@@ -69,9 +68,9 @@ public class InteractionItem : MonoBehaviour
         }
     }
 
- private List<Sprite> GetItemDetailSprites()
+    private List<Sprite> GetItemDetailSprites()
     {
-        DatabaseManager databaseManager = FindObjectOfType<DatabaseManager>();
+        DatabaseManager databaseManager = FindObjectOfType<DatabaseManager>(); // 나중에 수정해야함
         List<Sprite> sprites = new List<Sprite>();
 
         foreach (string name in itemNames)

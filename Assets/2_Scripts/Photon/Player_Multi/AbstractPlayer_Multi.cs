@@ -14,6 +14,7 @@ public abstract class AbstractPlayer_Multi : MonoBehaviour
     //모바일 UI오브젝트
     public FloatingJoystick joystick; //조이스틱 프리팹
     public GameObject webglBtn; //웹에서 사용하는 버튼
+    public Canvas canvas; //캔버스 할당
 
     //플레이어 상호작용 안내 Sprite
     public Sprite[] Sprite; //모바일,컴퓨터에 각각 다른 이미지 sprite
