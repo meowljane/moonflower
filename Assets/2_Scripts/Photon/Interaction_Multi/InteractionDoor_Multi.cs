@@ -24,17 +24,36 @@ public class InteractionDoor_Multi : AbstractInteraction
 
     public override void OnTriggerEnter2D(Collider2D other)
     {
-        base.OnTriggerEnter2D(other);
+        if (!isColliding)
+        {
+            GetPVComponent(other);
+        }
+        
+        if (CheckIsMaster(PV))
+        {
+            webglBtn = playerManager_Multi.canvas.GetComponent<WebGLBtn_Multi>();
+            panelManager_Multi = playerManager_Multi.canvas.GetComponent<PanelManager_Multi>();
 
-        panelManager_Multi = playerManager_Multi.canvas.GetComponent<PanelManager_Multi>();
+            confirmBtn = playerManager_Multi.ConfirmOn.gameObject;
+            panelManager_Multi.objectsToDisable = objectsToDisable;
+            panelManager_Multi.objectsToEnable = objectsToEnable;
 
-        panelManager_Multi.objectsToDisable = objectsToDisable;
-        panelManager_Multi.objectsToEnable = objectsToEnable;
+            isColliding = true;
+        }
     }
 
     public override void OnTriggerExit2D(Collider2D other)
     {
-        base.OnTriggerExit2D(other);
+        if (isColliding)
+        {
+            GetPVComponent(other);
+        }
+
+        if (CheckIsMaster(PV))
+        {
+            isColliding = false;
+            confirmBtn.SetActive(false);
+        }
     }
 
     public override void UpdateMethod()

@@ -1,6 +1,7 @@
+using Photon.Pun;
 using UnityEngine;
 
-public abstract class AbstractIsActive_Multi : MonoBehaviour
+public abstract class AbstractIsActive_Multi : MonoBehaviourPunCallbacks
 {
     [HideInInspector]
     protected static bool isActive = false;

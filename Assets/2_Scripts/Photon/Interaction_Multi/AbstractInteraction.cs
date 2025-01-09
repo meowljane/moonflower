@@ -57,4 +57,13 @@ public abstract class AbstractInteraction : AbstractIsActive_Multi, ITriggerEnte
 
         return false;
     }
+
+    public bool CheckIsMaster(PhotonView PV)
+    {
+        if (PV == PhotonNetwork.IsMasterClient && PV.IsMine)
+        {
+            return true;
+        }
+        return false;
+    }
 }

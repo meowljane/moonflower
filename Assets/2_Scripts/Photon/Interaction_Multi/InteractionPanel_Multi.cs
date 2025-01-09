@@ -13,11 +13,6 @@ public class InteractionPanel_Multi : AbstractInteraction
     // Sprite 배열 미리 받아두는곳
     public List<Sprite> spriteData;
 
-    void Awake()
-    {
-        //thePM = FindFirstObjectByType<PanelManager>();
-    }
-
     void Update()
     {
         UpdateMethod();
@@ -27,7 +22,10 @@ public class InteractionPanel_Multi : AbstractInteraction
     {
         base.OnTriggerEnter2D(other);
 
-        panelManager_Multi = playerManager_Multi.canvas.GetComponent<PanelManager_Multi>();
+        if (CheckIsMine(PV))
+        {
+            panelManager_Multi = playerManager_Multi.canvas.GetComponent<PanelManager_Multi>();
+        }
     }
 
     public override void OnTriggerExit2D(Collider2D other)
